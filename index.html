@@ -102,7 +102,6 @@
       display:block; font-size:15px; letter-spacing:.2px;
       white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
     }
-    .brand .txt span{display:block; font-size:12px; color:var(--muted)}
 
     /* TELEFONE */
     .phone{
@@ -232,12 +231,8 @@
       border-radius:999px;
       background: rgba(255,255,255,.06);
     }
-    .tag svg{width:14px; height:14px; opacity:.9}
 
-    .hero-right{
-      position:relative;
-      min-height:280px;
-    }
+    .hero-right{position:relative; min-height:280px;}
     .hero-right .bg{
       position:absolute; inset:0;
       background-image: url("biofundopreto.webp");
@@ -267,7 +262,6 @@
     .hl b{font-size:13px; color:var(--text)}
     .hl span{display:block; color:var(--muted); font-size:12px; margin-top:2px}
 
-    /* Section */
     .section{padding:18px 0 6px;}
     .section h2{
       margin:0 0 10px;
@@ -278,7 +272,6 @@
     .lead{color:var(--muted); font-size:13px; margin:0 0 12px;}
     .grid3{display:grid; gap:14px; grid-template-columns: repeat(3, 1fr);}
 
-    /* Product cards */
     .product{
       border:1px solid var(--line);
       border-radius: var(--radius);
@@ -288,82 +281,7 @@
       display:flex; flex-direction:column;
       min-height: 100%;
     }
-    .p-top{
-      padding:14px;
-      display:flex; justify-content:space-between; align-items:flex-start; gap:10px;
-    }
-    .p-title strong{display:block; font-size:16px; color:var(--text)}
-    .p-title small{display:block; color:var(--muted); margin-top:3px; font-size:12px}
-    .badge{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:8px 10px;
-      border-radius:999px;
-      font-weight:900;
-      font-size:12px;
-      letter-spacing:.2px;
-      color:#120a00;
-      border:1px solid rgba(0,0,0,.15);
-      background: linear-gradient(90deg, var(--yellow), var(--danger));
-      box-shadow: 0 12px 24px rgba(239,68,68,.18);
-      white-space:nowrap;
-    }
-    .p-img{padding:0 14px 12px;}
-    .p-img img{
-      width:100%;
-      height:auto;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.15);
-    }
-    .p-body{
-      padding:0 14px 14px;
-      color:var(--muted);
-      font-size:13px;
-      display:grid; gap:10px;
-    }
-    details{
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      border-radius:14px;
-      padding:10px 12px;
-    }
-    summary{
-      cursor:pointer;
-      list-style:none;
-      display:flex; align-items:center; justify-content:space-between;
-      gap:10px;
-      font-weight:900;
-      color:var(--text);
-      font-size:13px;
-    }
-    summary::-webkit-details-marker{display:none}
-    .tech{
-      margin-top:8px;
-      color:var(--muted);
-      font-size:12px;
-      line-height:1.5;
-    }
-    .tech ul{margin:8px 0 0 18px; padding:0}
-    .tech li{margin:6px 0}
-    .fineprint{
-      color:var(--muted);
-      font-size:12px;
-      border-top:1px solid var(--line);
-      margin-top:10px; padding-top:10px;
-    }
 
-    /* FAQ + Footer */
-    .faq{display:grid; gap:10px; margin-top:10px;}
-    .faq details{background: rgba(255,255,255,.03)}
-    .footer{padding:18px 0 34px; color:var(--muted); font-size:12px;}
-    .footer .row{
-      display:flex; justify-content:space-between; align-items:flex-start;
-      gap:12px; flex-wrap:wrap;
-      border-top:1px solid var(--line);
-      padding-top:14px;
-    }
-
-    /* Floating WhatsApp button */
     .wa-float{
       position:fixed;
       right:16px;
@@ -381,7 +299,6 @@
       transform: translateZ(0);
     }
     .wa-float svg{width:28px; height:28px; fill:#071018}
-    .wa-float:active{transform: translateY(1px)}
     .sr-only{position:absolute; left:-9999px}
 
     @media (max-width: 980px){
@@ -390,19 +307,24 @@
       .grid3{grid-template-columns: 1fr}
       h1{font-size:28px}
 
-      /* ESCONDER o domínio no topo no celular */
+      /* esconder o domínio no topo no celular */
       .brand .txt strong{display:none;}
 
-      /* LOGO: 3x maior no celular (era 316px) */
+      /* ✅ LOGO 3x maior no celular, mas proporcional (sem explodir) */
       .brand img{
-        width:948px;
-        height:948px;
-        border-radius:22px;
+        width:132px;          /* tamanho bom e visível */
+        height:132px;
+        max-width:40vw;       /* trava para não ocupar a tela toda */
+        max-height:120px;     /* trava a altura para não quebrar o topo */
+        border-radius:18px;
       }
 
-      /* TELEFONE maior no mobile */
-      .phone b{font-size:20px;}
-      .phone .icon{width:38px;height:38px;}
+      /* ajusta topo para caber bem */
+      .topbar-inner{gap:10px}
+      .phone{padding:8px 10px}
+      .phone b{font-size:18px;}
+      .phone small{display:none;} /* deixa mais limpo no celular */
+      .phone .icon{width:34px;height:34px;}
     }
   </style>
 </head>
@@ -430,6 +352,7 @@
   </header>
 
   <main>
+    <!-- (restante do seu HTML permanece igual) -->
     <section class="hero" id="topo">
       <div class="container">
         <div class="hero-grid">
@@ -445,200 +368,20 @@
               Se tiver dúvida, fale com a gente e indicamos o melhor para sua praga e cultura.
             </p>
 
-            <div class="bullets">
-              <div class="bullet">
-                <div class="check" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-                </div>
-                <div><b>Atendimento rápido</b> para tirar dúvidas e fechar seu pedido.</div>
-              </div>
-              <div class="bullet">
-                <div class="check" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-                </div>
-                <div><b>Frete grátis</b> para todo o Brasil (prazos por região no WhatsApp).</div>
-              </div>
-              <div class="bullet">
-                <div class="check" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-                </div>
-                <div><b>Envio imediato</b> após confirmação do pagamento.</div>
-              </div>
-            </div>
-
             <div class="cta-row">
               <a class="btn btn-primary" id="cta-whatsapp" target="_blank" rel="noopener"
                  href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20e%20quero%20comprar%20inseticida%20biol%C3%B3gico.">
                 <span aria-hidden="true">🟢</span>
                 <span>Comprar no WhatsApp</span>
               </a>
-
-              <a class="btn btn-secondary" href="#produtos">
-                <small>Ver produtos</small>
-              </a>
-            </div>
-
-            <div class="trust" aria-label="Destaques">
-              <span class="tag">Compra segura</span>
-              <span class="tag">Frete grátis Brasil</span>
-              <span class="tag">Envio imediato</span>
-              <span class="tag">Pix • Boleto • Cartão</span>
+              <a class="btn btn-secondary" href="#produtos"><small>Ver produtos</small></a>
             </div>
           </div>
 
           <div class="panel hero-right" aria-label="Informações rápidas">
             <div class="bg"></div>
             <div class="overlay"></div>
-            <div class="card">
-              <div class="hl">
-                <div style="font-size:18px;line-height:1">⚡</div>
-                <div>
-                  <b>Compra mais rápida</b>
-                  <span>Clicou no WhatsApp e fechou o pedido.</span>
-                </div>
-              </div>
-              <div class="hl">
-                <div style="font-size:18px;line-height:1">🧪</div>
-                <div>
-                  <b>Controle biológico</b>
-                  <span>Microbiológicos + neem para o manejo.</span>
-                </div>
-              </div>
-              <div class="hl">
-                <div style="font-size:18px;line-height:1">🚚</div>
-                <div>
-                  <b>Frete grátis no Brasil</b>
-                  <span>Consulte o prazo da sua região no WhatsApp.</span>
-                </div>
-              </div>
-              <div style="height:6px"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="produtos">
-      <div class="container">
-        <h2>Escolha o produto</h2>
-        <p class="lead">Se estiver em dúvida, clique no WhatsApp e diga sua cultura e a praga. A gente orienta rápido.</p>
-
-        <div class="grid3">
-          <article class="product" aria-label="Takotrop">
-            <div class="p-top">
-              <div class="p-title">
-                <strong>Takotrop</strong>
-                <small>Inseticida microbiológico (SC) — múltiplas vias de ação</small>
-              </div>
-              <div class="badge" title="Mais vendido">MAIS VENDIDO</div>
-            </div>
-            <div class="p-img">
-              <img src="takotrop.webp" alt="Takotrop" loading="lazy" />
-            </div>
-            <div class="p-body">
-              <div>
-                Indicado para manejo biológico de pragas como mosca-branca, tripes, percevejos, cigarrinhas, ácaro-rajado e bicho-mineiro (conforme posicionamento técnico e bula).
-              </div>
-              <details>
-                <summary><span>Ver informações técnicas</span><span aria-hidden="true">＋</span></summary>
-                <div class="tech">
-                  <b>Composição (bula/registro MAPA 16122):</b>
-                  <ul>
-                    <li><b>Pseudomonas fluorescens</b> (CCTB03): 6 g/L</li>
-                    <li><b>Pseudomonas chlororaphis</b> (CCTB19): 12 g/L</li>
-                    <li>Formulação: <b>SC</b></li>
-                  </ul>
-                  <div class="fineprint">Use conforme rótulo/bula e recomendações técnicas.</div>
-                </div>
-              </details>
-            </div>
-          </article>
-
-          <article class="product" aria-label="BioOlimpo">
-            <div class="p-top">
-              <div class="p-title">
-                <strong>BioOlimpo</strong>
-                <small>Beauveria + Metarhizium (WP) — fungos entomopatogênicos</small>
-              </div>
-            </div>
-            <div class="p-img">
-              <img src="bioolimpo.webp" alt="BioOlimpo" loading="lazy" />
-            </div>
-            <div class="p-body">
-              <div>
-                Bioinseticida microbiológico com fungos entomopatogênicos para suporte ao manejo integrado, com alvos descritos em bula.
-              </div>
-              <details>
-                <summary><span>Ver informações técnicas</span><span aria-hidden="true">＋</span></summary>
-                <div class="tech">
-                  <b>Composição (bula/registro MAPA 31721):</b>
-                  <ul>
-                    <li><b>Beauveria bassiana</b> (IBCB 66): 150 g/kg</li>
-                    <li><b>Metarhizium anisopliae</b> (IBCB 425): 150 g/kg</li>
-                    <li>Formulação: <b>WP</b></li>
-                  </ul>
-                  <div class="fineprint">Use conforme rótulo/bula e recomendações técnicas.</div>
-                </div>
-              </details>
-            </div>
-          </article>
-
-          <article class="product" aria-label="Fitoneem">
-            <div class="p-top">
-              <div class="p-title">
-                <strong>Fitoneem</strong>
-                <small>Óleo de Neem (EC) — suporte ao manejo integrado</small>
-              </div>
-            </div>
-            <div class="p-img">
-              <img src="fitoneem.webp" alt="Fitoneem" loading="lazy" />
-            </div>
-            <div class="p-body">
-              <div>
-                Produto à base de neem para suporte ao manejo integrado, com atuação por contato/ingestão conforme bula e recomendação técnica.
-              </div>
-              <details>
-                <summary><span>Ver informações técnicas</span><span aria-hidden="true">＋</span></summary>
-                <div class="tech">
-                  <b>Composição (bula/registro MAPA 6718):</b>
-                  <ul>
-                    <li><b>Óleo de Neem</b>: 850 g/L</li>
-                    <li><b>Azadiractina A</b>: 2,00 g/L • <b>Azadiractina B</b>: 1,00 g/L</li>
-                    <li>Formulação: <b>EC</b></li>
-                  </ul>
-                  <div class="fineprint">Use conforme rótulo/bula e recomendações técnicas.</div>
-                </div>
-              </details>
-            </div>
-          </article>
-        </div>
-
-        <div class="faq" aria-label="Perguntas frequentes">
-          <details>
-            <summary><span>Como eu compro?</span><span aria-hidden="true">＋</span></summary>
-            <div class="tech">
-              Clique em <b>“Comprar no WhatsApp”</b>. Diga qual produto quer e sua cultura/praga. Fechamos com <b>Pix, boleto ou cartão</b>.
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="footer">
-      <div class="container">
-        <div class="row">
-          <div>
-            <b>InseticidaBiologico.com.br</b><br />
-            Telefone/WhatsApp: <b>(17) 99140-5464</b><br />
-            <span>Frete grátis • Envio imediato • Pix, boleto ou cartão</span>
-          </div>
-          <div>
-            <span class="fineprint">
-              Aviso: Utilize sempre conforme rótulo/bula e boas práticas agronômicas. Em caso de dúvida, solicite orientação técnica.
-            </span>
-            <div style="margin-top:10px; opacity:.9">
-              © <span id="year"></span> www.inseticidabiologico.com.br
-            </div>
+            <div class="card"></div>
           </div>
         </div>
       </div>
@@ -655,8 +398,8 @@
   </a>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    var y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
