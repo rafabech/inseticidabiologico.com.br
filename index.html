@@ -60,11 +60,10 @@
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
       color:var(--text);
-      background:
-        radial-gradient(900px 500px at 20% 10%, rgba(96,165,250,.30), transparent 60%),
-        radial-gradient(900px 500px at 90% 0%, rgba(34,197,94,.24), transparent 55%),
-        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0) 35%),
-        var(--bg);
+
+      /* ✅ FUNDO ÚNICO (AZUL ESCURO) — sem degradês, sem duas cores */
+      background: var(--bg);
+
       line-height:1.35;
     }
     a{color:inherit}
@@ -694,4 +693,4 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
-</html>
+</html> 
