@@ -45,12 +45,12 @@
   <style>
     :root{
       --bg:#0b1220;
-      --muted:#a9b7d0;
-      --text:#eef3ff;
+      --muted:#c8d3ea;              /* <-- MAIS CLARO (era #a9b7d0) */
+      --text:#f7faff;               /* <-- MAIS CLARO (era #eef3ff) */
       --accent:#22c55e;
-      --line:rgba(255,255,255,.10);
+      --line:rgba(255,255,255,.12); /* <-- leve ajuste para legibilidade */
       --danger:#ef4444;
-      --shadow: 0 14px 40px rgba(0,0,0,.35);
+      --shadow: 0 14px 40px rgba(0,0,0,.30); /* <-- um pouco menos pesado */
       --radius:18px;
       --yellow:#fde047;
     }
@@ -60,9 +60,11 @@
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
       color:var(--text);
+      /* FUNDO MAIS CLARO */
       background:
-        radial-gradient(900px 500px at 20% 10%, rgba(96,165,250,.22), transparent 60%),
-        radial-gradient(900px 500px at 90% 0%, rgba(34,197,94,.18), transparent 55%),
+        radial-gradient(900px 500px at 20% 10%, rgba(96,165,250,.30), transparent 60%),
+        radial-gradient(900px 500px at 90% 0%, rgba(34,197,94,.24), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0) 35%),
         var(--bg);
       line-height:1.35;
     }
@@ -73,7 +75,7 @@
     .topbar{
       position:sticky; top:0; z-index:30;
       backdrop-filter: blur(10px);
-      background: rgba(11,18,32,.78);
+      background: rgba(11,18,32,.72); /* <-- um pouco mais claro */
       border-bottom:1px solid var(--line);
     }
     .topbar-inner{
@@ -84,13 +86,18 @@
     .brand{
       display:flex; align-items:center; gap:12px; min-width:0;
     }
+
+    /* LOGO: 1x no computador (dobro) e 0,5x no celular (metade) */
     .brand img{
-      width:58px; height:58px; border-radius:14px;
-      border:1px solid rgba(255,255,255,.12);
-      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+      width:116px;                  /* <-- era 58px */
+      height:116px;                 /* <-- era 58px */
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow: 0 12px 30px rgba(0,0,0,.22);
       object-fit:cover;
       flex:0 0 auto;
     }
+
     .brand .txt{min-width:0}
     .brand .txt strong{
       display:block; font-size:15px; letter-spacing:.2px;
@@ -119,12 +126,13 @@
       line-height:1;
     }
     .phone b{
-      font-size:18px;           /* <-- AUMENTADO AQUI */
+      font-size:18px;
       letter-spacing:.2px;
+      color:var(--text);            /* <-- garante legível */
     }
     .phone small{
       display:block;
-      color:var(--muted);
+      color:var(--muted);           /* <-- mais claro */
       font-size:12px;
       margin-top:2px;
     }
@@ -139,7 +147,7 @@
     .panel{
       border:1px solid var(--line);
       border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03)); /* <-- mais claro */
       box-shadow: var(--shadow);
       overflow:hidden;
     }
@@ -148,23 +156,24 @@
       display:inline-flex; gap:8px; align-items:center;
       font-size:12px; color:var(--muted);
       border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
+      background: rgba(255,255,255,.06); /* <-- mais claro */
       padding:8px 10px;
       border-radius:999px;
     }
     .kicker .dot{
       width:8px; height:8px; border-radius:99px; background: var(--accent);
-      box-shadow:0 0 0 6px rgba(34,197,94,.12);
+      box-shadow:0 0 0 6px rgba(34,197,94,.14);
     }
     h1{
       margin:14px 0 10px;
       font-size:30px;
       letter-spacing:-.3px;
       line-height:1.12;
+      color:var(--text);            /* <-- garante legível */
     }
     .sub{
       margin:0 0 14px;
-      color:var(--muted);
+      color:var(--muted);           /* <-- mais claro */
       font-size:14px;
     }
     .bullets{
@@ -207,7 +216,7 @@
       box-shadow: 0 14px 30px rgba(34,197,94,.18);
     }
     .btn-secondary{
-      background: rgba(255,255,255,.05);
+      background: rgba(255,255,255,.06); /* <-- mais claro */
       color:var(--text);
     }
     .btn small{font-weight:800; opacity:.92}
@@ -222,7 +231,7 @@
       padding:8px 10px;
       border:1px solid var(--line);
       border-radius:999px;
-      background: rgba(255,255,255,.04);
+      background: rgba(255,255,255,.06); /* <-- mais claro */
     }
     .tag svg{width:14px; height:14px; opacity:.9}
 
@@ -240,7 +249,7 @@
     }
     .hero-right .overlay{
       position:absolute; inset:0;
-      background: linear-gradient(180deg, rgba(11,18,32,.08), rgba(11,18,32,.84));
+      background: linear-gradient(180deg, rgba(11,18,32,.06), rgba(11,18,32,.82));
     }
     .hero-right .card{
       position:relative;
@@ -254,9 +263,9 @@
       padding:12px;
       border:1px solid var(--line);
       border-radius:16px;
-      background: rgba(11,18,32,.55);
+      background: rgba(11,18,32,.50);
     }
-    .hl b{font-size:13px}
+    .hl b{font-size:13px; color:var(--text)}
     .hl span{display:block; color:var(--muted); font-size:12px; margin-top:2px}
 
     /* Section */
@@ -265,6 +274,7 @@
       margin:0 0 10px;
       font-size:20px;
       letter-spacing:-.2px;
+      color:var(--text);
     }
     .lead{color:var(--muted); font-size:13px; margin:0 0 12px;}
     .grid3{display:grid; gap:14px; grid-template-columns: repeat(3, 1fr);}
@@ -273,7 +283,7 @@
     .product{
       border:1px solid var(--line);
       border-radius: var(--radius);
-      background: rgba(255,255,255,.04);
+      background: rgba(255,255,255,.05); /* <-- mais claro */
       box-shadow: var(--shadow);
       overflow:hidden;
       display:flex; flex-direction:column;
@@ -283,7 +293,7 @@
       padding:14px;
       display:flex; justify-content:space-between; align-items:flex-start; gap:10px;
     }
-    .p-title strong{display:block; font-size:16px}
+    .p-title strong{display:block; font-size:16px; color:var(--text)}
     .p-title small{display:block; color:var(--muted); margin-top:3px; font-size:12px}
     .badge{
       display:inline-flex; align-items:center; justify-content:center;
@@ -314,7 +324,7 @@
     }
     details{
       border:1px solid var(--line);
-      background: rgba(0,0,0,.14);
+      background: rgba(255,255,255,.03); /* <-- mais claro */
       border-radius:14px;
       padding:10px 12px;
     }
@@ -380,6 +390,13 @@
       .hero-right{min-height:220px}
       .grid3{grid-template-columns: 1fr}
       h1{font-size:28px}
+
+      /* LOGO: 0,5x no celular (metade do original 58px => 29px) */
+      .brand img{
+        width:29px;                /* <-- 0,5x do original */
+        height:29px;
+        border-radius:10px;
+      }
 
       /* TELEFONE maior no mobile também */
       .phone b{font-size:20px;}
