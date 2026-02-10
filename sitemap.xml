@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://inseticidabiologico.com.br/</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Âncoras da página (ajuda o Google a entender seções; não é obrigatório) -->
+  <url><loc>https://inseticidabiologico.com.br/#produtos</loc></url>
+  <url><loc>https://inseticidabiologico.com.br/#avaliacoes</loc></url>
+  <url><loc>https://inseticidabiologico.com.br/#como-comprar</loc></url>
+</urlset>
