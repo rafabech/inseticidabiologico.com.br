@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>Inseticida Biológico | Frete Grátis Brasil | Comprar no WhatsApp</title>
-  <meta name="description" content="Fitoneem, Bioolimpo e Takotrop. Entrega para todo o Brasil com frete grátis. Compra rápida pelo WhatsApp. Telefone (17) 99140-5464." />
+  <meta name="description" content="Fitoneem, Bioolimpo e Takotrop. Envio imediato. Entrega para todo o Brasil com frete grátis. Pagamento facilitado no boleto. WhatsApp (17) 99140-5464." />
 
   <!-- FAVICON: alterna conforme tema do navegador -->
   <link rel="icon" type="image/webp" href="biofundopreto.webp" media="(prefers-color-scheme: light)">
@@ -35,6 +35,7 @@
     }
     a{color:inherit}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 14px}
+
     header{
       position:sticky;top:0;z-index:20;
       background:rgba(7,11,20,.72);
@@ -45,9 +46,23 @@
       display:flex;align-items:center;justify-content:space-between;gap:10px;
       padding:10px 0;
     }
-    .brand{display:flex;flex-direction:column;line-height:1.1}
-    .brand strong{font-size:14px;letter-spacing:.2px}
-    .brand span{font-size:12px;color:var(--muted)}
+
+    /* Logo + marca */
+    .brand{
+      display:flex;align-items:center;gap:10px;
+      min-width:0;
+    }
+    .brand-logo{
+      width:38px;height:38px;border-radius:10px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      object-fit:cover;
+      flex:0 0 auto;
+    }
+    .brand-text{display:flex;flex-direction:column;line-height:1.1;min-width:0}
+    .brand-text strong{font-size:14px;letter-spacing:.2px}
+    .brand-text span{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
     .actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
     .chip{
       display:inline-flex;align-items:center;gap:8px;
@@ -73,7 +88,7 @@
 
     main{padding:14px 0 34px}
 
-    /* Faixa de oferta (mata objeção rápido) */
+    /* Faixa de oferta (objeções principais) */
     .banner{
       margin-top:12px;
       border:1px solid rgba(37,211,102,.35);
@@ -108,9 +123,7 @@
     .section{margin-top:18px}
     .section h2{margin:0 0 10px;font-size:18px}
 
-    .benefits{
-      display:grid;gap:10px;margin-top:12px;
-    }
+    .benefits{display:grid;gap:10px;margin-top:12px}
     @media(min-width:900px){.benefits{grid-template-columns:repeat(3,1fr)}}
     .b{
       border:1px solid var(--line);
@@ -210,9 +223,14 @@
     <div class="wrap">
       <div class="top">
         <div class="brand">
-          <strong>Inseticida Biológico</strong>
-          <span>Fitoneem • Bioolimpo • Takotrop</span>
+          <!-- biofundopreto no cabeçalho -->
+          <img class="brand-logo" src="biofundopreto.webp" alt="Inseticida Biológico" width="38" height="38" loading="eager" decoding="async">
+          <div class="brand-text">
+            <strong>Inseticida Biológico</strong>
+            <span>Envio imediato • Boleto bancário</span>
+          </div>
         </div>
+
         <div class="actions">
           <a class="chip" href="tel:+5517991405464">(17) 99140-5464</a>
           <a class="btn btn-wa" target="_blank" rel="noopener"
@@ -225,11 +243,10 @@
   </header>
 
   <main class="wrap">
-    <!-- Oferta/Objeções principais -->
     <div class="banner" aria-label="Oferta e entrega">
       <div>
         <strong>🚚 Frete grátis • Entrega rápida • Todo o Brasil</strong>
-        <span>Atendimento imediato no WhatsApp</span>
+        <span>⚡ Envio imediato • 💳 Pagamento no boleto bancário</span>
       </div>
       <a class="btn btn-wa" target="_blank" rel="noopener"
          href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
@@ -237,12 +254,11 @@
       </a>
     </div>
 
-    <!-- HERO: promessa + CTA -->
     <section class="hero" id="topo">
       <span class="kicker">⚡ Compra rápida pelo WhatsApp</span>
-      <h1>Inseticida biológico com envio rápido e frete grátis</h1>
+      <h1>Inseticida biológico com envio imediato e frete grátis</h1>
       <p class="sub">
-        Escolha seu produto e finalize direto no WhatsApp.
+        Atendimento imediato no WhatsApp. Pagamento facilitado no <strong>boleto bancário</strong>.
         <br><strong>Telefone:</strong> (17) 99140-5464
       </p>
 
@@ -255,24 +271,22 @@
         <a class="btn btn-ghost" href="#avaliacoes">Avaliações</a>
       </div>
 
-      <!-- Benefícios escaneáveis (estilo “campanha”) -->
-      <div class="benefits" style="margin-top:14px">
+      <div class="benefits">
         <div class="b">
-          <strong>✅ Atendimento imediato</strong>
-          <span>Você tira dúvidas e fecha a compra no WhatsApp.</span>
+          <strong>⚡ Envio imediato</strong>
+          <span>Agilidade na separação e postagem para você receber o quanto antes.</span>
         </div>
         <div class="b">
           <strong>🚚 Frete grátis Brasil</strong>
-          <span>Enviamos para todo o país (conforme condições).</span>
+          <span>Entregamos para todo o Brasil com frete grátis (conforme condições).</span>
         </div>
         <div class="b">
-          <strong>⚡ Rapidez na entrega</strong>
-          <span>Agilidade no envio para você receber o quanto antes.</span>
+          <strong>💳 Boleto bancário</strong>
+          <span>Pagamento facilitado no boleto bancário.</span>
         </div>
       </div>
     </section>
 
-    <!-- Produtos (1 página, 3 cards) -->
     <section class="section" id="produtos">
       <h2>Escolha o produto</h2>
 
@@ -281,9 +295,9 @@
           <img class="thumb" src="fitoneem.webp" alt="Fitoneem" width="960" height="600" loading="lazy" decoding="async">
           <h3>Fitoneem</h3>
           <ul>
-            <li>Compra rápida pelo WhatsApp.</li>
+            <li>Envio imediato.</li>
             <li>Frete grátis (Brasil).</li>
-            <li>Use conforme rótulo e bula.</li>
+            <li>Pagamento no boleto bancário.</li>
           </ul>
           <a class="btn btn-wa" target="_blank" rel="noopener"
              href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
@@ -295,9 +309,9 @@
           <img class="thumb" src="bioolimpo.webp" alt="Bioolimpo" width="960" height="600" loading="lazy" decoding="async">
           <h3>Bioolimpo</h3>
           <ul>
-            <li>Atendimento imediato.</li>
-            <li>Envio rápido + frete grátis (Brasil).</li>
-            <li>Use conforme rótulo e bula.</li>
+            <li>Atendimento imediato no WhatsApp.</li>
+            <li>Frete grátis + entrega rápida (Brasil).</li>
+            <li>Boleto bancário disponível.</li>
           </ul>
           <a class="btn btn-wa" target="_blank" rel="noopener"
              href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
@@ -309,9 +323,9 @@
           <img class="thumb" src="takotrop.webp" alt="Takotrop" width="960" height="600" loading="lazy" decoding="async">
           <h3>Takotrop</h3>
           <ul>
-            <li>Compra direta no WhatsApp.</li>
-            <li>Frete grátis para todo o Brasil.</li>
-            <li>Use conforme rótulo e bula.</li>
+            <li>Compra direta pelo WhatsApp.</li>
+            <li>Envio imediato + frete grátis (Brasil).</li>
+            <li>Pagamento no boleto bancário.</li>
           </ul>
           <a class="btn btn-wa" target="_blank" rel="noopener"
              href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
@@ -321,33 +335,30 @@
       </div>
     </section>
 
-    <!-- Prova/Autoridade (sem inventar) -->
     <section class="section" id="avaliacoes">
       <h2>Avaliações</h2>
 
       <div class="proof">
-        <strong style="display:block;font-size:13px">Como usar esta seção (rápido)</strong>
+        <strong style="display:block;font-size:13px">Cole aqui avaliações reais</strong>
         <div style="color:var(--muted);font-size:13px;margin-top:6px">
-          Cole aqui avaliações reais (pode usar iniciais + UF) para aumentar conversão.
-          Ex.: “R.S. — GO”, “M.A. — MT”.
+          Para manter credibilidade e evitar problemas com Ads, use avaliações reais (pode ser com iniciais + UF).
         </div>
       </div>
 
       <div class="testi">
         <strong>Cliente (iniciais) — UF</strong>
-        <span>“Escreva aqui uma avaliação real curta sobre atendimento e entrega.”</span>
+        <span>“Cole aqui uma avaliação real curta destacando envio imediato/atendimento.”</span>
       </div>
       <div class="testi">
         <strong>Cliente (iniciais) — UF</strong>
-        <span>“Escreva aqui outra avaliação real curta.”</span>
+        <span>“Cole aqui outra avaliação real curta.”</span>
       </div>
       <div class="testi">
         <strong>Cliente (iniciais) — UF</strong>
-        <span>“Escreva aqui outra avaliação real curta.”</span>
+        <span>“Cole aqui outra avaliação real curta.”</span>
       </div>
     </section>
 
-    <!-- CTA final (última chance) -->
     <section class="final-cta" id="comprar">
       <h2 style="margin:0 0 10px;font-size:18px">Pronto para comprar?</h2>
       <p>Toque no botão e envie a mensagem automática. Atendimento imediato no WhatsApp.</p>
@@ -362,12 +373,11 @@
 
     <footer>
       <div><strong>Telefone:</strong> (17) 99140-5464</div>
-      <div style="margin-top:6px">Entrega para todo o Brasil • Frete grátis • Envio rápido</div>
-      <div style="margin-top:6px">Use conforme rótulo e bula.</div>
+      <div style="margin-top:6px">Envio imediato • Pagamento no boleto bancário</div>
+      <div style="margin-top:6px">Entrega para todo o Brasil • Frete grátis • Entrega rápida</div>
     </footer>
   </main>
 
-  <!-- Botão flutuante redondo do WhatsApp -->
   <a class="wa-float" target="_blank" rel="noopener"
      href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico."
      aria-label="Falar no WhatsApp" title="Falar no WhatsApp">
