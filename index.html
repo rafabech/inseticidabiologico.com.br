@@ -51,10 +51,11 @@
       --r:16px;
       --shadow: 0 18px 40px rgba(0,0,0,.32);
 
-      /* Selo "mais vendido" clean (sem amarelo) */
-      --mvBorder: rgba(37,211,102,.55);
-      --mvBg: rgba(37,211,102,.12);
-      --mvText: rgba(238,243,255,.95);
+      /* Mais vendido (vermelho + amarelo) */
+      --hotRed:#ff2a2a;
+      --hotYellow:#ffd400;
+      --hotText:#1a1200;
+      --hotBorder:rgba(255,212,0,.75);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -116,7 +117,7 @@
     .btn-ghost{border-color:var(--line);background:rgba(255,255,255,.03);color:var(--text)}
     .btn-soft{border-color:rgba(37,211,102,.35);background:rgba(37,211,102,.10);color:var(--text)}
 
-    /* 🔧 Correção topo no celular: empilha e diminui botão do WhatsApp */
+    /* topo no celular: sem sobrepor */
     @media (max-width: 540px){
       .top{flex-direction:column;align-items:stretch}
       .actions{justify-content:space-between;width:100%}
@@ -204,7 +205,7 @@
       aspect-ratio: 16/10;
       object-fit: cover;
     }
-    /* Fitoneem ajustado (menos “grande”) */
+    /* Fitoneem menor/ajustado */
     .thumb.contain{
       object-fit: contain;
       padding:10px;
@@ -214,10 +215,10 @@
     .card ul{margin:0;padding-left:18px;color:var(--muted);font-size:13px}
     .card .btn{width:100%}
 
-    /* Mais vendido (sem amarelo) */
+    /* Takotrop: destaque + selo vermelho/amarelo */
     .card.featured{
-      border:2px solid var(--mvBorder);
-      background:rgba(37,211,102,.06);
+      border:2px solid rgba(255,212,0,.55);
+      background:rgba(255,212,0,.06);
       box-shadow:0 18px 40px rgba(0,0,0,.38);
       transform: translateY(-2px);
     }
@@ -226,12 +227,12 @@
       display:inline-flex;align-items:center;gap:8px;
       padding:9px 12px;border-radius:999px;
       font-size:12px;font-weight:1000;
-      border:1px solid var(--mvBorder);
-      background:var(--mvBg);
-      color:var(--mvText);
+      border:1px solid var(--hotBorder);
+      background:linear-gradient(90deg, var(--hotRed), var(--hotYellow));
+      color:var(--hotText);
       text-transform:uppercase;
       letter-spacing:.4px;
-      box-shadow:0 10px 22px rgba(0,0,0,.25);
+      box-shadow:0 10px 22px rgba(0,0,0,.30);
     }
 
     .urgency{
@@ -243,22 +244,6 @@
       color:var(--muted);
       font-size:13px;
     }
-
-    .proof{
-      border:1px solid var(--line);
-      border-radius:var(--r);
-      background:rgba(255,255,255,.03);
-      padding:12px;
-    }
-    .testi{
-      border:1px solid var(--line);
-      border-radius:var(--r);
-      background:rgba(255,255,255,.03);
-      padding:12px;
-      margin-top:10px;
-    }
-    .testi strong{display:block;font-size:13px}
-    .testi span{display:block;color:var(--muted);margin-top:6px;font-size:13px}
 
     .guarantee{
       margin-top:18px;
@@ -290,6 +275,7 @@
       font-size:12px;
     }
 
+    /* WhatsApp flutuante */
     .wa-float{
       position:fixed;right:16px;bottom:16px;
       width:58px;height:58px;border-radius:999px;
@@ -361,7 +347,7 @@
           Quero comprar agora
         </a>
         <a class="btn btn-soft" href="#takotrop">Ver Takotrop (Mais vendido)</a>
-        <a class="btn btn-ghost" href="#avaliacoes">Avaliações</a>
+        <a class="btn btn-ghost" href="#garantia">Garantia</a>
       </div>
 
       <div class="benefits">
@@ -388,7 +374,7 @@
       <h2>Produtos (Takotrop é o mais vendido)</h2>
 
       <div class="grid">
-        <!-- TAKOTROP destaque (sem amarelo) -->
+        <!-- TAKOTROP destaque -->
         <article class="card featured" id="takotrop">
           <div class="tag">MAIS VENDIDO • Takotrop</div>
           <img class="thumb" src="takotrop.webp" alt="Takotrop inseticida biológico mais vendido para comprar com frete grátis" width="960" height="600" loading="lazy" decoding="async">
@@ -404,7 +390,7 @@
           </a>
         </article>
 
-        <!-- FITONEEM (imagem menor/ajustada) -->
+        <!-- FITONEEM -->
         <article class="card" id="fitoneem">
           <img class="thumb contain" src="fitoneem.webp" alt="Fitoneem inseticida biológico para comprar com frete grátis" width="960" height="600" loading="lazy" decoding="async">
           <h3>Fitoneem</h3>
@@ -419,6 +405,7 @@
           </a>
         </article>
 
+        <!-- BIOOLIMPO -->
         <article class="card" id="bioolimpo">
           <img class="thumb" src="bioolimpo.webp" alt="Bioolimpo inseticida biológico comprar com envio imediato" width="960" height="600" loading="lazy" decoding="async">
           <h3>Bioolimpo</h3>
@@ -436,33 +423,6 @@
 
       <div class="urgency">
         ⏱️ Para informar prazo com precisão, mande seu CEP no WhatsApp (varia por região).
-      </div>
-    </section>
-
-    <!-- Avaliações (sem citar fonte externa) -->
-    <section class="section" id="avaliacoes">
-      <h2>Avaliações</h2>
-
-      <div class="proof">
-        <strong style="display:block;font-size:13px">O que clientes relatam</strong>
-        <div style="color:var(--muted);font-size:13px;margin-top:6px">
-          (Sugestão) Cole aqui 3 avaliações reais curtas para aumentar ainda mais a conversão.
-        </div>
-      </div>
-
-      <div class="testi">
-        <strong>Avaliação 1 — (iniciais/UF)</strong>
-        <span>“Cole aqui uma avaliação real curta sobre atendimento, envio e entrega.”</span>
-      </div>
-
-      <div class="testi">
-        <strong>Avaliação 2 — (iniciais/UF)</strong>
-        <span>“Cole aqui outra avaliação real curta.”</span>
-      </div>
-
-      <div class="testi">
-        <strong>Avaliação 3 — (iniciais/UF)</strong>
-        <span>“Cole aqui outra avaliação real curta.”</span>
       </div>
     </section>
 
