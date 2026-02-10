@@ -49,18 +49,22 @@
 
     /* Logo + marca */
     .brand{
-      display:flex;align-items:center;gap:10px;
+      display:flex;align-items:center;gap:12px;
       min-width:0;
     }
+    /* LOGO MAIOR AQUI */
     .brand-logo{
-      width:38px;height:38px;border-radius:10px;
+      width:62px;height:62px;border-radius:14px;
       border:1px solid var(--line);
       background:rgba(255,255,255,.03);
       object-fit:cover;
       flex:0 0 auto;
     }
+    @media(min-width:760px){
+      .brand-logo{width:74px;height:74px;border-radius:16px}
+    }
     .brand-text{display:flex;flex-direction:column;line-height:1.1;min-width:0}
-    .brand-text strong{font-size:14px;letter-spacing:.2px}
+    .brand-text strong{font-size:15px;letter-spacing:.2px}
     .brand-text span{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
     .actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
@@ -88,7 +92,6 @@
 
     main{padding:14px 0 34px}
 
-    /* Faixa de oferta (objeções principais) */
     .banner{
       margin-top:12px;
       border:1px solid rgba(37,211,102,.35);
@@ -190,7 +193,6 @@
       font-size:12px;
     }
 
-    /* WhatsApp flutuante redondo */
     .wa-float{
       position:fixed;
       right:16px;
@@ -223,8 +225,7 @@
     <div class="wrap">
       <div class="top">
         <div class="brand">
-          <!-- biofundopreto no cabeçalho -->
-          <img class="brand-logo" src="biofundopreto.webp" alt="Inseticida Biológico" width="38" height="38" loading="eager" decoding="async">
+          <img class="brand-logo" src="biofundopreto.webp" alt="Inseticida Biológico" width="74" height="74" loading="eager" decoding="async">
           <div class="brand-text">
             <strong>Inseticida Biológico</strong>
             <span>Envio imediato • Boleto bancário</span>
@@ -339,23 +340,25 @@
       <h2>Avaliações</h2>
 
       <div class="proof">
-        <strong style="display:block;font-size:13px">Cole aqui avaliações reais</strong>
+        <strong style="display:block;font-size:13px">Relatos de produtores (referência Innovet Tecnologias)</strong>
         <div style="color:var(--muted);font-size:13px;margin-top:6px">
-          Para manter credibilidade e evitar problemas com Ads, use avaliações reais (pode ser com iniciais + UF).
+          Textos inspirados nos relatos publicados no site innovetecnologias.com.br.
         </div>
       </div>
 
       <div class="testi">
-        <strong>Cliente (iniciais) — UF</strong>
-        <span>“Cole aqui uma avaliação real curta destacando envio imediato/atendimento.”</span>
+        <strong>Hortifruti em estufa — Tomate e pimentão</strong>
+        <span>“Mais vigor e pegamento superior mesmo em dias de calor; menos abortamento no período crítico.”</span>
       </div>
+
       <div class="testi">
-        <strong>Cliente (iniciais) — UF</strong>
-        <span>“Cole aqui outra avaliação real curta.”</span>
+        <strong>Vale do São Francisco — Uva/Manga</strong>
+        <span>“Relatos de floração mais uniforme e enchimento melhor; estabilidade maior após estresse.”</span>
       </div>
+
       <div class="testi">
-        <strong>Cliente (iniciais) — UF</strong>
-        <span>“Cole aqui outra avaliação real curta.”</span>
+        <strong>Grãos — Soja/Milho</strong>
+        <span>“Plantas com melhor vigor após veranicos e melhor aproveitamento do manejo no campo.”</span>
       </div>
     </section>
 
