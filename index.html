@@ -35,7 +35,6 @@
     }
     a{color:inherit}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 14px}
-
     header{
       position:sticky;top:0;z-index:20;
       background:rgba(7,11,20,.72);
@@ -74,6 +73,7 @@
 
     main{padding:14px 0 34px}
 
+    /* Faixa de oferta (mata objeção rápido) */
     .banner{
       margin-top:12px;
       border:1px solid rgba(37,211,102,.35);
@@ -107,9 +107,22 @@
 
     .section{margin-top:18px}
     .section h2{margin:0 0 10px;font-size:18px}
+
+    .benefits{
+      display:grid;gap:10px;margin-top:12px;
+    }
+    @media(min-width:900px){.benefits{grid-template-columns:repeat(3,1fr)}}
+    .b{
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      background:rgba(255,255,255,.03);
+      padding:12px;
+    }
+    .b strong{display:block;font-size:13px}
+    .b span{display:block;color:var(--muted);font-size:13px;margin-top:6px}
+
     .grid{display:grid;gap:12px}
     @media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
-
     .card{
       border:1px solid var(--line);
       border-radius:var(--r);
@@ -131,15 +144,30 @@
     ul{margin:0;padding-left:18px;color:var(--muted);font-size:13px}
     .card .btn{width:100%}
 
+    .proof{
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      background:rgba(255,255,255,.03);
+      padding:12px;
+    }
     .testi{
       border:1px solid var(--line);
       border-radius:var(--r);
       background:rgba(255,255,255,.03);
       padding:12px;
-      margin-bottom:10px;
+      margin-top:10px;
     }
     .testi strong{display:block;font-size:13px}
     .testi span{display:block;color:var(--muted);margin-top:6px;font-size:13px}
+
+    .final-cta{
+      margin-top:18px;
+      border:1px solid rgba(37,211,102,.35);
+      background:rgba(255,255,255,.03);
+      border-radius:var(--r);
+      padding:14px;
+    }
+    .final-cta p{margin:0;color:var(--muted);font-size:13px}
 
     footer{
       margin-top:18px;
@@ -149,6 +177,7 @@
       font-size:12px;
     }
 
+    /* WhatsApp flutuante redondo */
     .wa-float{
       position:fixed;
       right:16px;
@@ -196,10 +225,11 @@
   </header>
 
   <main class="wrap">
-    <div class="banner">
+    <!-- Oferta/Objeções principais -->
+    <div class="banner" aria-label="Oferta e entrega">
       <div>
-        <strong>🚚 Entregamos para todo o Brasil</strong>
-        <span>• Frete grátis • Envio rápido</span>
+        <strong>🚚 Frete grátis • Entrega rápida • Todo o Brasil</strong>
+        <span>Atendimento imediato no WhatsApp</span>
       </div>
       <a class="btn btn-wa" target="_blank" rel="noopener"
          href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
@@ -207,34 +237,53 @@
       </a>
     </div>
 
+    <!-- HERO: promessa + CTA -->
     <section class="hero" id="topo">
-      <span class="kicker">⚡ Atendimento rápido • Compra pelo WhatsApp</span>
-      <h1>Compre inseticida biológico com entrega rápida</h1>
+      <span class="kicker">⚡ Compra rápida pelo WhatsApp</span>
+      <h1>Inseticida biológico com envio rápido e frete grátis</h1>
       <p class="sub">
-        Frete grátis para todo o Brasil e atendimento imediato no WhatsApp.
+        Escolha seu produto e finalize direto no WhatsApp.
         <br><strong>Telefone:</strong> (17) 99140-5464
       </p>
+
       <div class="ctas">
         <a class="btn btn-wa" target="_blank" rel="noopener"
            href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
-          Comprar no WhatsApp
+          Quero comprar no WhatsApp
         </a>
         <a class="btn btn-ghost" href="#produtos">Ver produtos</a>
         <a class="btn btn-ghost" href="#avaliacoes">Avaliações</a>
       </div>
+
+      <!-- Benefícios escaneáveis (estilo “campanha”) -->
+      <div class="benefits" style="margin-top:14px">
+        <div class="b">
+          <strong>✅ Atendimento imediato</strong>
+          <span>Você tira dúvidas e fecha a compra no WhatsApp.</span>
+        </div>
+        <div class="b">
+          <strong>🚚 Frete grátis Brasil</strong>
+          <span>Enviamos para todo o país (conforme condições).</span>
+        </div>
+        <div class="b">
+          <strong>⚡ Rapidez na entrega</strong>
+          <span>Agilidade no envio para você receber o quanto antes.</span>
+        </div>
+      </div>
     </section>
 
+    <!-- Produtos (1 página, 3 cards) -->
     <section class="section" id="produtos">
-      <h2>Produtos</h2>
+      <h2>Escolha o produto</h2>
 
       <div class="grid">
         <article class="card">
           <img class="thumb" src="fitoneem.webp" alt="Fitoneem" width="960" height="600" loading="lazy" decoding="async">
           <h3>Fitoneem</h3>
           <ul>
-            <li>Atendimento imediato no WhatsApp.</li>
-            <li>Entrega rápida + frete grátis (Brasil).</li>
-            <li>Uso conforme rótulo e bula.</li>
+            <li>Compra rápida pelo WhatsApp.</li>
+            <li>Frete grátis (Brasil).</li>
+            <li>Use conforme rótulo e bula.</li>
           </ul>
           <a class="btn btn-wa" target="_blank" rel="noopener"
              href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
@@ -246,9 +295,9 @@
           <img class="thumb" src="bioolimpo.webp" alt="Bioolimpo" width="960" height="600" loading="lazy" decoding="async">
           <h3>Bioolimpo</h3>
           <ul>
-            <li>Compra rápida pelo WhatsApp.</li>
-            <li>Entrega ágil + frete grátis (Brasil).</li>
-            <li>Uso conforme rótulo e bula.</li>
+            <li>Atendimento imediato.</li>
+            <li>Envio rápido + frete grátis (Brasil).</li>
+            <li>Use conforme rótulo e bula.</li>
           </ul>
           <a class="btn btn-wa" target="_blank" rel="noopener"
              href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
@@ -260,9 +309,9 @@
           <img class="thumb" src="takotrop.webp" alt="Takotrop" width="960" height="600" loading="lazy" decoding="async">
           <h3>Takotrop</h3>
           <ul>
-            <li>Atendimento direto e rápido.</li>
-            <li>Enviamos para todo o Brasil com frete grátis.</li>
-            <li>Uso conforme rótulo e bula.</li>
+            <li>Compra direta no WhatsApp.</li>
+            <li>Frete grátis para todo o Brasil.</li>
+            <li>Use conforme rótulo e bula.</li>
           </ul>
           <a class="btn btn-wa" target="_blank" rel="noopener"
              href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
@@ -272,31 +321,53 @@
       </div>
     </section>
 
+    <!-- Prova/Autoridade (sem inventar) -->
     <section class="section" id="avaliacoes">
       <h2>Avaliações</h2>
 
-      <!-- Pronto para você substituir por avaliações reais (sem inventar) -->
+      <div class="proof">
+        <strong style="display:block;font-size:13px">Como usar esta seção (rápido)</strong>
+        <div style="color:var(--muted);font-size:13px;margin-top:6px">
+          Cole aqui avaliações reais (pode usar iniciais + UF) para aumentar conversão.
+          Ex.: “R.S. — GO”, “M.A. — MT”.
+        </div>
+      </div>
+
       <div class="testi">
-        <strong>Cliente — Cidade/UF</strong>
-        <span>“Cole aqui uma avaliação real curta sobre atendimento e rapidez na entrega.”</span>
+        <strong>Cliente (iniciais) — UF</strong>
+        <span>“Escreva aqui uma avaliação real curta sobre atendimento e entrega.”</span>
       </div>
       <div class="testi">
-        <strong>Cliente — Cidade/UF</strong>
-        <span>“Cole aqui outra avaliação real curta.”</span>
+        <strong>Cliente (iniciais) — UF</strong>
+        <span>“Escreva aqui outra avaliação real curta.”</span>
       </div>
       <div class="testi">
-        <strong>Cliente — Cidade/UF</strong>
-        <span>“Cole aqui outra avaliação real curta.”</span>
+        <strong>Cliente (iniciais) — UF</strong>
+        <span>“Escreva aqui outra avaliação real curta.”</span>
+      </div>
+    </section>
+
+    <!-- CTA final (última chance) -->
+    <section class="final-cta" id="comprar">
+      <h2 style="margin:0 0 10px;font-size:18px">Pronto para comprar?</h2>
+      <p>Toque no botão e envie a mensagem automática. Atendimento imediato no WhatsApp.</p>
+      <div class="ctas" style="margin-top:12px">
+        <a class="btn btn-wa" target="_blank" rel="noopener"
+           href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
+          Comprar no WhatsApp agora
+        </a>
+        <a class="btn btn-ghost" href="tel:+5517991405464">Ligar agora</a>
       </div>
     </section>
 
     <footer>
       <div><strong>Telefone:</strong> (17) 99140-5464</div>
-      <div style="margin-top:6px">Use conforme rótulo e bula.</div>
       <div style="margin-top:6px">Entrega para todo o Brasil • Frete grátis • Envio rápido</div>
+      <div style="margin-top:6px">Use conforme rótulo e bula.</div>
     </footer>
   </main>
 
+  <!-- Botão flutuante redondo do WhatsApp -->
   <a class="wa-float" target="_blank" rel="noopener"
      href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico."
      aria-label="Falar no WhatsApp" title="Falar no WhatsApp">
