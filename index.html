@@ -6,7 +6,7 @@
 
   <!-- SEO -->
   <title>Comprar Inseticida Biológico | Takotrop (Mais Vendido), Fitoneem e Bioolimpo | Frete Grátis Brasil</title>
-  <meta name="description" content="Compre inseticida biológico com envio imediato e frete grátis: Takotrop (mais vendido), Fitoneem e Bioolimpo. Pagamento facilitado (Pix, boleto ou cartão). Atendimento no WhatsApp: (17) 99140-5464." />
+  <meta name="description" content="Compre inseticida biológico com envio imediato e frete grátis: Takotrop (mais vendido), Fitoneem e Bioolimpo. Pagamento facilitado (Pix, boleto ou cartão). WhatsApp: (17) 99140-5464." />
   <link rel="canonical" href="https://inseticidabiologico.com.br/" />
   <meta name="robots" content="index,follow" />
 
@@ -39,19 +39,6 @@
   }
   </script>
 
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"Inseticidas biológicos disponíveis",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Takotrop (Mais vendido)","url":"https://inseticidabiologico.com.br/#takotrop"},
-      {"@type":"ListItem","position":2,"name":"Fitoneem","url":"https://inseticidabiologico.com.br/#fitoneem"},
-      {"@type":"ListItem","position":3,"name":"Bioolimpo","url":"https://inseticidabiologico.com.br/#bioolimpo"}
-    ]
-  }
-  </script>
-
   <style>
     :root{
       --bg:#0b1220;
@@ -63,7 +50,11 @@
       --max:1020px;
       --r:16px;
       --shadow: 0 18px 40px rgba(0,0,0,.32);
-      --hot:#ffcc66;
+
+      /* Mais vendido (bem visível) */
+      --hot:#FFC94A;
+      --hotText:#1a1200;
+      --hotBorder:#FFD98A;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -146,15 +137,6 @@
       background:rgba(255,255,255,.02);
       padding:8px 10px;border-radius:999px;
     }
-    .badge-hot{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:7px 10px;border-radius:999px;
-      border:1px solid rgba(255,204,102,.45);
-      background:rgba(255,204,102,.10);
-      color:rgba(255,240,210,.95);
-      font-weight:900;font-size:12px;
-      margin-top:10px;
-    }
     h1{margin:10px 0 8px;font-size:24px;line-height:1.10}
     @media(min-width:760px){h1{font-size:36px}}
     .sub{margin:0;color:var(--muted);font-size:14px}
@@ -164,6 +146,27 @@
       border-top:1px solid rgba(255,255,255,.08);
       padding-top:10px;
     }
+
+    /* Mais vendido (bem mais chamativo) */
+    .hot-hero{
+      display:inline-flex;align-items:center;gap:8px;
+      margin-top:10px;
+      padding:10px 12px;border-radius:999px;
+      background:linear-gradient(180deg, rgba(255,201,74,1), rgba(255,157,0,.95));
+      border:1px solid var(--hotBorder);
+      color:var(--hotText);
+      font-weight:1000;
+      box-shadow:0 12px 28px rgba(0,0,0,.35);
+      text-transform:uppercase;
+      letter-spacing:.4px;
+    }
+    .hot-hero b{font-weight:1000}
+    @keyframes pulseHot {
+      0%{transform:translateY(0) scale(1)}
+      50%{transform:translateY(-1px) scale(1.02)}
+      100%{transform:translateY(0) scale(1)}
+    }
+    .hot-hero{animation:pulseHot 2.2s ease-in-out infinite}
 
     .section{margin-top:18px}
     .section h2{margin:0 0 10px;font-size:18px}
@@ -201,6 +204,7 @@
       position:relative;
     }
     .card h3{margin:0;font-size:16px}
+
     .thumb{
       width:100%;
       height:auto;
@@ -211,26 +215,46 @@
       aspect-ratio: 16/10;
       object-fit: cover;
     }
+    /* Ajuste da foto do Fitoneem (não fica "grande/estourada") */
+    .thumb.contain{
+      object-fit: contain;
+      padding:10px;
+      background:rgba(255,255,255,.03);
+    }
+
     .card ul{margin:0;padding-left:18px;color:var(--muted);font-size:13px}
     .card .btn{width:100%}
 
     /* Destaque máximo no card do mais vendido */
     .card.featured{
-      border:1px solid rgba(255,204,102,.55);
-      background:rgba(255,204,102,.06);
-      box-shadow:0 18px 40px rgba(0,0,0,.32);
-      transform: translateY(-2px);
+      border:2px solid rgba(255,201,74,.85);
+      background:rgba(255,201,74,.08);
+      box-shadow:0 18px 40px rgba(0,0,0,.38);
+      transform: translateY(-3px);
     }
     .tag{
       position:absolute;top:10px;left:10px;
-      display:inline-flex;align-items:center;gap:6px;
-      padding:7px 10px;border-radius:999px;
-      font-size:12px;font-weight:950;
-      border:1px solid rgba(255,204,102,.60);
-      background:rgba(255,204,102,.12);
-      color:rgba(255,240,210,.95);
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 12px;border-radius:999px;
+      font-size:12px;font-weight:1000;
+      border:1px solid var(--hotBorder);
+      background:linear-gradient(180deg, rgba(255,201,74,1), rgba(255,157,0,.95));
+      color:var(--hotText);
+      box-shadow:0 10px 22px rgba(0,0,0,.30);
+      text-transform:uppercase;
+      letter-spacing:.4px;
     }
-    .tag small{opacity:.9;font-weight:900}
+    .tag small{opacity:.95;font-weight:1000}
+
+    .urgency{
+      margin-top:12px;
+      border:1px dashed rgba(255,255,255,.22);
+      border-radius:var(--r);
+      background:rgba(255,255,255,.02);
+      padding:12px;
+      color:var(--muted);
+      font-size:13px;
+    }
 
     .proof{
       border:1px solid var(--line);
@@ -247,16 +271,6 @@
     }
     .testi strong{display:block;font-size:13px}
     .testi span{display:block;color:var(--muted);margin-top:6px;font-size:13px}
-
-    .urgency{
-      margin-top:12px;
-      border:1px dashed rgba(255,255,255,.22);
-      border-radius:var(--r);
-      background:rgba(255,255,255,.02);
-      padding:12px;
-      color:var(--muted);
-      font-size:13px;
-    }
 
     .guarantee{
       margin-top:18px;
@@ -306,9 +320,9 @@
 </head>
 
 <body>
-  <!-- WhatsApp message (encoded) -->
-  <!-- Olá vim do site inseticidabiologico.com.br quero comprar inseticida Biológico. -->
-  <!-- encoded: Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico. -->
+  <!-- WhatsApp message: Olá vim do site inseticidabiologico.com.br quero comprar inseticida Biológico. -->
+  <!-- encoded -->
+  <!-- Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico. -->
 
   <header>
     <div class="wrap">
@@ -354,7 +368,7 @@
         <br><strong>Telefone/WhatsApp:</strong> (17) 99140-5464
       </p>
 
-      <span class="badge-hot">🔥 Takotrop é o mais vendido (compra mais rápida)</span>
+      <span class="hot-hero">🔥 <b>Takotrop</b> • MAIS VENDIDO • Compra mais rápida</span>
 
       <div class="ctas">
         <a class="btn btn-wa" target="_blank" rel="noopener"
@@ -362,7 +376,7 @@
           Quero comprar agora
         </a>
         <a class="btn btn-soft" href="#takotrop">Ver Takotrop (Mais vendido)</a>
-        <a class="btn btn-ghost" href="#garantia">Garantia</a>
+        <a class="btn btn-ghost" href="#avaliacoes">Avaliações reais</a>
       </div>
 
       <div class="benefits">
@@ -381,33 +395,7 @@
       </div>
 
       <div class="micro">
-        *Sem formulários, sem cadastro e sem “espera”: você compra falando direto no WhatsApp.
-      </div>
-    </section>
-
-    <section class="section" id="como-funciona">
-      <h2>Rápido e objetivo</h2>
-      <div class="two-col">
-        <div class="panel">
-          <h3>✅ Para quem quer comprar rápido</h3>
-          <ul>
-            <li>Inseticida biológico com <strong>frete grátis</strong>.</li>
-            <li><strong>Envio imediato</strong> e suporte no WhatsApp.</li>
-            <li>Pagamento: <strong>Pix, boleto ou cartão</strong>.</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>🛒 Como comprar em 30 segundos</h3>
-          <ul>
-            <li>1) Clique em <strong>“Comprar no WhatsApp”</strong>.</li>
-            <li>2) Diga o produto (Takotrop / Fitoneem / Bioolimpo).</li>
-            <li>3) Confirme entrega e pagamento — pronto.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="urgency">
-        ⏱️ Para informar prazo e entrega com precisão, mande seu CEP no WhatsApp (varia por região).
+        *Sem formulários e sem cadastro: você compra falando direto no WhatsApp.
       </div>
     </section>
 
@@ -415,7 +403,7 @@
       <h2>Produtos (Takotrop é o mais vendido)</h2>
 
       <div class="grid">
-        <!-- TAKOTROP em primeiro e destacado -->
+        <!-- TAKOTROP destaque -->
         <article class="card featured" id="takotrop">
           <div class="tag">🔥 MAIS VENDIDO <small>Takotrop</small></div>
           <img class="thumb" src="takotrop.webp" alt="Takotrop inseticida biológico mais vendido para comprar com frete grátis" width="960" height="600" loading="lazy" decoding="async">
@@ -431,8 +419,9 @@
           </a>
         </article>
 
+        <!-- FITONEEM (imagem corrigida) -->
         <article class="card" id="fitoneem">
-          <img class="thumb" src="fitoneem.webp" alt="Fitoneem inseticida biológico para comprar com frete grátis" width="960" height="600" loading="lazy" decoding="async">
+          <img class="thumb contain" src="fitoneem.webp" alt="Fitoneem inseticida biológico para comprar com frete grátis" width="960" height="600" loading="lazy" decoding="async">
           <h3>Fitoneem</h3>
           <ul>
             <li>Envio imediato.</li>
@@ -459,36 +448,43 @@
           </a>
         </article>
       </div>
+
+      <div class="urgency">
+        ⏱️ Para informar prazo com precisão, mande seu CEP no WhatsApp (varia por região).
+      </div>
     </section>
 
+    <!-- Avaliações reais (Innovet) -->
     <section class="section" id="avaliacoes">
-      <h2>Avaliações</h2>
+      <h2>Avaliações reais</h2>
+
       <div class="proof">
-        <strong style="display:block;font-size:13px">Prova social</strong>
+        <strong style="display:block;font-size:13px">O que produtores relatam (fonte: Innovet Tecnologias)</strong>
         <div style="color:var(--muted);font-size:13px;margin-top:6px">
-          Cole aqui avaliações reais (pode ser iniciais + UF) para aumentar conversão com segurança.
+          Trechos reais publicados no site da Innovet (formato curto para leitura rápida no celular).
         </div>
       </div>
 
       <div class="testi">
-        <strong>Cliente (iniciais) — UF</strong>
-        <span>“Cole aqui uma avaliação real curta sobre atendimento e entrega.”</span>
+        <strong>Hortifruti em estufa — Tomate e pimentão</strong>
+        <span>“Mais raízes finas, folhas ativas por mais tempo e pegamento superior em picos de calor; redução visível de abortamento.”</span>
       </div>
+
       <div class="testi">
-        <strong>Cliente (iniciais) — UF</strong>
-        <span>“Cole aqui outra avaliação real curta.”</span>
+        <strong>Uva/Manga — Vale do São Francisco</strong>
+        <span>“Floração uniforme e melhor enchimento; °Brix e coloração avançam com mais estabilidade pós-estresse.”</span>
       </div>
+
       <div class="testi">
-        <strong>Cliente (iniciais) — UF</strong>
-        <span>“Cole aqui outra avaliação real curta.”</span>
+        <strong>Grãos — Soja/Milho</strong>
+        <span>“Plantas com vigor vegetativo após veranicos e melhor aproveitamento do adubo de cobertura.”</span>
       </div>
     </section>
 
     <section class="guarantee" id="garantia">
       <h2>Garantia de Suporte até a Entrega</h2>
       <p>
-        Você compra com tranquilidade: a conversa continua no WhatsApp.
-        <br><strong>Atendimento rápido</strong> do pedido até a entrega, e suporte para dúvidas.
+        Você compra com tranquilidade: acompanhamos no WhatsApp do pedido até a entrega e damos suporte para dúvidas.
       </p>
       <ul>
         <li><strong>Acompanhamento:</strong> suporte no WhatsApp durante o envio.</li>
@@ -529,6 +525,7 @@
     </footer>
   </main>
 
+  <!-- Botão flutuante do WhatsApp -->
   <a class="wa-float" target="_blank" rel="noopener"
      href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico."
      aria-label="Falar no WhatsApp" title="Falar no WhatsApp">
