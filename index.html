@@ -384,6 +384,11 @@
     .wa-float:active{transform: translateY(1px)}
     .sr-only{position:absolute; left:-9999px}
 
+    /* ✅ NOVO: deixa tudo aberto e sem “+” / sem precisar clicar */
+    details > summary{display:none;}          /* remove o “botão” de abrir/fechar */
+    details[open]{padding-top:10px;}         /* mantém o visual ok quando aberto */
+    details{padding-top:10px;}               /* evita ficar “vazio” no topo */
+
     /* ========= MOBILE AJUSTADO (sem desconfigurar) ========= */
     @media (max-width: 980px){
       .hero-grid{grid-template-columns: 1fr;} /* ✅ CORRIGIDO: remove a “coluna vazia” no celular */
@@ -606,8 +611,10 @@
               <div>
                 Indicado para manejo biológico de pragas como mosca-branca, tripes, percevejos, cigarrinhas, ácaro-rajado e bicho-mineiro (conforme posicionamento técnico e bula).
               </div>
-              <details>
-                <summary><span>Ver informações técnicas</span><span aria-hidden="true">＋</span></summary>
+
+              <!-- ✅ SEM “+” e SEM clicar (sempre aberto) -->
+              <details open>
+                <summary><span>Ver informações técnicas</span></summary>
                 <div class="tech">
                   <b>Composição (bula/registro MAPA 16122):</b>
                   <ul>
@@ -635,8 +642,10 @@
               <div>
                 Bioinseticida microbiológico com fungos entomopatogênicos para suporte ao manejo integrado, com alvos descritos em bula.
               </div>
-              <details>
-                <summary><span>Ver informações técnicas</span><span aria-hidden="true">＋</span></summary>
+
+              <!-- ✅ SEM “+” e SEM clicar (sempre aberto) -->
+              <details open>
+                <summary><span>Ver informações técnicas</span></summary>
                 <div class="tech">
                   <b>Composição (bula/registro MAPA 31721):</b>
                   <ul>
@@ -664,8 +673,10 @@
               <div>
                 Produto à base de neem para suporte ao manejo integrado, com atuação por contato/ingestão conforme bula e recomendação técnica.
               </div>
-              <details>
-                <summary><span>Ver informações técnicas</span><span aria-hidden="true">＋</span></summary>
+
+              <!-- ✅ SEM “+” e SEM clicar (sempre aberto) -->
+              <details open>
+                <summary><span>Ver informações técnicas</span></summary>
                 <div class="tech">
                   <b>Composição (bula/registro MAPA 6718):</b>
                   <ul>
@@ -681,8 +692,9 @@
         </div>
 
         <div class="faq" aria-label="Perguntas frequentes">
-          <details>
-            <summary><span>Como eu compro?</span><span aria-hidden="true">＋</span></summary>
+          <!-- ✅ SEM “+” e SEM clicar (sempre aberto) -->
+          <details open>
+            <summary><span>Como eu compro?</span></summary>
             <div class="tech">
               Clique em <b>“Comprar no WhatsApp”</b>. Diga qual produto quer e sua cultura/praga. Fechamos com <b>Pix, boleto ou cartão</b>.
               <br /><br />
