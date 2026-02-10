@@ -3,8 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>Inseticida Biológico | Comprar no WhatsApp</title>
-  <meta name="description" content="Fitoneem, Bioolimpo e Takotrop. Compre inseticida biológico pelo WhatsApp. Telefone (17) 99165-0661." />
+  <title>Inseticida Biológico | Frete Grátis Brasil | Comprar no WhatsApp</title>
+  <meta name="description" content="Fitoneem, Bioolimpo e Takotrop. Entrega para todo o Brasil com frete grátis. Compra rápida pelo WhatsApp. Telefone (17) 99165-0661." />
+
+  <!-- Favicon (suba a imagem como favicon.png na raiz do GitHub) -->
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
 
   <style>
     :root{
@@ -67,8 +71,22 @@
     .btn-wa{background:var(--wa);color:#062012}
     .btn-ghost{border-color:var(--line);background:rgba(255,255,255,.03);color:var(--text)}
 
-    main{padding:18px 0 34px}
+    main{padding:14px 0 34px}
+
+    /* Faixa de oferta */
+    .banner{
+      margin-top:12px;
+      border:1px solid rgba(37,211,102,.35);
+      background:rgba(37,211,102,.10);
+      border-radius:var(--r);
+      padding:10px 12px;
+      display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;
+    }
+    .banner strong{font-size:13px}
+    .banner span{color:var(--muted);font-size:12px}
+
     .hero{
+      margin-top:12px;
       border:1px solid var(--line);
       border-radius:var(--r);
       background:var(--card);
@@ -122,16 +140,6 @@
     }
     .testi strong{display:block;font-size:13px}
     .testi span{display:block;color:var(--muted);margin-top:6px;font-size:13px}
-
-    details{
-      border:1px solid var(--line);
-      border-radius:var(--r);
-      background:rgba(255,255,255,.03);
-      padding:12px;
-      margin-bottom:10px;
-    }
-    summary{cursor:pointer;font-weight:800;font-size:13px}
-    details p{margin:10px 0 0;color:var(--muted);font-size:13px}
 
     footer{
       margin-top:18px;
@@ -189,12 +197,24 @@
   </header>
 
   <main class="wrap">
+    <!-- FAIXA DE OFERTA -->
+    <div class="banner" aria-label="Oferta e entrega">
+      <div>
+        <strong>🚚 Entregamos para todo o Brasil</strong>
+        <span>• Frete grátis • Envio rápido</span>
+      </div>
+      <a class="btn btn-wa" target="_blank" rel="noopener"
+         href="https://wa.me/5517991650661?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
+        Comprar agora
+      </a>
+    </div>
+
     <!-- HERO -->
     <section class="hero" id="topo">
       <span class="kicker">⚡ Atendimento rápido • Compra pelo WhatsApp</span>
-      <h1>Compre inseticida biológico direto no WhatsApp</h1>
+      <h1>Compre inseticida biológico com entrega rápida</h1>
       <p class="sub">
-        Produtos: <strong>Fitoneem</strong>, <strong>Bioolimpo</strong> e <strong>Takotrop</strong>.
+        Frete grátis para todo o Brasil e atendimento imediato no WhatsApp.
         <br><strong>Telefone:</strong> (17) 99165-0661
       </p>
       <div class="ctas">
@@ -207,7 +227,7 @@
       </div>
     </section>
 
-    <!-- PRODUTOS (tudo na mesma página, só uma seção) -->
+    <!-- PRODUTOS (continua tudo na mesma página) -->
     <section class="section" id="produtos">
       <h2>Produtos</h2>
 
@@ -216,13 +236,13 @@
           <img class="thumb" src="fitoneem.webp" alt="Fitoneem" width="960" height="600" loading="lazy" decoding="async">
           <h3>Fitoneem</h3>
           <ul>
-            <li>Opção biológica para apoiar o controle de pragas.</li>
-            <li>Compra rápida e atendimento no WhatsApp.</li>
+            <li>Atendimento imediato no WhatsApp.</li>
+            <li>Entrega rápida + frete grátis (Brasil).</li>
             <li>Uso conforme rótulo e bula.</li>
           </ul>
           <a class="btn btn-wa" target="_blank" rel="noopener"
              href="https://wa.me/5517991650661?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
-            Comprar agora
+            Comprar Fitoneem
           </a>
         </article>
 
@@ -230,13 +250,13 @@
           <img class="thumb" src="bioolimpo.webp" alt="Bioolimpo" width="960" height="600" loading="lazy" decoding="async">
           <h3>Bioolimpo</h3>
           <ul>
-            <li>Solução biológica para auxiliar no manejo.</li>
-            <li>Atendimento rápido pelo WhatsApp.</li>
+            <li>Compra rápida pelo WhatsApp.</li>
+            <li>Entrega ágil + frete grátis (Brasil).</li>
             <li>Uso conforme rótulo e bula.</li>
           </ul>
           <a class="btn btn-wa" target="_blank" rel="noopener"
              href="https://wa.me/5517991650661?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
-            Comprar agora
+            Comprar Bioolimpo
           </a>
         </article>
 
@@ -244,26 +264,25 @@
           <img class="thumb" src="takotrop.webp" alt="Takotrop" width="960" height="600" loading="lazy" decoding="async">
           <h3>Takotrop</h3>
           <ul>
-            <li>Inseticida biológico para apoiar o controle de pragas.</li>
-            <li>Compra direta pelo WhatsApp.</li>
+            <li>Atendimento direto e rápido.</li>
+            <li>Enviamos para todo o Brasil com frete grátis.</li>
             <li>Uso conforme rótulo e bula.</li>
           </ul>
           <a class="btn btn-wa" target="_blank" rel="noopener"
              href="https://wa.me/5517991650661?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
-            Comprar agora
+            Comprar Takotrop
           </a>
         </article>
       </div>
     </section>
 
-    <!-- DEPOIMENTOS (na mesma página) -->
+    <!-- DEPOIMENTOS (placeholders) -->
     <section class="section" id="depoimentos">
       <h2>Depoimentos</h2>
 
-      <!-- Troque pelos seus depoimentos REAIS -->
       <div class="testi">
         <strong>Cliente — Cidade/UF</strong>
-        <span>“Cole aqui um depoimento real curto sobre atendimento/compra/entrega.”</span>
+        <span>“Cole aqui um depoimento real curto sobre a rapidez no atendimento e entrega.”</span>
       </div>
       <div class="testi">
         <strong>Cliente — Cidade/UF</strong>
@@ -273,31 +292,12 @@
         <strong>Cliente — Cidade/UF</strong>
         <span>“Cole aqui outro depoimento real curto.”</span>
       </div>
-    </section>
-
-    <!-- FAQ (na mesma página) -->
-    <section class="section" id="faq">
-      <h2>Dúvidas rápidas</h2>
-
-      <details>
-        <summary>Como comprar?</summary>
-        <p>Clique em “Comprar no WhatsApp” e envie a mensagem. A gente atende e fecha a compra no chat.</p>
-      </details>
-
-      <details>
-        <summary>Como usar?</summary>
-        <p>Use conforme rótulo e bula.</p>
-      </details>
-
-      <details>
-        <summary>Entrega e pagamento</summary>
-        <p>Combinamos tudo no WhatsApp conforme sua cidade.</p>
-      </details>
     </section>
 
     <footer>
       <div><strong>Telefone:</strong> (17) 99165-0661</div>
       <div style="margin-top:6px">Use conforme rótulo e bula.</div>
+      <div style="margin-top:6px">Entrega para todo o Brasil • Frete grátis • Envio rápido</div>
     </footer>
   </main>
 
