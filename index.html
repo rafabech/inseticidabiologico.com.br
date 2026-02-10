@@ -32,7 +32,7 @@
   {
     "@context":"https://schema.org",
     "@type":"Store",
-    "name":"inseticidabiologico.com.br",
+    "name":"www.inseticidabiologico.com.br",
     "url":"https://inseticidabiologico.com.br",
     "telephone":"+55-17-99140-5464",
     "areaServed":"BR",
@@ -45,12 +45,12 @@
   <style>
     :root{
       --bg:#0b1220;
-      --muted:#c8d3ea;              /* <-- MAIS CLARO (era #a9b7d0) */
-      --text:#f7faff;               /* <-- MAIS CLARO (era #eef3ff) */
+      --muted:#c8d3ea;
+      --text:#f7faff;
       --accent:#22c55e;
-      --line:rgba(255,255,255,.12); /* <-- leve ajuste para legibilidade */
+      --line:rgba(255,255,255,.12);
       --danger:#ef4444;
-      --shadow: 0 14px 40px rgba(0,0,0,.30); /* <-- um pouco menos pesado */
+      --shadow: 0 14px 40px rgba(0,0,0,.30);
       --radius:18px;
       --yellow:#fde047;
     }
@@ -60,7 +60,6 @@
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
       color:var(--text);
-      /* FUNDO MAIS CLARO */
       background:
         radial-gradient(900px 500px at 20% 10%, rgba(96,165,250,.30), transparent 60%),
         radial-gradient(900px 500px at 90% 0%, rgba(34,197,94,.24), transparent 55%),
@@ -75,7 +74,7 @@
     .topbar{
       position:sticky; top:0; z-index:30;
       backdrop-filter: blur(10px);
-      background: rgba(11,18,32,.72); /* <-- um pouco mais claro */
+      background: rgba(11,18,32,.72);
       border-bottom:1px solid var(--line);
     }
     .topbar-inner{
@@ -87,10 +86,10 @@
       display:flex; align-items:center; gap:12px; min-width:0;
     }
 
-    /* LOGO: 1x no computador (dobro) e 0,5x no celular (metade) */
+    /* LOGO desktop (mantido como estava) */
     .brand img{
-      width:116px;                  /* <-- era 58px */
-      height:116px;                 /* <-- era 58px */
+      width:316px;
+      height:316px;
       border-radius:18px;
       border:1px solid rgba(255,255,255,.14);
       box-shadow: 0 12px 30px rgba(0,0,0,.22);
@@ -105,7 +104,7 @@
     }
     .brand .txt span{display:block; font-size:12px; color:var(--muted)}
 
-    /* TELEFONE (destaque maior) */
+    /* TELEFONE */
     .phone{
       display:flex; align-items:center; gap:12px;
       padding:10px 14px;
@@ -128,11 +127,11 @@
     .phone b{
       font-size:18px;
       letter-spacing:.2px;
-      color:var(--text);            /* <-- garante legível */
+      color:var(--text);
     }
     .phone small{
       display:block;
-      color:var(--muted);           /* <-- mais claro */
+      color:var(--muted);
       font-size:12px;
       margin-top:2px;
     }
@@ -147,7 +146,7 @@
     .panel{
       border:1px solid var(--line);
       border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03)); /* <-- mais claro */
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
       box-shadow: var(--shadow);
       overflow:hidden;
     }
@@ -156,7 +155,7 @@
       display:inline-flex; gap:8px; align-items:center;
       font-size:12px; color:var(--muted);
       border:1px solid var(--line);
-      background: rgba(255,255,255,.06); /* <-- mais claro */
+      background: rgba(255,255,255,.06);
       padding:8px 10px;
       border-radius:999px;
     }
@@ -169,11 +168,11 @@
       font-size:30px;
       letter-spacing:-.3px;
       line-height:1.12;
-      color:var(--text);            /* <-- garante legível */
+      color:var(--text);
     }
     .sub{
       margin:0 0 14px;
-      color:var(--muted);           /* <-- mais claro */
+      color:var(--muted);
       font-size:14px;
     }
     .bullets{
@@ -216,7 +215,7 @@
       box-shadow: 0 14px 30px rgba(34,197,94,.18);
     }
     .btn-secondary{
-      background: rgba(255,255,255,.06); /* <-- mais claro */
+      background: rgba(255,255,255,.06);
       color:var(--text);
     }
     .btn small{font-weight:800; opacity:.92}
@@ -231,7 +230,7 @@
       padding:8px 10px;
       border:1px solid var(--line);
       border-radius:999px;
-      background: rgba(255,255,255,.06); /* <-- mais claro */
+      background: rgba(255,255,255,.06);
     }
     .tag svg{width:14px; height:14px; opacity:.9}
 
@@ -283,7 +282,7 @@
     .product{
       border:1px solid var(--line);
       border-radius: var(--radius);
-      background: rgba(255,255,255,.05); /* <-- mais claro */
+      background: rgba(255,255,255,.05);
       box-shadow: var(--shadow);
       overflow:hidden;
       display:flex; flex-direction:column;
@@ -324,7 +323,7 @@
     }
     details{
       border:1px solid var(--line);
-      background: rgba(255,255,255,.03); /* <-- mais claro */
+      background: rgba(255,255,255,.03);
       border-radius:14px;
       padding:10px 12px;
     }
@@ -364,7 +363,7 @@
       padding-top:14px;
     }
 
-    /* Floating WhatsApp button (ONLY 1 floating + 1 CTA no topo) */
+    /* Floating WhatsApp button */
     .wa-float{
       position:fixed;
       right:16px;
@@ -385,22 +384,61 @@
     .wa-float:active{transform: translateY(1px)}
     .sr-only{position:absolute; left:-9999px}
 
+    /* ========= MOBILE AJUSTADO (sem desconfigurar) ========= */
     @media (max-width: 980px){
       .hero-grid{grid-template-columns: 1fr}
       .hero-right{min-height:220px}
       .grid3{grid-template-columns: 1fr}
       h1{font-size:28px}
 
-      /* LOGO: 0,5x no celular (metade do original 58px => 29px) */
-      .brand img{
-        width:28px;                /* <-- 0,5x do original */
-        height:28px;
-        border-radius:10px;
+      /* Header empilhado no celular */
+      .topbar-inner{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 0;
       }
 
-      /* TELEFONE maior no mobile também */
-      .phone b{font-size:80px;}
-      .phone .icon{width:150px;height:150px;}
+      /* Esconde o www no topo no celular */
+      .brand .txt strong{display:none;}
+
+      /* Logo maior, proporcional */
+      .brand{
+        justify-content: center;
+        width: 100%;
+      }
+      .brand img{
+        width: 140px;
+        height: 140px;
+        border-radius: 18px;
+      }
+
+      /* Telefone destacado, mas sem “faixa gigante” */
+      .phone{
+        width: 100%;
+        max-width: 420px;
+        justify-content: center;
+        padding: 10px 12px;
+        border-radius: 16px;
+        white-space: normal;
+        text-align: center;
+      }
+      .phone b{
+        font-size: 22px;
+        line-height: 1.05;
+        letter-spacing: .5px;
+      }
+      .phone small{
+        display:none;
+      }
+
+      .phone .icon{
+        width:34px;
+        height:34px;
+        border-radius:12px;
+        font-size:18px;
+      }
     }
   </style>
 </head>
@@ -413,10 +451,9 @@
           <img src="biofundopreto.webp" alt="Inseticida Biológico" />
           <div class="txt">
             <strong>www.inseticidabiologico.com.br</strong>
-                     </div>
+          </div>
         </div>
 
-        <!-- TELEFONE EM DESTAQUE -->
         <div class="phone" aria-label="Telefone">
           <div class="icon" aria-hidden="true">📞</div>
           <div>
@@ -636,7 +673,7 @@
               Aviso: Utilize sempre conforme rótulo/bula e boas práticas agronômicas. Em caso de dúvida, solicite orientação técnica.
             </span>
             <div style="margin-top:10px; opacity:.9">
-              © <span id="year"></span> InseticidaBiologico.com.br
+              © <span id="year"></span> www.inseticidabiologico.com.br
             </div>
           </div>
         </div>
@@ -644,7 +681,6 @@
     </section>
   </main>
 
-  <!-- Botão flutuante WhatsApp -->
   <a class="wa-float" id="wa-float" target="_blank" rel="noopener"
      aria-label="Abrir WhatsApp"
      href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20e%20quero%20comprar%20inseticida%20biol%C3%B3gico.">
