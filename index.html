@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0b1220" />
+
   <title>Inseticida Biológico | Takotrop, BioOlimpo e Fitoneem — Frete Grátis Brasil</title>
-  <meta name="description" content="Compre inseticida biológico com envio imediato e frete grátis para todo o Brasil. Pagamento facilitado: Pix, boleto ou cartão. Atendimento e compra rápida pelo WhatsApp." />
-  <meta name="keywords" content="inseticida biológico, takotrop, bioolimpo, fitoneem, controle biológico, mosca-branca, percevejo, cigarrinha, beauveria, metarhizium, neem" />
+  <meta name="description" content="Compre inseticida biológico com envio imediato e frete grátis para todo o Brasil. Pix, boleto ou cartão. Compra rápida pelo WhatsApp." />
+  <meta name="keywords" content="inseticida biológico, takotrop, bioolimpo, fitoneem, controle biológico, mosca-branca, percevejo, cigarrinha, beauveria, metarhizium, neem, pseudomonas" />
   <meta name="robots" content="index,follow" />
 
-  <!-- Favicon (ajuste se quiser trocar depois) -->
   <link rel="icon" href="biofundobranco.webp" type="image/webp" />
 
   <!-- Open Graph -->
@@ -17,6 +17,15 @@
   <meta property="og:description" content="Frete grátis Brasil • Envio imediato • Pix, boleto ou cartão. Escolha Takotrop, BioOlimpo ou Fitoneem e finalize no WhatsApp." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
+
+  <!-- Google Ads tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17674376709"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17674376709');
+  </script>
 
   <!-- JSON-LD (SEO) -->
   <script type="application/ld+json">
@@ -40,12 +49,11 @@
       --muted:#a9b7d0;
       --text:#eef3ff;
       --accent:#22c55e;
-      --accent2:#60a5fa;
       --line:rgba(255,255,255,.10);
-      --warning:#f59e0b;
       --danger:#ef4444;
       --shadow: 0 14px 40px rgba(0,0,0,.35);
       --radius:18px;
+      --yellow:#fde047;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -60,11 +68,13 @@
       line-height:1.35;
     }
     a{color:inherit}
-    .container{max-width:1100px; margin:0 auto; padding:0 18px}
+    .container{max-width:1120px; margin:0 auto; padding:0 18px}
+
+    /* Topbar */
     .topbar{
-      position:sticky; top:0; z-index:20;
+      position:sticky; top:0; z-index:30;
       backdrop-filter: blur(10px);
-      background: rgba(11,18,32,.72);
+      background: rgba(11,18,32,.78);
       border-bottom:1px solid var(--line);
     }
     .topbar-inner{
@@ -76,7 +86,7 @@
       display:flex; align-items:center; gap:12px; min-width:0;
     }
     .brand img{
-      width:64px; height:64px; border-radius:14px;
+      width:58px; height:58px; border-radius:14px;
       border:1px solid rgba(255,255,255,.12);
       box-shadow: 0 10px 28px rgba(0,0,0,.25);
       object-fit:cover;
@@ -84,7 +94,7 @@
     }
     .brand .txt{min-width:0}
     .brand .txt strong{
-      display:block; font-size:16px; letter-spacing:.2px;
+      display:block; font-size:15px; letter-spacing:.2px;
       white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
     }
     .brand .txt span{display:block; font-size:12px; color:var(--muted)}
@@ -98,12 +108,12 @@
     }
     .phone b{font-size:13px}
     .phone small{color:var(--muted); font-size:12px}
-    .hero{
-      padding:26px 0 10px;
-    }
+
+    /* Hero */
+    .hero{padding:22px 0 10px;}
     .hero-grid{
       display:grid; gap:16px;
-      grid-template-columns: 1.2fr .8fr;
+      grid-template-columns: 1.15fr .85fr;
       align-items:stretch;
     }
     .panel{
@@ -130,7 +140,7 @@
       margin:14px 0 10px;
       font-size:30px;
       letter-spacing:-.3px;
-      line-height:1.15;
+      line-height:1.12;
     }
     .sub{
       margin:0 0 14px;
@@ -153,6 +163,7 @@
       margin-top:1px;
     }
     .check svg{width:14px; height:14px}
+
     .cta-row{
       display:flex; gap:10px; align-items:center; flex-wrap:wrap;
       margin-top:10px;
@@ -172,14 +183,14 @@
       background: linear-gradient(90deg, rgba(34,197,94,.98), rgba(16,185,129,.98));
       color:#071018;
       border-color: rgba(34,197,94,.55);
-      font-weight:800;
+      font-weight:900;
       box-shadow: 0 14px 30px rgba(34,197,94,.18);
     }
     .btn-secondary{
       background: rgba(255,255,255,.05);
       color:var(--text);
     }
-    .btn small{font-weight:600; opacity:.9}
+    .btn small{font-weight:800; opacity:.92}
     .trust{
       margin-top:12px;
       display:flex; gap:10px; flex-wrap:wrap;
@@ -194,9 +205,10 @@
       background: rgba(255,255,255,.04);
     }
     .tag svg{width:14px; height:14px; opacity:.9}
+
     .hero-right{
       position:relative;
-      min-height:260px;
+      min-height:280px;
     }
     .hero-right .bg{
       position:absolute; inset:0;
@@ -208,7 +220,7 @@
     }
     .hero-right .overlay{
       position:absolute; inset:0;
-      background: linear-gradient(180deg, rgba(11,18,32,.10), rgba(11,18,32,.78));
+      background: linear-gradient(180deg, rgba(11,18,32,.08), rgba(11,18,32,.84));
     }
     .hero-right .card{
       position:relative;
@@ -216,9 +228,6 @@
       height:100%;
       display:flex; flex-direction:column; justify-content:flex-end;
       gap:10px;
-    }
-    .highlight{
-      display:grid; gap:10px;
     }
     .hl{
       display:flex; gap:10px; align-items:flex-start;
@@ -229,18 +238,19 @@
     }
     .hl b{font-size:13px}
     .hl span{display:block; color:var(--muted); font-size:12px; margin-top:2px}
-    .section{
-      padding:18px 0 6px;
-    }
+
+    /* Section */
+    .section{padding:18px 0 6px;}
     .section h2{
       margin:0 0 10px;
       font-size:20px;
       letter-spacing:-.2px;
     }
-    .grid3{
-      display:grid; gap:14px;
-      grid-template-columns: repeat(3, 1fr);
-    }
+    .lead{color:var(--muted); font-size:13px; margin:0 0 12px;}
+
+    .grid3{display:grid; gap:14px; grid-template-columns: repeat(3, 1fr);}
+
+    /* Product cards */
     .product{
       border:1px solid var(--line);
       border-radius: var(--radius);
@@ -265,13 +275,11 @@
       letter-spacing:.2px;
       color:#120a00;
       border:1px solid rgba(0,0,0,.15);
-      background: linear-gradient(90deg, #fde047, #ef4444);
+      background: linear-gradient(90deg, var(--yellow), var(--danger));
       box-shadow: 0 12px 24px rgba(239,68,68,.18);
       white-space:nowrap;
     }
-    .p-img{
-      padding:0 14px 12px;
-    }
+    .p-img{padding:0 14px 12px;}
     .p-img img{
       width:100%;
       height:auto;
@@ -296,7 +304,7 @@
       list-style:none;
       display:flex; align-items:center; justify-content:space-between;
       gap:10px;
-      font-weight:800;
+      font-weight:900;
       color:var(--text);
       font-size:13px;
     }
@@ -305,7 +313,7 @@
       margin-top:8px;
       color:var(--muted);
       font-size:12px;
-      line-height:1.45;
+      line-height:1.5;
     }
     .tech ul{margin:8px 0 0 18px; padding:0}
     .tech li{margin:6px 0}
@@ -315,16 +323,21 @@
       border-top:1px solid var(--line);
       margin-top:10px; padding-top:10px;
     }
-    .faq{
-      margin-top:10px;
-      display:grid; gap:10px;
-    }
-    .faq details{background: rgba(255,255,255,.03)}
-    .footer{
-      padding:18px 0 34px;
+
+    /* Simple CTA inside product (NO more WhatsApp buttons) */
+    .hint{
+      border:1px dashed rgba(255,255,255,.16);
+      background: rgba(255,255,255,.03);
+      border-radius:14px;
+      padding:10px 12px;
       color:var(--muted);
       font-size:12px;
     }
+
+    /* FAQ + Footer */
+    .faq{display:grid; gap:10px; margin-top:10px;}
+    .faq details{background: rgba(255,255,255,.03)}
+    .footer{padding:18px 0 34px; color:var(--muted); font-size:12px;}
     .footer .row{
       display:flex; justify-content:space-between; align-items:flex-start;
       gap:12px; flex-wrap:wrap;
@@ -332,7 +345,7 @@
       padding-top:14px;
     }
 
-    /* Floating WhatsApp button (only 1 floating + 1 CTA) */
+    /* Floating WhatsApp button (ONLY 1 floating + 1 CTA no topo) */
     .wa-float{
       position:fixed;
       right:16px;
@@ -347,17 +360,17 @@
       box-shadow: 0 18px 35px rgba(34,197,94,.28);
       border:1px solid rgba(255,255,255,.18);
       text-decoration:none;
+      transform: translateZ(0);
     }
     .wa-float svg{width:28px; height:28px; fill:#071018}
     .wa-float:active{transform: translateY(1px)}
     .sr-only{position:absolute; left:-9999px}
 
-    @media (max-width: 960px){
+    @media (max-width: 980px){
       .hero-grid{grid-template-columns: 1fr}
-      .hero-right{min-height:210px}
+      .hero-right{min-height:220px}
       .grid3{grid-template-columns: 1fr}
       h1{font-size:28px}
-      .brand img{width:60px; height:60px}
     }
   </style>
 </head>
@@ -368,7 +381,6 @@
     <div class="container">
       <div class="topbar-inner">
         <div class="brand" aria-label="Cabeçalho">
-          <!-- Pedido: biofundopreto no cabeçalho -->
           <img src="biofundopreto.webp" alt="Inseticida Biológico" />
           <div class="txt">
             <strong>InseticidaBiologico.com.br</strong>
@@ -376,7 +388,6 @@
           </div>
         </div>
 
-        <!-- Telefone visível no site -->
         <div class="phone" aria-label="Telefone">
           <div>
             <b>(17) 99140-5464</b><br />
@@ -387,21 +398,21 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <main>
-    <section class="hero">
+    <!-- HERO -->
+    <section class="hero" id="topo">
       <div class="container">
         <div class="hero-grid">
           <div class="panel hero-left">
             <div class="kicker">
               <span class="dot"></span>
-              <span>1 clique → WhatsApp • Frete grátis para todo o Brasil</span>
+              <span>Frete grátis Brasil • Envio imediato • Pix, boleto ou cartão</span>
             </div>
 
-            <h1>Inseticida biológico com entrega rápida e pagamento facilitado.</h1>
+            <h1>Inseticida biológico com compra simples e rápida no WhatsApp.</h1>
             <p class="sub">
-              Escolha <b>Takotrop</b>, <b>BioOlimpo</b> ou <b>Fitoneem</b>. Você compra direto no WhatsApp com
-              <b>Pix, boleto ou cartão de crédito</b>.
+              Escolha o produto abaixo e clique em <b>Comprar no WhatsApp</b>.
+              Se tiver dúvida, fale com a gente e indicamos o melhor para sua praga e cultura.
             </p>
 
             <div class="bullets">
@@ -409,32 +420,32 @@
                 <div class="check" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
                 </div>
-                <div><b>Envio imediato</b> (despacho rápido após confirmação do pagamento).</div>
+                <div><b>Atendimento rápido</b> para tirar dúvidas e fechar seu pedido.</div>
               </div>
               <div class="bullet">
                 <div class="check" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
                 </div>
-                <div><b>Frete grátis</b> para todo o Brasil (consulte prazos no WhatsApp).</div>
+                <div><b>Frete grátis</b> para todo o Brasil (prazos por região no WhatsApp).</div>
               </div>
               <div class="bullet">
                 <div class="check" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
                 </div>
-                <div><b>Atendimento prático</b>: tiramos suas dúvidas no WhatsApp e indicamos o melhor produto.</div>
+                <div><b>Envio imediato</b> após confirmação do pagamento.</div>
               </div>
             </div>
 
-            <!-- Botão 1 (CTA principal) -->
+            <!-- CTA PRINCIPAL (WhatsApp 1) -->
             <div class="cta-row">
               <a class="btn btn-primary" id="cta-whatsapp" target="_blank" rel="noopener"
-                 href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
+                 href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20e%20quero%20comprar%20inseticida%20biol%C3%B3gico.">
                 <span aria-hidden="true">🟢</span>
                 <span>Comprar no WhatsApp</span>
               </a>
 
               <a class="btn btn-secondary" href="#produtos">
-                <small>Ver opções</small>
+                <small>Ver produtos</small>
               </a>
             </div>
 
@@ -462,27 +473,25 @@
             <div class="bg"></div>
             <div class="overlay"></div>
             <div class="card">
-              <div class="highlight">
-                <div class="hl">
-                  <div style="font-size:18px;line-height:1">⚡</div>
-                  <div>
-                    <b>Compra mais rápida</b>
-                    <span>Você escolhe o produto e finaliza no WhatsApp.</span>
-                  </div>
+              <div class="hl">
+                <div style="font-size:18px;line-height:1">⚡</div>
+                <div>
+                  <b>Compra mais rápida</b>
+                  <span>Clicou no WhatsApp e fechou o pedido.</span>
                 </div>
-                <div class="hl">
-                  <div style="font-size:18px;line-height:1">🚚</div>
-                  <div>
-                    <b>Frete grátis + despacho ágil</b>
-                    <span>Atendemos todo o Brasil. Consulte prazo da sua região.</span>
-                  </div>
+              </div>
+              <div class="hl">
+                <div style="font-size:18px;line-height:1">🧪</div>
+                <div>
+                  <b>Controle biológico</b>
+                  <span>Produtos microbiológicos e botânico (neem) para o manejo.</span>
                 </div>
-                <div class="hl">
-                  <div style="font-size:18px;line-height:1">💳</div>
-                  <div>
-                    <b>Pagamento facilitado</b>
-                    <span>Pix, boleto bancário ou cartão de crédito.</span>
-                  </div>
+              </div>
+              <div class="hl">
+                <div style="font-size:18px;line-height:1">🚚</div>
+                <div>
+                  <b>Frete grátis no Brasil</b>
+                  <span>Consulte o prazo da sua região no WhatsApp.</span>
                 </div>
               </div>
               <div style="height:6px"></div>
@@ -492,10 +501,11 @@
       </div>
     </section>
 
-    <!-- Produtos (uma única página) -->
+    <!-- PRODUTOS -->
     <section class="section" id="produtos">
       <div class="container">
         <h2>Escolha o produto</h2>
+        <p class="lead">Se estiver em dúvida, clique no WhatsApp e diga sua cultura e a praga. A gente orienta rápido.</p>
 
         <div class="grid3">
           <!-- TAKOTROP -->
@@ -503,7 +513,7 @@
             <div class="p-top">
               <div class="p-title">
                 <strong>Takotrop</strong>
-                <small>Inseticida microbiológico (SC) — ação por múltiplas vias</small>
+                <small>Inseticida microbiológico (SC) — múltiplas vias de ação</small>
               </div>
               <div class="badge" title="Mais vendido">MAIS VENDIDO</div>
             </div>
@@ -512,25 +522,29 @@
             </div>
             <div class="p-body">
               <div>
-                Indicado para manejo biológico de pragas (ex.: mosca-branca, tripes, percevejos, cigarrinhas, ácaro-rajado, bicho-mineiro).
+                Indicado para manejo biológico de pragas como mosca-branca, tripes, percevejos, cigarrinhas, ácaro-rajado e bicho-mineiro (conforme posicionamento técnico e bula).
+              </div>
+
+              <div class="hint">
+                <b>Dica simples:</b> muito procurado quando o produtor quer uma solução biológica “forte” e prática para o manejo.
               </div>
 
               <details>
                 <summary>
-                  <span>Informações técnicas (resumo)</span>
+                  <span>Ver informações técnicas</span>
                   <span aria-hidden="true">＋</span>
                 </summary>
                 <div class="tech">
                   <b>Composição (bula/registro MAPA 16122):</b>
                   <ul>
-                    <li><b>Pseudomonas fluorescens</b> (isolado CCTB03): 6 g/L</li>
-                    <li><b>Pseudomonas chlororaphis</b> (isolado CCTB19): 12 g/L</li>
-                    <li>Formulação: <b>Suspensão Concentrada (SC)</b></li>
+                    <li><b>Pseudomonas fluorescens</b> (CCTB03): 6 g/L</li>
+                    <li><b>Pseudomonas chlororaphis</b> (CCTB19): 12 g/L</li>
+                    <li>Formulação: <b>SC</b></li>
                   </ul>
                   <b>Aplicação (geral):</b>
                   <ul>
-                    <li>Pulverização foliar (terrestre/aérea conforme cultura e recomendação técnica).</li>
-                    <li>Fazer aplicações no início da infestação e respeitar intervalos indicados em bula.</li>
+                    <li>Pulverização foliar (conforme cultura e recomendação técnica).</li>
+                    <li>Aplicar no início da infestação e seguir intervalos do rótulo/bula.</li>
                   </ul>
                   <div class="fineprint">
                     Use conforme rótulo/bula e recomendações técnicas. Consulte um engenheiro agrônomo para posicionamento por cultura e alvo.
@@ -545,7 +559,7 @@
             <div class="p-top">
               <div class="p-title">
                 <strong>BioOlimpo</strong>
-                <small>Beauveria + Metarhizium (WP) — “dupla ação” biológica</small>
+                <small>Beauveria + Metarhizium (WP) — fungos entomopatogênicos</small>
               </div>
             </div>
             <div class="p-img">
@@ -553,20 +567,24 @@
             </div>
             <div class="p-body">
               <div>
-                Bioinseticida microbiológico com fungos entomopatogênicos para manejo de pragas como cigarrinhas e percevejo-marrom.
+                Bioinseticida microbiológico com fungos entomopatogênicos para suporte ao manejo integrado de pragas, com alvos de eficiência agronômica descritos em bula.
+              </div>
+
+              <div class="hint">
+                <b>Dica simples:</b> costuma ter melhor desempenho em condições mais favoráveis de umidade (horários frescos).
               </div>
 
               <details>
                 <summary>
-                  <span>Informações técnicas (resumo)</span>
+                  <span>Ver informações técnicas</span>
                   <span aria-hidden="true">＋</span>
                 </summary>
                 <div class="tech">
                   <b>Composição (bula/registro MAPA 31721):</b>
                   <ul>
-                    <li><b>Beauveria bassiana</b> (isolado IBCB 66): 150 g/kg (15% m/m)</li>
-                    <li><b>Metarhizium anisopliae</b> (isolado IBCB 425): 150 g/kg (15% m/m)</li>
-                    <li>Formulação: <b>Pó molhável (WP)</b></li>
+                    <li><b>Beauveria bassiana</b> (IBCB 66): 150 g/kg (15% m/m)</li>
+                    <li><b>Metarhizium anisopliae</b> (IBCB 425): 150 g/kg (15% m/m)</li>
+                    <li>Formulação: <b>WP</b></li>
                   </ul>
                   <b>Alvos com eficiência agronômica (bula):</b>
                   <ul>
@@ -575,23 +593,23 @@
                   </ul>
                   <b>Boas práticas (geral):</b>
                   <ul>
-                    <li>Aplicar em horários mais frescos (final da tarde/noite) e com umidade favorável.</li>
-                    <li>Evitar condições de calor intenso, vento forte e baixa umidade.</li>
+                    <li>Aplicar em horários mais frescos e com umidade favorável.</li>
+                    <li>Evitar calor intenso e baixa umidade no momento da aplicação.</li>
                   </ul>
                   <div class="fineprint">
-                    Use conforme rótulo/bula e recomendações técnicas. Consulte um engenheiro agrônomo para dose e número de aplicações por cultura.
+                    Use conforme rótulo/bula e recomendações técnicas. Consulte um engenheiro agrônomo para dose e aplicações por cultura.
                   </div>
                 </div>
               </details>
             </div>
           </article>
 
-          <!-- FITONEEM -->
+          <!-- FITONEEM (imagem atualizada = fitoneem.webp) -->
           <article class="product" aria-label="Fitoneem">
             <div class="p-top">
               <div class="p-title">
                 <strong>Fitoneem</strong>
-                <small>Óleo de Neem (EC) — ação por contato/ingestão</small>
+                <small>Óleo de Neem (EC) — suporte ao manejo integrado</small>
               </div>
             </div>
             <div class="p-img">
@@ -599,12 +617,16 @@
             </div>
             <div class="p-body">
               <div>
-                Inseticida/fungicida à base de neem para suporte ao manejo integrado, com foco em mosca-branca e outros alvos conforme recomendação técnica.
+                Produto à base de neem para suporte ao manejo integrado, com atuação por contato/ingestão conforme bula e recomendação técnica.
+              </div>
+
+              <div class="hint">
+                <b>Dica simples:</b> ótimo para compor estratégia de manejo (MIP) e reduzir pressão de pragas ao longo do ciclo.
               </div>
 
               <details>
                 <summary>
-                  <span>Informações técnicas (resumo)</span>
+                  <span>Ver informações técnicas</span>
                   <span aria-hidden="true">＋</span>
                 </summary>
                 <div class="tech">
@@ -613,11 +635,11 @@
                     <li><b>Óleo de Neem (Azadirachta indica)</b>: 850 g/L</li>
                     <li><b>Azadiractina A</b>: 2,00 g/L</li>
                     <li><b>Azadiractina B</b>: 1,00 g/L</li>
-                    <li>Formulação: <b>Concentrado emulsionável (EC)</b></li>
+                    <li>Formulação: <b>EC</b></li>
                   </ul>
                   <b>Indicações (bula):</b>
                   <ul>
-                    <li><b>Mosca-branca</b> (Bemisia tabaci / Bemisia argentifolii) e <b>oídio do feijoeiro</b> (Erysiphe polygoni), entre outras ocorrências conforme alvo e cultura.</li>
+                    <li><b>Mosca-branca</b> (Bemisia tabaci / B. argentifolii) e <b>oídio do feijoeiro</b> (Erysiphe polygoni), entre outras ocorrências conforme cultura/alvo.</li>
                     <li>A bula descreve atuação na alimentação e no desenvolvimento/reprodução das pragas.</li>
                   </ul>
                   <div class="fineprint">
@@ -629,31 +651,33 @@
           </article>
         </div>
 
+        <!-- FAQ -->
         <div class="faq" aria-label="Perguntas frequentes">
           <details>
-            <summary><span>Como faço para comprar?</span><span aria-hidden="true">＋</span></summary>
+            <summary><span>Como eu compro?</span><span aria-hidden="true">＋</span></summary>
             <div class="tech">
-              Clique em <b>“Comprar no WhatsApp”</b>, informe o produto (Takotrop, BioOlimpo ou Fitoneem) e tire dúvidas. Finalizamos o pedido pelo WhatsApp com <b>Pix, boleto ou cartão</b>.
+              Clique em <b>“Comprar no WhatsApp”</b>. Você pode dizer: <b>qual produto</b> quer e sua <b>cultura/praga</b>. Fechamos com <b>Pix, boleto ou cartão</b>.
             </div>
           </details>
 
           <details>
-            <summary><span>Vocês entregam no Brasil todo?</span><span aria-hidden="true">＋</span></summary>
+            <summary><span>Entrega no Brasil todo?</span><span aria-hidden="true">＋</span></summary>
             <div class="tech">
-              Sim: <b>frete grátis para todo o Brasil</b>. No WhatsApp te passamos prazos e orientações de envio.
+              Sim: <b>frete grátis para todo o Brasil</b>. No WhatsApp te passamos o prazo da sua região.
             </div>
           </details>
 
           <details>
-            <summary><span>Posso usar em qualquer cultura?</span><span aria-hidden="true">＋</span></summary>
+            <summary><span>Tenho dúvida do produto. O que eu falo?</span><span aria-hidden="true">＋</span></summary>
             <div class="tech">
-              Depende do <b>alvo biológico</b>, cultura e recomendação do rótulo/bula. Se você me disser a cultura e a praga, orientamos o melhor caminho pelo WhatsApp.
+              Só diga: <b>cultura + praga</b> (ex.: “soja + percevejo” / “pasto + cigarrinha”). A gente indica o melhor.
             </div>
           </details>
         </div>
       </div>
     </section>
 
+    <!-- Rodapé -->
     <section class="footer">
       <div class="container">
         <div class="row">
@@ -675,10 +699,10 @@
     </section>
   </main>
 
-  <!-- Botão flutuante (ZAP) — somente este + o CTA do topo -->
-  <a class="wa-float" target="_blank" rel="noopener"
+  <!-- Botão flutuante WhatsApp (WhatsApp 2) -->
+  <a class="wa-float" id="wa-float" target="_blank" rel="noopener"
      aria-label="Abrir WhatsApp"
-     href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
+     href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20e%20quero%20comprar%20inseticida%20biol%C3%B3gico.">
     <span class="sr-only">WhatsApp</span>
     <svg viewBox="0 0 32 32" aria-hidden="true">
       <path d="M19.11 17.53c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47l-.52-.01c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.26 0 1.33.97 2.61 1.11 2.79.14.18 1.91 2.92 4.63 4.09.65.28 1.15.45 1.54.57.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16 3C8.83 3 3 8.7 3 15.72c0 2.47.73 4.76 1.98 6.7L3.69 29 10.6 26.8a13.2 13.2 0 0 0 5.4 1.14c7.17 0 13-5.7 13-12.72C29 8.7 23.17 3 16 3zm0 22.42c-1.79 0-3.46-.48-4.9-1.3l-.35-.2-4.1 1.3 1.34-3.93-.23-.39a10.93 10.93 0 0 1-1.66-5.78C6.1 9.2 10.64 4.78 16 4.78c5.36 0 9.9 4.42 9.9 9.94 0 5.52-4.54 9.7-9.9 9.7z"/>
