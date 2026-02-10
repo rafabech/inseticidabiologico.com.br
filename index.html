@@ -157,6 +157,7 @@
       background: rgba(255,255,255,.06);
       padding:8px 10px;
       border-radius:999px;
+      flex-wrap:wrap;
     }
     .kicker .dot{
       width:8px; height:8px; border-radius:99px; background: var(--accent);
@@ -385,8 +386,8 @@
 
     /* ========= MOBILE AJUSTADO (sem desconfigurar) ========= */
     @media (max-width: 980px){
-      .hero-grid{grid-template-columns: 1fr}
-      .hero-right{min-height:220px}
+      .hero-grid{grid-template-columns: 1fr;} /* ✅ CORRIGIDO: remove a “coluna vazia” no celular */
+      .hero-right{display:none;} /* ✅ some com o card da direita no mobile (era o “vazio” que você circulou) */
       .grid3{grid-template-columns: 1fr}
       h1{font-size:28px}
 
@@ -471,7 +472,7 @@
           <div class="panel hero-left">
             <div class="kicker">
               <span class="dot"></span>
-              <span>Frete grátis Brasil • Envio imediato • Pix, boleto ou cartão</span>
+              <span>Frete grátis Brasil • Envio imediato • Pix, boleto ou cartão • <b>BOLETO: você recebe e só paga depois</b></span>
             </div>
 
             <h1>Inseticida biológico com compra simples e rápida no WhatsApp.</h1>
@@ -497,7 +498,8 @@
                 <div class="check" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
                 </div>
-                <div><b>Envio imediato</b> após confirmação do pagamento.</div>
+                <div><b>Envio imediato</b> 
+.</div>
               </div>
             </div>
 
@@ -518,7 +520,29 @@
               <span class="tag">Frete grátis Brasil</span>
               <span class="tag">Envio imediato</span>
               <span class="tag">Pix • Boleto • Cartão</span>
+              <span class="tag"><b>Boleto: receba e pague depois</b></span>
+              <span class="tag"><b>Nota fiscal em todos os pedidos</b></span>
+              <span class="tag"><b>Envio por transportadora</b></span>
+              <span class="tag"><b>Rastreio em tempo real</b></span>
             </div>
+
+            <!-- ✅ BOX EM EVIDÊNCIA (chamativo) -->
+            <div style="margin-top:12px; padding:12px 12px; border:1px solid rgba(34,197,94,.35); border-radius:14px; background: rgba(34,197,94,.10); box-shadow: 0 14px 28px rgba(34,197,94,.10);">
+              <div style="display:flex; gap:10px; align-items:flex-start;">
+                <div style="width:34px; height:34px; border-radius:12px; display:grid; place-items:center; background: rgba(34,197,94,.18); border:1px solid rgba(34,197,94,.30); flex:0 0 auto;">
+                  ✅
+                </div>
+                <div style="min-width:0;">
+                  <div style="font-weight:900; color:var(--text);">Mais confiança na compra</div>
+                  <div style="margin-top:4px; color:var(--muted); font-size:12px; line-height:1.45;">
+                    <b style="color:var(--text);">Boleto:</b> você <b style="color:var(--text);">recebe o produto</b> e só <b style="color:var(--text);">paga depois</b> de receber o produto.
+                    <br />
+                    <b style="color:var(--text);">Nota fiscal</b> em todos os pedidos • <b style="color:var(--text);">Envio por transportadora</b> • <b style="color:var(--text);">Rastreio em tempo real</b>.
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           <div class="panel hero-right" aria-label="Informações rápidas">
@@ -530,6 +554,13 @@
                 <div>
                   <b>Compra mais rápida</b>
                   <span>Clicou no WhatsApp e fechou o pedido.</span>
+                </div>
+              </div>
+              <div class="hl">
+                <div style="font-size:18px;line-height:1">🧾</div>
+                <div>
+                  <b>Nota fiscal + rastreio</b>
+                  <span>Envio por transportadora e rastreio em tempo real.</span>
                 </div>
               </div>
               <div class="hl">
@@ -549,6 +580,7 @@
               <div style="height:6px"></div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -653,6 +685,10 @@
             <summary><span>Como eu compro?</span><span aria-hidden="true">＋</span></summary>
             <div class="tech">
               Clique em <b>“Comprar no WhatsApp”</b>. Diga qual produto quer e sua cultura/praga. Fechamos com <b>Pix, boleto ou cartão</b>.
+              <br /><br />
+              <b>Segurança no boleto:</b> você <b>recebe</b> o produto e só <b>paga depois</b> no vencimento.
+              <br />
+              <b>Todos os pedidos vão com nota fiscal</b> • <b>envio por transportadora</b> • <b>rastreio em tempo real</b>.
             </div>
           </details>
         </div>
@@ -665,7 +701,8 @@
           <div>
             <b>InseticidaBiologico.com.br</b><br />
             Telefone/WhatsApp: <b>(17) 99140-5464</b><br />
-            <span>Frete grátis • Envio imediato • Pix, boleto ou cartão</span>
+            <span>Frete grátis • Envio imediato • Pix, boleto ou cartão</span><br />
+            <span><b>Nota fiscal</b> • <b>Transportadora</b> • <b>Rastreio em tempo real</b></span>
           </div>
           <div>
             <span class="fineprint">
@@ -693,4 +730,4 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
-</html> 
+</html>
