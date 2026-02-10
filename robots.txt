@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inseticidabiologico.com.br/sitemap.xml
