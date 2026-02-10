@@ -6,9 +6,4 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Âncoras da página (ajuda o Google a entender seções; não é obrigatório) -->
-  <url><loc>https://inseticidabiologico.com.br/#produtos</loc></url>
-  <url><loc>https://inseticidabiologico.com.br/#avaliacoes</loc></url>
-  <url><loc>https://inseticidabiologico.com.br/#como-comprar</loc></url>
 </urlset>
