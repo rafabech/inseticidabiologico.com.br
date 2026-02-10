@@ -114,10 +114,8 @@
     }
     .btn:active{transform:translateY(1px)}
     .btn-wa{background:var(--wa);color:#062012}
-    .btn-ghost{border-color:var(--line);background:rgba(255,255,255,.03);color:var(--text)}
-    .btn-soft{border-color:rgba(37,211,102,.35);background:rgba(37,211,102,.10);color:var(--text)}
 
-    /* topo no celular: sem sobrepor */
+    /* topo no celular: empilha e diminui botão WhatsApp para não sobrepor */
     @media (max-width: 540px){
       .top{flex-direction:column;align-items:stretch}
       .actions{justify-content:space-between;width:100%}
@@ -152,22 +150,9 @@
       box-shadow:var(--shadow);
       padding:16px;
     }
-    .kicker{
-      display:inline-flex;align-items:center;gap:8px;
-      font-size:12px;color:var(--muted);
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.02);
-      padding:8px 10px;border-radius:999px;
-    }
-    h1{margin:10px 0 8px;font-size:24px;line-height:1.10}
+    h1{margin:0 0 8px;font-size:24px;line-height:1.10}
     @media(min-width:760px){h1{font-size:36px}}
     .sub{margin:0;color:var(--muted);font-size:14px}
-    .ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-    .micro{
-      margin-top:10px;color:var(--muted);font-size:12px;
-      border-top:1px solid rgba(255,255,255,.08);
-      padding-top:10px;
-    }
 
     .section{margin-top:18px}
     .section h2{margin:0 0 10px;font-size:18px}
@@ -205,7 +190,7 @@
       aspect-ratio: 16/10;
       object-fit: cover;
     }
-    /* Fitoneem menor/ajustado */
+    /* Fitoneem ajustado */
     .thumb.contain{
       object-fit: contain;
       padding:10px;
@@ -213,7 +198,6 @@
     }
 
     .card ul{margin:0;padding-left:18px;color:var(--muted);font-size:13px}
-    .card .btn{width:100%}
 
     /* Takotrop: destaque + selo vermelho/amarelo */
     .card.featured{
@@ -275,7 +259,7 @@
       font-size:12px;
     }
 
-    /* WhatsApp flutuante */
+    /* WhatsApp flutuante (2º e último botão) */
     .wa-float{
       position:fixed;right:16px;bottom:16px;
       width:58px;height:58px;border-radius:999px;
@@ -294,7 +278,8 @@
 </head>
 
 <body>
-  <!-- WhatsApp message: Olá vim do site inseticidabiologico.com.br quero comprar inseticida Biológico. -->
+  <!-- WhatsApp message -->
+  <!-- Olá vim do site inseticidabiologico.com.br quero comprar inseticida Biológico. -->
   <!-- encoded: Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico. -->
 
   <header>
@@ -310,6 +295,8 @@
 
         <div class="actions">
           <a class="chip" href="tel:+5517991405464">(17) 99140-5464</a>
+
+          <!-- BOTÃO WHATSAPP #1 (ÚNICO no topo) -->
           <a class="btn btn-wa" target="_blank" rel="noopener"
              href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
             WhatsApp
@@ -325,14 +312,9 @@
         <strong>🚚 Frete grátis Brasil • ⚡ Envio imediato</strong>
         <span>💳 Pagamento: Pix, boleto ou cartão • Atendimento rápido no WhatsApp</span>
       </div>
-      <a class="btn btn-wa" target="_blank" rel="noopener"
-         href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
-        Comprar agora
-      </a>
     </div>
 
     <section class="hero" id="topo">
-      <span class="kicker">✅ 1 página • ✅ 1 objetivo: vender no WhatsApp</span>
       <h1>Comprar inseticida biológico com frete grátis e envio imediato</h1>
       <p class="sub">
         Escolha o produto e finalize no WhatsApp.
@@ -340,15 +322,6 @@
         <br><strong>Pagamento:</strong> Pix, boleto ou cartão de crédito.
         <br><strong>Telefone/WhatsApp:</strong> (17) 99140-5464
       </p>
-
-      <div class="ctas">
-        <a class="btn btn-wa" target="_blank" rel="noopener"
-           href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
-          Quero comprar agora
-        </a>
-        <a class="btn btn-soft" href="#takotrop">Ver Takotrop (Mais vendido)</a>
-        <a class="btn btn-ghost" href="#garantia">Garantia</a>
-      </div>
 
       <div class="benefits">
         <div class="b">
@@ -364,17 +337,12 @@
           <span>Pix, boleto ou cartão — confirmado direto no WhatsApp.</span>
         </div>
       </div>
-
-      <div class="micro">
-        *Sem formulários e sem cadastro: você compra falando direto no WhatsApp.
-      </div>
     </section>
 
     <section class="section" id="produtos">
       <h2>Produtos (Takotrop é o mais vendido)</h2>
 
       <div class="grid">
-        <!-- TAKOTROP destaque -->
         <article class="card featured" id="takotrop">
           <div class="tag">MAIS VENDIDO • Takotrop</div>
           <img class="thumb" src="takotrop.webp" alt="Takotrop inseticida biológico mais vendido para comprar com frete grátis" width="960" height="600" loading="lazy" decoding="async">
@@ -384,13 +352,8 @@
             <li>Envio imediato + frete grátis (Brasil).</li>
             <li>Pagamento: Pix, boleto ou cartão.</li>
           </ul>
-          <a class="btn btn-wa" target="_blank" rel="noopener"
-             href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
-            Comprar Takotrop (Mais vendido)
-          </a>
         </article>
 
-        <!-- FITONEEM -->
         <article class="card" id="fitoneem">
           <img class="thumb contain" src="fitoneem.webp" alt="Fitoneem inseticida biológico para comprar com frete grátis" width="960" height="600" loading="lazy" decoding="async">
           <h3>Fitoneem</h3>
@@ -399,25 +362,16 @@
             <li>Frete grátis (Brasil).</li>
             <li>Pagamento: Pix, boleto ou cartão.</li>
           </ul>
-          <a class="btn btn-wa" target="_blank" rel="noopener"
-             href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
-            Comprar Fitoneem no WhatsApp
-          </a>
         </article>
 
-        <!-- BIOOLIMPO -->
         <article class="card" id="bioolimpo">
           <img class="thumb" src="bioolimpo.webp" alt="Bioolimpo inseticida biológico comprar com envio imediato" width="960" height="600" loading="lazy" decoding="async">
           <h3>Bioolimpo</h3>
           <ul>
-            <li>Atendimento imediato no WhatsApp.</li>
+            <li>Atendimento no WhatsApp.</li>
             <li>Frete grátis + entrega rápida (Brasil).</li>
             <li>Pagamento: Pix, boleto ou cartão.</li>
           </ul>
-          <a class="btn btn-wa" target="_blank" rel="noopener"
-             href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
-            Comprar Bioolimpo no WhatsApp
-          </a>
         </article>
       </div>
 
@@ -436,30 +390,14 @@
         <li><strong>Pós-venda:</strong> atendimento para dúvidas e orientações.</li>
         <li><strong>Sem fricção:</strong> pague com Pix, boleto ou cartão.</li>
       </ul>
-
-      <div class="ctas" style="margin-top:12px">
-        <a class="btn btn-wa" target="_blank" rel="noopener"
-           href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
-          Comprar no WhatsApp agora
-        </a>
-        <a class="btn btn-ghost" href="tel:+5517991405464">Ligar agora</a>
-      </div>
     </section>
 
     <section class="final-cta" id="comprar">
-      <h2 style="margin:0 0 10px;font-size:18px">Feche seu pedido agora</h2>
+      <h2 style="margin:0 0 10px;font-size:18px">Feche seu pedido no WhatsApp</h2>
       <p>
-        Quer decidir mais rápido? Vá de <strong>Takotrop (mais vendido)</strong>.
-        <br><strong>Frete grátis</strong> • <strong>Envio imediato</strong> • <strong>Pix/boleto/cartão</strong>
+        <strong>Frete grátis</strong> • <strong>Envio imediato</strong> • <strong>Pix/boleto/cartão</strong>
+        <br>WhatsApp: <strong>(17) 99140-5464</strong>
       </p>
-
-      <div class="ctas" style="margin-top:12px">
-        <a class="btn btn-wa" target="_blank" rel="noopener"
-           href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
-          Comprar no WhatsApp
-        </a>
-        <a class="btn btn-soft" href="#takotrop">Ver Takotrop (Mais vendido)</a>
-      </div>
     </section>
 
     <footer>
@@ -470,7 +408,7 @@
     </footer>
   </main>
 
-  <!-- Botão flutuante do WhatsApp -->
+  <!-- BOTÃO WHATSAPP #2 (ÚNICO flutuante) -->
   <a class="wa-float" target="_blank" rel="noopener"
      href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico."
      aria-label="Falar no WhatsApp" title="Falar no WhatsApp">
