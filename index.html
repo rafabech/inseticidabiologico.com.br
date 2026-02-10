@@ -51,10 +51,10 @@
       --r:16px;
       --shadow: 0 18px 40px rgba(0,0,0,.32);
 
-      /* Mais vendido (bem visível) */
-      --hot:#FFC94A;
-      --hotText:#1a1200;
-      --hotBorder:#FFD98A;
+      /* Selo "mais vendido" clean (sem amarelo) */
+      --mvBorder: rgba(37,211,102,.55);
+      --mvBg: rgba(37,211,102,.12);
+      --mvText: rgba(238,243,255,.95);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -71,13 +71,17 @@
     a{color:inherit}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 14px}
 
+    /* HEADER */
     header{
       position:sticky;top:0;z-index:50;
       background:rgba(7,11,20,.78);
       backdrop-filter:blur(10px);
       border-bottom:1px solid var(--line);
     }
-    .top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0}
+    .top{
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+      padding:10px 0;
+    }
     .brand{display:flex;align-items:center;gap:12px;min-width:0}
     .brand-logo{
       width:76px;height:76px;border-radius:18px;
@@ -88,7 +92,10 @@
     @media(min-width:760px){.brand-logo{width:110px;height:110px;border-radius:20px}}
     .brand-text{display:flex;flex-direction:column;line-height:1.1;min-width:0}
     .brand-text strong{font-size:15px;letter-spacing:.2px}
-    .brand-text span{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .brand-text span{
+      font-size:12px;color:var(--muted);
+      white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    }
 
     .actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
     .chip{
@@ -108,6 +115,20 @@
     .btn-wa{background:var(--wa);color:#062012}
     .btn-ghost{border-color:var(--line);background:rgba(255,255,255,.03);color:var(--text)}
     .btn-soft{border-color:rgba(37,211,102,.35);background:rgba(37,211,102,.10);color:var(--text)}
+
+    /* 🔧 Correção topo no celular: empilha e diminui botão do WhatsApp */
+    @media (max-width: 540px){
+      .top{flex-direction:column;align-items:stretch}
+      .actions{justify-content:space-between;width:100%}
+      .brand-text span{white-space:normal;overflow:visible;text-overflow:unset}
+      .chip{flex:1;justify-content:center}
+      .btn{
+        padding:10px 12px;
+        min-height:40px;
+        font-size:13px;
+        font-weight:900;
+      }
+    }
 
     main{padding:14px 0 34px}
 
@@ -147,27 +168,6 @@
       padding-top:10px;
     }
 
-    /* Mais vendido (bem mais chamativo) */
-    .hot-hero{
-      display:inline-flex;align-items:center;gap:8px;
-      margin-top:10px;
-      padding:10px 12px;border-radius:999px;
-      background:linear-gradient(180deg, rgba(255,201,74,1), rgba(255,157,0,.95));
-      border:1px solid var(--hotBorder);
-      color:var(--hotText);
-      font-weight:1000;
-      box-shadow:0 12px 28px rgba(0,0,0,.35);
-      text-transform:uppercase;
-      letter-spacing:.4px;
-    }
-    .hot-hero b{font-weight:1000}
-    @keyframes pulseHot {
-      0%{transform:translateY(0) scale(1)}
-      50%{transform:translateY(-1px) scale(1.02)}
-      100%{transform:translateY(0) scale(1)}
-    }
-    .hot-hero{animation:pulseHot 2.2s ease-in-out infinite}
-
     .section{margin-top:18px}
     .section h2{margin:0 0 10px;font-size:18px}
 
@@ -181,17 +181,6 @@
     }
     .b strong{display:block;font-size:13px}
     .b span{display:block;color:var(--muted);font-size:13px;margin-top:6px}
-
-    .two-col{display:grid;gap:12px}
-    @media(min-width:900px){.two-col{grid-template-columns:1fr 1fr}}
-    .panel{
-      border:1px solid var(--line);
-      border-radius:var(--r);
-      background:rgba(255,255,255,.03);
-      padding:12px;
-    }
-    .panel h3{margin:0 0 8px;font-size:15px}
-    .panel ul{margin:0;padding-left:18px;color:var(--muted);font-size:13px}
 
     .grid{display:grid;gap:12px}
     @media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
@@ -215,7 +204,7 @@
       aspect-ratio: 16/10;
       object-fit: cover;
     }
-    /* Ajuste da foto do Fitoneem (não fica "grande/estourada") */
+    /* Fitoneem ajustado (menos “grande”) */
     .thumb.contain{
       object-fit: contain;
       padding:10px;
@@ -225,26 +214,25 @@
     .card ul{margin:0;padding-left:18px;color:var(--muted);font-size:13px}
     .card .btn{width:100%}
 
-    /* Destaque máximo no card do mais vendido */
+    /* Mais vendido (sem amarelo) */
     .card.featured{
-      border:2px solid rgba(255,201,74,.85);
-      background:rgba(255,201,74,.08);
+      border:2px solid var(--mvBorder);
+      background:rgba(37,211,102,.06);
       box-shadow:0 18px 40px rgba(0,0,0,.38);
-      transform: translateY(-3px);
+      transform: translateY(-2px);
     }
     .tag{
       position:absolute;top:10px;left:10px;
       display:inline-flex;align-items:center;gap:8px;
-      padding:10px 12px;border-radius:999px;
+      padding:9px 12px;border-radius:999px;
       font-size:12px;font-weight:1000;
-      border:1px solid var(--hotBorder);
-      background:linear-gradient(180deg, rgba(255,201,74,1), rgba(255,157,0,.95));
-      color:var(--hotText);
-      box-shadow:0 10px 22px rgba(0,0,0,.30);
+      border:1px solid var(--mvBorder);
+      background:var(--mvBg);
+      color:var(--mvText);
       text-transform:uppercase;
       letter-spacing:.4px;
+      box-shadow:0 10px 22px rgba(0,0,0,.25);
     }
-    .tag small{opacity:.95;font-weight:1000}
 
     .urgency{
       margin-top:12px;
@@ -321,8 +309,7 @@
 
 <body>
   <!-- WhatsApp message: Olá vim do site inseticidabiologico.com.br quero comprar inseticida Biológico. -->
-  <!-- encoded -->
-  <!-- Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico. -->
+  <!-- encoded: Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico. -->
 
   <header>
     <div class="wrap">
@@ -339,7 +326,7 @@
           <a class="chip" href="tel:+5517991405464">(17) 99140-5464</a>
           <a class="btn btn-wa" target="_blank" rel="noopener"
              href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
-            Comprar no WhatsApp
+            WhatsApp
           </a>
         </div>
       </div>
@@ -354,7 +341,7 @@
       </div>
       <a class="btn btn-wa" target="_blank" rel="noopener"
          href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
-        Falar agora
+        Comprar agora
       </a>
     </div>
 
@@ -368,15 +355,13 @@
         <br><strong>Telefone/WhatsApp:</strong> (17) 99140-5464
       </p>
 
-      <span class="hot-hero">🔥 <b>Takotrop</b> • MAIS VENDIDO • Compra mais rápida</span>
-
       <div class="ctas">
         <a class="btn btn-wa" target="_blank" rel="noopener"
            href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20quero%20comprar%20inseticida%20Biol%C3%B3gico.">
           Quero comprar agora
         </a>
         <a class="btn btn-soft" href="#takotrop">Ver Takotrop (Mais vendido)</a>
-        <a class="btn btn-ghost" href="#avaliacoes">Avaliações reais</a>
+        <a class="btn btn-ghost" href="#avaliacoes">Avaliações</a>
       </div>
 
       <div class="benefits">
@@ -403,13 +388,13 @@
       <h2>Produtos (Takotrop é o mais vendido)</h2>
 
       <div class="grid">
-        <!-- TAKOTROP destaque -->
+        <!-- TAKOTROP destaque (sem amarelo) -->
         <article class="card featured" id="takotrop">
-          <div class="tag">🔥 MAIS VENDIDO <small>Takotrop</small></div>
+          <div class="tag">MAIS VENDIDO • Takotrop</div>
           <img class="thumb" src="takotrop.webp" alt="Takotrop inseticida biológico mais vendido para comprar com frete grátis" width="960" height="600" loading="lazy" decoding="async">
           <h3>Takotrop</h3>
           <ul>
-            <li><strong>Mais vendido</strong> (decisão mais rápida).</li>
+            <li><strong>Mais vendido</strong> (escolha mais rápida).</li>
             <li>Envio imediato + frete grátis (Brasil).</li>
             <li>Pagamento: Pix, boleto ou cartão.</li>
           </ul>
@@ -419,7 +404,7 @@
           </a>
         </article>
 
-        <!-- FITONEEM (imagem corrigida) -->
+        <!-- FITONEEM (imagem menor/ajustada) -->
         <article class="card" id="fitoneem">
           <img class="thumb contain" src="fitoneem.webp" alt="Fitoneem inseticida biológico para comprar com frete grátis" width="960" height="600" loading="lazy" decoding="async">
           <h3>Fitoneem</h3>
@@ -454,30 +439,30 @@
       </div>
     </section>
 
-    <!-- Avaliações reais (Innovet) -->
+    <!-- Avaliações (sem citar fonte externa) -->
     <section class="section" id="avaliacoes">
-      <h2>Avaliações reais</h2>
+      <h2>Avaliações</h2>
 
       <div class="proof">
-        <strong style="display:block;font-size:13px">O que produtores relatam (fonte: Innovet Tecnologias)</strong>
+        <strong style="display:block;font-size:13px">O que clientes relatam</strong>
         <div style="color:var(--muted);font-size:13px;margin-top:6px">
-          Trechos reais publicados no site da Innovet (formato curto para leitura rápida no celular).
+          (Sugestão) Cole aqui 3 avaliações reais curtas para aumentar ainda mais a conversão.
         </div>
       </div>
 
       <div class="testi">
-        <strong>Hortifruti em estufa — Tomate e pimentão</strong>
-        <span>“Mais raízes finas, folhas ativas por mais tempo e pegamento superior em picos de calor; redução visível de abortamento.”</span>
+        <strong>Avaliação 1 — (iniciais/UF)</strong>
+        <span>“Cole aqui uma avaliação real curta sobre atendimento, envio e entrega.”</span>
       </div>
 
       <div class="testi">
-        <strong>Uva/Manga — Vale do São Francisco</strong>
-        <span>“Floração uniforme e melhor enchimento; °Brix e coloração avançam com mais estabilidade pós-estresse.”</span>
+        <strong>Avaliação 2 — (iniciais/UF)</strong>
+        <span>“Cole aqui outra avaliação real curta.”</span>
       </div>
 
       <div class="testi">
-        <strong>Grãos — Soja/Milho</strong>
-        <span>“Plantas com vigor vegetativo após veranicos e melhor aproveitamento do adubo de cobertura.”</span>
+        <strong>Avaliação 3 — (iniciais/UF)</strong>
+        <span>“Cole aqui outra avaliação real curta.”</span>
       </div>
     </section>
 
