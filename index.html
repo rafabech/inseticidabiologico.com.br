@@ -18,7 +18,7 @@
   <meta property="og:description" content="Frete grátis Brasil • Nota fiscal • Transportadora • Rastreio. No boleto: você recebe o produto e só paga depois." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
-  <meta property="og:image" content="plantacao.webp" />
+  <meta property="og:image" content="capa.webp" />
 
   <!-- Canonical -->
   <link rel="canonical" href="https://www.inseticidabiologico.com.br/" />
@@ -106,43 +106,65 @@
     a{color:inherit}
     .container{max-width:1120px; margin:0 auto; padding:0 18px}
 
-    /* HERO (sem topo/header) */
-    .hero{padding:16px 0 10px;}
-    .hero-grid{
-      display:grid; gap:16px;
-      grid-template-columns: 1.15fr .85fr;
-      align-items:stretch;
+    /* CAPA NO TOPO */
+    .top-cover{
+      width:100%;
+      margin:0;
+      border-bottom:1px solid var(--line);
+      background: rgba(255,255,255,.03);
     }
-    .panel{
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-      box-shadow: var(--shadow);
-      overflow:hidden;
+    .top-cover img{
+      width:100%;
+      height:auto;
+      display:block;
+      max-height: 420px;
+      object-fit: cover;
     }
-    .hero-left{padding:20px}
-    .kicker{
-      display:inline-flex; gap:8px; align-items:center;
-      font-size:12px; color:var(--muted);
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.06);
-      padding:8px 10px;
-      border-radius:999px;
+
+    /* HERO (agora fora do “quadrado”, centralizado e focado em conversão) */
+    .hero{padding:22px 0 8px;}
+    .hero-content{
+      max-width: 900px;
+      margin: 0 auto;
+      text-align:center;
+    }
+    .kickerline{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
       flex-wrap:wrap;
+      color:var(--muted);
+      font-size:12px;
+      margin-bottom:10px;
+      opacity:.95;
     }
-    .kicker .dot{
-      width:8px; height:8px; border-radius:99px; background: var(--accent);
-      box-shadow:0 0 0 6px rgba(34,197,94,.14);
+    .kickerline .dot{
+      width:10px; height:10px; border-radius:99px; background: var(--accent);
+      box-shadow:0 0 0 7px rgba(34,197,94,.14);
+      flex:0 0 auto;
     }
     h1{
-      margin:14px 0 10px;
-      font-size:30px;
-      letter-spacing:-.3px;
+      margin:0 0 10px;
+      font-size:34px;
+      letter-spacing:-.4px;
       line-height:1.12;
       color:var(--text);
     }
-    .sub{margin:0 0 14px; color:var(--muted); font-size:14px;}
-    .bullets{display:grid; gap:10px; margin:14px 0 16px;}
+    .sub{
+      margin:0 auto 16px;
+      color:var(--muted);
+      font-size:14px;
+      max-width: 760px;
+    }
+
+    .bullets{
+      max-width: 760px;
+      margin: 0 auto 16px;
+      display:grid;
+      gap:10px;
+      text-align:left;
+    }
     .bullet{display:flex; gap:10px; align-items:flex-start; color:var(--text); font-size:14px;}
     .check{
       width:20px; height:20px; border-radius:8px;
@@ -153,7 +175,14 @@
     }
     .check svg{width:14px; height:14px}
 
-    .cta-row{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:10px;}
+    .cta-row{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
     .btn{
       display:inline-flex; gap:10px; align-items:center; justify-content:center;
       border-radius:14px;
@@ -171,15 +200,19 @@
       border-color: rgba(34,197,94,.55);
       font-weight:900;
       box-shadow: 0 14px 30px rgba(34,197,94,.18);
+      min-width: 280px;
+      padding: 13px 16px;
     }
     .btn-secondary{background: rgba(255,255,255,.06); color:var(--text);}
     .btn small{font-weight:800; opacity:.92}
 
     .trust{
-      margin-top:12px;
+      margin:14px auto 0;
       display:flex; gap:10px; flex-wrap:wrap;
+      justify-content:center;
       color:var(--muted);
       font-size:12px;
+      max-width: 980px;
     }
     .tag{
       display:inline-flex; gap:8px; align-items:center;
@@ -189,54 +222,22 @@
       background: rgba(255,255,255,.06);
     }
 
-    .trustbox{
-      margin-top:12px;
-      padding:12px 12px;
-      border:1px solid rgba(34,197,94,.35);
-      border-radius:14px;
-      background: rgba(34,197,94,.10);
-      box-shadow: 0 14px 28px rgba(34,197,94,.10);
+    .seo-links{
+      margin:12px auto 0;
+      display:flex; flex-wrap:wrap; gap:10px;
+      justify-content:center;
+      color:var(--muted);
+      font-size:12px;
+      max-width: 980px;
     }
-    .trustbox-row{display:flex; gap:10px; align-items:flex-start;}
-    .trustbox-ic{
-      width:34px; height:34px; border-radius:12px;
-      display:grid; place-items:center;
-      background: rgba(34,197,94,.18);
-      border:1px solid rgba(34,197,94,.30);
-      flex:0 0 auto;
-    }
-    .trustbox-title{font-weight:900; color:var(--text);}
-    .trustbox-txt{margin-top:4px; color:var(--muted); font-size:12px; line-height:1.45;}
-
-    .hero-right{position:relative; min-height:280px;}
-    .hero-right .bg{
-      position:absolute; inset:0;
-      background-image: url("plantacao.webp");
-      background-size: cover;
-      background-position: center;
-      filter: saturate(1.05) contrast(1.05);
-      transform: scale(1.02);
-    }
-    .hero-right .overlay{
-      position:absolute; inset:0;
-      background: linear-gradient(180deg, rgba(11,18,32,.06), rgba(11,18,32,.82));
-    }
-    .hero-right .card{
-      position:relative;
-      padding:18px;
-      height:100%;
-      display:flex; flex-direction:column; justify-content:flex-end;
-      gap:10px;
-    }
-    .hl{
-      display:flex; gap:10px; align-items:flex-start;
-      padding:12px;
+    .seo-links a{
+      display:inline-flex;
+      padding:8px 10px;
       border:1px solid var(--line);
-      border-radius:16px;
-      background: rgba(11,18,32,.50);
+      border-radius:999px;
+      background: rgba(255,255,255,.06);
+      text-decoration:none;
     }
-    .hl b{font-size:13px; color:var(--text)}
-    .hl span{display:block; color:var(--muted); font-size:12px; margin-top:2px}
 
     .section{padding:18px 0 6px;}
     .section h2{margin:0 0 10px; font-size:20px; letter-spacing:-.2px; color:var(--text);}
@@ -282,8 +283,6 @@
       background: rgba(0,0,0,.15);
       display:block;
     }
-
-    /* clique na foto */
     .p-img a{display:block; text-decoration:none;}
     .p-img a:focus{outline:2px solid rgba(34,197,94,.7); outline-offset:4px; border-radius:18px;}
     .p-img a:hover img{filter: brightness(1.03); transform: translateY(-1px);}
@@ -347,22 +346,6 @@
     .review .meta{font-size:12px; color:#334155}
     .review .txt{font-size:13px; color:#111827; line-height:1.45}
 
-    /* Links internos SEO */
-    .seo-links{
-      margin-top:12px;
-      display:flex; flex-wrap:wrap; gap:10px;
-      color:var(--muted);
-      font-size:12px;
-    }
-    .seo-links a{
-      display:inline-flex;
-      padding:8px 10px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      background: rgba(255,255,255,.06);
-      text-decoration:none;
-    }
-
     .faqbox{
       border:1px solid var(--line);
       border-radius: var(--radius);
@@ -402,120 +385,95 @@
     .sr-only{position:absolute; left:-9999px}
 
     @media (max-width: 980px){
-      .hero-grid{grid-template-columns: 1fr;}
-      .hero-right{display:none;}
       .grid3{grid-template-columns: 1fr}
       h1{font-size:28px}
+      .top-cover img{max-height: 320px;}
+      .btn-primary{min-width: 100%;}
+      .bullets{max-width: 100%;}
+      .hero-content{text-align:left;}
+      .kickerline{justify-content:flex-start;}
+      .cta-row{justify-content:flex-start;}
+      .trust, .seo-links{justify-content:flex-start;}
     }
   </style>
 </head>
 
 <body>
   <main>
+
+    <!-- CAPA NO TOPO -->
+    <div class="top-cover" aria-label="Capa">
+      <img src="capa.webp" alt="Inseticida biológico - capa" loading="eager" />
+    </div>
+
+    <!-- HERO (TEXTO FORA DO QUADRADO / CENTRALIZADO) -->
     <section class="hero" id="topo">
       <div class="container">
-        <div class="hero-grid">
-          <div class="panel hero-left">
-            <div class="kicker">
-              <span class="dot"></span>
-              <span>
-                Frete grátis Brasil • Pix, boleto ou cartão •
-                <b>BOLETO: você recebe o produto e só paga depois</b> •
-                <b>Nota fiscal</b> • <b>Transportadora</b> • <b>Rastreio em tempo real</b>
-              </span>
-            </div>
-
-            <h1>Inseticida biológico com compra simples e rápida no WhatsApp.</h1>
-
-            <p class="sub">
-              Escolha o produto abaixo e clique em <b>Falar com o técnico responsável</b>.
-              Se tiver dúvida, diga sua cultura e a praga.
-            </p>
-
-            <div class="bullets">
-              <div class="bullet">
-                <div class="check" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-                </div>
-                <div><b>Atendimento rápido</b> para tirar dúvidas e fechar seu pedido.</div>
-              </div>
-              <div class="bullet">
-                <div class="check" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-                </div>
-                <div><b>Frete grátis</b> para todo o Brasil (prazos por região no WhatsApp).</div>
-              </div>
-              <div class="bullet">
-                <div class="check" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-                </div>
-                <div><b>Envio imediato</b> após aprovação do pedido.</div>
-              </div>
-            </div>
-
-            <div class="cta-row">
-              <a class="btn btn-primary" id="cta-whatsapp" target="_blank" rel="noopener"
-                 href="https://wa.me/5517991405464?text=Ol%C3%A1%2C%20quero%20falar%20com%20o%20t%C3%A9cnico%20respons%C3%A1vel%20sobre%20inseticida%20biol%C3%B3gico.%20Minha%20cultura%20%C3%A9%20____%20e%20a%20praga%20%C3%A9%20____.">
-                <span aria-hidden="true">🟢</span>
-                <span>Falar com o técnico responsável</span>
-              </a>
-
-              <a class="btn btn-secondary" href="#produtos">
-                <small>Ver produtos</small>
-              </a>
-
-              <a class="btn btn-secondary" href="#avaliacoes">
-                <small>Avaliações</small>
-              </a>
-            </div>
-
-            <div class="trust" aria-label="Destaques">
-              <span class="tag">Compra segura</span>
-              <span class="tag">Frete grátis Brasil</span>
-              <span class="tag">Envio imediato</span>
-              <span class="tag">Pix • Boleto • Cartão</span>
-              <span class="tag"><b>Boleto: receba e pague depois</b></span>
-              <span class="tag"><b>Nota fiscal em todos os pedidos</b></span>
-              <span class="tag"><b>Envio por transportadora</b></span>
-              <span class="tag"><b>Rastreio em tempo real</b></span>
-            </div>
-
-            <div class="seo-links" aria-label="Saiba mais (SEO)">
-              <a href="/takotrop.html">Saiba mais: Takotrop</a>
-              <a href="/bioolimpo.html">Saiba mais: BioOlimpo</a>
-            </div>
-
+        <div class="hero-content">
+          <div class="kickerline">
+            <span class="dot" aria-hidden="true"></span>
+            <span>Atendimento técnico no WhatsApp • Compra rápida • Frete grátis Brasil</span>
           </div>
 
-          <div class="panel hero-right" aria-label="Imagem de lavoura">
-            <div class="bg"></div>
-            <div class="overlay"></div>
-            <div class="card">
-              <div class="hl">
-                <div style="font-size:18px;line-height:1">⚡</div>
-                <div>
-                  <b>Atendimento rápido</b>
-                  <span>WhatsApp direto.</span>
-                </div>
+          <h1>Inseticida biológico com compra simples e rápida no WhatsApp.</h1>
+
+          <p class="sub">
+            Escolha o produto abaixo e clique em <b>Falar com o técnico responsável</b>.
+            Se tiver dúvida, diga sua cultura e a praga.
+          </p>
+
+          <div class="bullets">
+            <div class="bullet">
+              <div class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
               </div>
-              <div class="hl">
-                <div style="font-size:18px;line-height:1">🧾</div>
-                <div>
-                  <b>Nota fiscal + rastreio</b>
-                  <span>Transportadora + acompanhamento.</span>
-                </div>
+              <div><b>Atendimento rápido</b> para tirar dúvidas e fechar seu pedido.</div>
+            </div>
+            <div class="bullet">
+              <div class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
               </div>
-              <div class="hl">
-                <div style="font-size:18px;line-height:1">🚚</div>
-                <div>
-                  <b>Frete grátis no Brasil</b>
-                  <span>Consulte prazos no WhatsApp.</span>
-                </div>
+              <div><b>Frete grátis</b> para todo o Brasil (prazos por região no WhatsApp).</div>
+            </div>
+            <div class="bullet">
+              <div class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
               </div>
-              <div style="height:6px"></div>
+              <div><b>Envio imediato</b> após aprovação do pedido.</div>
             </div>
           </div>
 
+          <div class="cta-row">
+            <a class="btn btn-primary" id="cta-whatsapp" target="_blank" rel="noopener"
+               href="https://wa.me/5517991405464?text=Ol%C3%A1%2C%20quero%20falar%20com%20o%20t%C3%A9cnico%20respons%C3%A1vel%20sobre%20inseticida%20biol%C3%B3gico.%20Minha%20cultura%20%C3%A9%20____%20e%20a%20praga%20%C3%A9%20____.">
+              <span aria-hidden="true">🟢</span>
+              <span>Falar com o técnico responsável</span>
+            </a>
+
+            <a class="btn btn-secondary" href="#produtos">
+              <small>Ver produtos</small>
+            </a>
+
+            <a class="btn btn-secondary" href="#avaliacoes">
+              <small>Avaliações</small>
+            </a>
+          </div>
+
+          <div class="trust" aria-label="Destaques">
+            <span class="tag">Compra segura</span>
+            <span class="tag">Frete grátis Brasil</span>
+            <span class="tag">Envio imediato</span>
+            <span class="tag">Pix • Boleto • Cartão</span>
+            <span class="tag"><b>Boleto: receba e pague depois</b></span>
+            <span class="tag"><b>Nota fiscal em todos os pedidos</b></span>
+            <span class="tag"><b>Envio por transportadora</b></span>
+            <span class="tag"><b>Rastreio em tempo real</b></span>
+          </div>
+
+          <div class="seo-links" aria-label="Saiba mais (SEO)">
+            <a href="/takotrop.html">Saiba mais: Takotrop</a>
+            <a href="/bioolimpo.html">Saiba mais: BioOlimpo</a>
+          </div>
         </div>
       </div>
     </section>
