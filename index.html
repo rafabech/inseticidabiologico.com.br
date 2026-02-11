@@ -5,23 +5,20 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0b1220" />
 
-  <title>Inseticida Biológico | Takotrop, BioOlimpo e Fitoneem — Frete Grátis Brasil</title>
-  <meta name="description" content="Compre inseticida biológico com nota fiscal. Envio por transportadora com rastreio. No boleto, você recebe o produto e só paga depois no vencimento." />
-  <meta name="keywords" content="inseticida biológico, takotrop, bioolimpo, fitoneem, controle biológico, mosca-branca, percevejo, cigarrinha, beauveria, metarhizium, neem, pseudomonas" />
+  <title>Inseticida Biológico — Takotrop, BioOlimpo e Fitoneem | Compra no WhatsApp</title>
+  <meta name="description" content="Escolha o inseticida biológico ideal (Takotrop, BioOlimpo ou Fitoneem). Página simples para o produtor: clique na foto e fale no WhatsApp." />
+  <meta name="keywords" content="inseticida biológico, takotrop, bioolimpo, fitoneem, controle biológico, manejo integrado, mosca-branca, percevejo, tripes, cigarrinha, neem, beauveria, metarhizium, pseudomonas" />
   <meta name="robots" content="index,follow" />
   <meta name="googlebot" content="index,follow,max-image-preview:large" />
 
   <link rel="icon" href="biofundobranco.webp" type="image/webp" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Inseticida Biológico — Compra rápida no WhatsApp" />
-  <meta property="og:description" content="Frete grátis Brasil • Nota fiscal • Transportadora • Rastreio. No boleto: você recebe o produto e só paga depois." />
+  <meta property="og:title" content="Inseticida Biológico — Compra simples no WhatsApp" />
+  <meta property="og:description" content="Clique na foto do produto e veja pragas + culturas. Atendimento no WhatsApp." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:image" content="biofundopreto.webp" />
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.inseticidabiologico.com.br/" />
 
   <!-- Google Ads tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17674376709"></script>
@@ -32,7 +29,7 @@
     gtag('config', 'AW-17674376709');
   </script>
 
-  <!-- JSON-LD (SEO): Store + ItemList (ajuda Google Imagens) -->
+  <!-- JSON-LD (SEO): Store + ItemList -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -43,7 +40,7 @@
     "areaServed":"BR",
     "currenciesAccepted":"BRL",
     "paymentAccepted":"Pix, Boleto, Cartão de crédito",
-    "description":"Venda de inseticidas biológicos com atendimento via WhatsApp. No boleto, o cliente recebe o produto e paga depois no vencimento. Nota fiscal em todos os pedidos. Envio por transportadora com rastreio."
+    "description":"Venda de inseticidas biológicos com atendimento via WhatsApp. Páginas de produto com pragas e culturas."
   }
   </script>
 
@@ -59,9 +56,9 @@
         "item":{
           "@type":"Product",
           "name":"Takotrop",
-          "image":[ "https://www.inseticidabiologico.com.br/takotrop.webp" ],
-          "description":"Inseticida microbiológico (SC) com Pseudomonas fluorescens e Pseudomonas chlororaphis.",
-          "brand":{"@type":"Brand","name":"Takotrop"}
+          "url":"https://www.inseticidabiologico.com.br/takotrop.html",
+          "image":"https://www.inseticidabiologico.com.br/takotrop1.webp",
+          "description":"Inseticida biológico microbiológico (Pseudomonas fluorescens + P. chlororaphis)."
         }
       },
       {
@@ -70,9 +67,9 @@
         "item":{
           "@type":"Product",
           "name":"BioOlimpo",
-          "image":[ "https://www.inseticidabiologico.com.br/bioolimpo.webp" ],
-          "description":"Bioinseticida microbiológico (WP) com Beauveria bassiana e Metarhizium anisopliae.",
-          "brand":{"@type":"Brand","name":"BioOlimpo"}
+          "url":"https://www.inseticidabiologico.com.br/bioolimpo.html",
+          "image":"https://www.inseticidabiologico.com.br/bioolimpo1.webp",
+          "description":"Inseticida biológico (Beauveria bassiana + Metarhizium anisopliae)."
         }
       },
       {
@@ -81,9 +78,9 @@
         "item":{
           "@type":"Product",
           "name":"Fitoneem",
-          "image":[ "https://www.inseticidabiologico.com.br/fitoneem.webp" ],
-          "description":"Óleo de Neem (EC) com azadiractinas para suporte ao manejo integrado.",
-          "brand":{"@type":"Brand","name":"Fitoneem"}
+          "url":"https://www.inseticidabiologico.com.br/fitoneem.html",
+          "image":"https://www.inseticidabiologico.com.br/fitoneem1.webp",
+          "description":"Óleo de Neem com azadiractina (suporte ao manejo integrado)."
         }
       }
     ]
@@ -97,11 +94,10 @@
       --text:#f7faff;
       --accent:#22c55e;
       --line:rgba(255,255,255,.12);
-      --danger:#ef4444;
       --shadow: 0 14px 40px rgba(0,0,0,.30);
       --radius:18px;
       --yellow:#fde047;
-      --white:#ffffff;
+      --danger:#ef4444;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -112,9 +108,10 @@
       background: var(--bg);
       line-height:1.35;
     }
-    a{color:inherit}
+    a{color:inherit; text-decoration:none}
     .container{max-width:1120px; margin:0 auto; padding:0 18px}
 
+    /* Topbar */
     .topbar{
       position:sticky; top:0; z-index:30;
       backdrop-filter: blur(10px);
@@ -128,7 +125,7 @@
     }
     .brand{display:flex; align-items:center; gap:12px; min-width:0;}
     .brand img{
-      width:316px; height:316px;
+      width:140px; height:140px;
       border-radius:18px;
       border:1px solid rgba(255,255,255,.14);
       box-shadow: 0 12px 30px rgba(0,0,0,.22);
@@ -139,7 +136,7 @@
       display:block; font-size:15px; letter-spacing:.2px;
       white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
     }
-
+    .brand .txt span{display:block; font-size:12px; color:var(--muted)}
     .phone{
       display:flex; align-items:center; gap:12px;
       padding:10px 14px;
@@ -162,12 +159,8 @@
     .phone b{font-size:18px; letter-spacing:.2px; color:var(--text);}
     .phone small{display:block; color:var(--muted); font-size:12px; margin-top:2px;}
 
-    .hero{padding:22px 0 10px;}
-    .hero-grid{
-      display:grid; gap:16px;
-      grid-template-columns: 1.15fr .85fr;
-      align-items:stretch;
-    }
+    /* Hero */
+    .hero{padding:18px 0 10px;}
     .panel{
       border:1px solid var(--line);
       border-radius: var(--radius);
@@ -175,7 +168,7 @@
       box-shadow: var(--shadow);
       overflow:hidden;
     }
-    .hero-left{padding:20px}
+    .hero-in{padding:18px}
     .kicker{
       display:inline-flex; gap:8px; align-items:center;
       font-size:12px; color:var(--muted);
@@ -189,112 +182,21 @@
       width:8px; height:8px; border-radius:99px; background: var(--accent);
       box-shadow:0 0 0 6px rgba(34,197,94,.14);
     }
-    h1{
-      margin:14px 0 10px;
-      font-size:30px;
-      letter-spacing:-.3px;
-      line-height:1.12;
-      color:var(--text);
-    }
-    .sub{margin:0 0 14px; color:var(--muted); font-size:14px;}
-    .bullets{display:grid; gap:10px; margin:14px 0 16px;}
-    .bullet{display:flex; gap:10px; align-items:flex-start; color:var(--text); font-size:14px;}
-    .check{
-      width:20px; height:20px; border-radius:8px;
-      background: rgba(34,197,94,.18);
-      border:1px solid rgba(34,197,94,.35);
-      display:grid; place-items:center; flex:0 0 auto;
-      margin-top:1px;
-    }
-    .check svg{width:14px; height:14px}
-
-    .cta-row{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:10px;}
-    .btn{
-      display:inline-flex; gap:10px; align-items:center; justify-content:center;
-      border-radius:14px;
+    h1{margin:12px 0 8px; font-size:30px; letter-spacing:-.3px; line-height:1.12;}
+    .sub{margin:0; color:var(--muted); font-size:14px;}
+    .big-tip{
+      margin-top:12px;
       padding:12px 14px;
-      border:1px solid var(--line);
-      text-decoration:none;
-      cursor:pointer;
-      transition: transform .12s ease, filter .12s ease, background .12s ease;
-      user-select:none;
-    }
-    .btn:active{transform: translateY(1px)}
-    .btn-primary{
-      background: linear-gradient(90deg, rgba(34,197,94,.98), rgba(16,185,129,.98));
-      color:#071018;
-      border-color: rgba(34,197,94,.55);
-      font-weight:900;
-      box-shadow: 0 14px 30px rgba(34,197,94,.18);
-    }
-    .btn-secondary{background: rgba(255,255,255,.06); color:var(--text);}
-    .btn small{font-weight:800; opacity:.92}
-
-    .trust{
-      margin-top:12px;
-      display:flex; gap:10px; flex-wrap:wrap;
-      color:var(--muted);
-      font-size:12px;
-    }
-    .tag{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:8px 10px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      background: rgba(255,255,255,.06);
-    }
-
-    .trustbox{
-      margin-top:12px;
-      padding:12px 12px;
-      border:1px solid rgba(34,197,94,.35);
       border-radius:14px;
-      background: rgba(34,197,94,.10);
-      box-shadow: 0 14px 28px rgba(34,197,94,.10);
+      border:1px dashed rgba(255,255,255,.22);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      font-size:14px;
     }
-    .trustbox-row{display:flex; gap:10px; align-items:flex-start;}
-    .trustbox-ic{
-      width:34px; height:34px; border-radius:12px;
-      display:grid; place-items:center;
-      background: rgba(34,197,94,.18);
-      border:1px solid rgba(34,197,94,.30);
-      flex:0 0 auto;
-    }
-    .trustbox-title{font-weight:900; color:var(--text);}
-    .trustbox-txt{margin-top:4px; color:var(--muted); font-size:12px; line-height:1.45;}
 
-    .hero-right{position:relative; min-height:280px;}
-    .hero-right .bg{
-      position:absolute; inset:0;
-      background-image: url("biofundopreto.webp");
-      background-size: cover;
-      background-position: center;
-      filter: saturate(1.05) contrast(1.05);
-      transform: scale(1.02);
-    }
-    .hero-right .overlay{
-      position:absolute; inset:0;
-      background: linear-gradient(180deg, rgba(11,18,32,.06), rgba(11,18,32,.82));
-    }
-    .hero-right .card{
-      position:relative;
-      padding:18px;
-      height:100%;
-      display:flex; flex-direction:column; justify-content:flex-end;
-      gap:10px;
-    }
-    .hl{
-      display:flex; gap:10px; align-items:flex-start;
-      padding:12px;
-      border:1px solid var(--line);
-      border-radius:16px;
-      background: rgba(11,18,32,.50);
-    }
-    .hl b{font-size:13px; color:var(--text)}
-    .hl span{display:block; color:var(--muted); font-size:12px; margin-top:2px}
-
+    /* Products */
     .section{padding:18px 0 6px;}
-    .section h2{margin:0 0 10px; font-size:20px; letter-spacing:-.2px; color:var(--text);}
+    .section h2{margin:0 0 10px; font-size:20px; letter-spacing:-.2px;}
     .lead{color:var(--muted); font-size:13px; margin:0 0 12px;}
     .grid3{display:grid; gap:14px; grid-template-columns: repeat(3, 1fr);}
 
@@ -305,27 +207,24 @@
       box-shadow: var(--shadow);
       overflow:hidden;
       display:flex; flex-direction:column;
-      min-height: 100%;
+      min-height:100%;
     }
-    .p-top{
-      padding:14px;
-      display:flex; justify-content:space-between; align-items:flex-start; gap:10px;
-    }
-    .p-title strong{display:block; font-size:16px; color:var(--text)}
+    .p-top{padding:14px; display:flex; justify-content:space-between; align-items:flex-start; gap:10px;}
+    .p-title strong{display:block; font-size:16px;}
     .p-title small{display:block; color:var(--muted); margin-top:3px; font-size:12px}
     .badge{
       display:inline-flex; align-items:center; justify-content:center;
-      padding:8px 10px;
-      border-radius:999px;
-      font-weight:900;
-      font-size:12px;
-      letter-spacing:.2px;
+      padding:8px 10px; border-radius:999px;
+      font-weight:900; font-size:12px; letter-spacing:.2px;
       color:#120a00;
       border:1px solid rgba(0,0,0,.15);
       background: linear-gradient(90deg, var(--yellow), var(--danger));
       box-shadow: 0 12px 24px rgba(239,68,68,.18);
       white-space:nowrap;
     }
+
+    /* CLICK NA FOTO -> PÁGINA DO PRODUTO */
+    .p-img a{display:block}
     .p-img{padding:0 14px 12px;}
     .p-img img{
       width:100%;
@@ -333,91 +232,34 @@
       border-radius:16px;
       border:1px solid rgba(255,255,255,.10);
       background: rgba(0,0,0,.15);
+      transition: transform .14s ease, filter .14s ease;
     }
-    .p-body{
-      padding:0 14px 14px;
-      color:var(--muted);
-      font-size:13px;
-      display:grid; gap:10px;
-    }
-    .techbox{
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
+    .p-img a:active img{transform: scale(.99)}
+    .p-img a:hover img{filter: brightness(1.03)}
+
+    .p-body{padding:0 14px 14px; color:var(--muted); font-size:13px; display:grid; gap:10px;}
+
+    .btn{
+      display:inline-flex; gap:10px; align-items:center; justify-content:center;
       border-radius:14px;
-      padding:10px 12px;
-    }
-    .techbox .t-title{
-      font-weight:900;
-      color:var(--text);
-      font-size:13px;
-      margin-bottom:8px;
-    }
-    .tech{color:var(--muted); font-size:12px; line-height:1.5;}
-    .tech ul{margin:8px 0 0 18px; padding:0}
-    .tech li{margin:6px 0}
-    .fineprint{
-      color:var(--muted);
-      font-size:12px;
-      border-top:1px solid var(--line);
-      margin-top:10px; padding-top:10px;
-    }
-
-    /* Avaliações: branco estilo print, SEM Google */
-    .reviews-wrap{
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow: var(--shadow);
-    }
-    .reviews-head{
-      background: rgba(255,255,255,.06);
-      padding:14px;
-      border-bottom:1px solid rgba(255,255,255,.12);
-    }
-    .reviews-head b{color:var(--text)}
-    .reviews-white{
-      background: var(--white);
-      color: #111827;
-      padding:14px;
-    }
-    .review{
-      display:grid;
-      gap:6px;
-      padding:12px 0;
-      border-bottom:1px solid rgba(17,24,39,.12);
-    }
-    .review:last-child{border-bottom:none}
-    .stars{color:#fbbf24; letter-spacing:1px; font-size:14px;}
-    .review .who{font-weight:900; color:#0f172a}
-    .review .meta{font-size:12px; color:#334155}
-    .review .txt{font-size:13px; color:#111827; line-height:1.45}
-
-    /* Links internos SEO (discretos) */
-    .seo-links{
-      margin-top:12px;
-      display:flex; flex-wrap:wrap; gap:10px;
-      color:var(--muted);
-      font-size:12px;
-    }
-    .seo-links a{
-      display:inline-flex;
-      padding:8px 10px;
+      padding:12px 14px;
       border:1px solid var(--line);
-      border-radius:999px;
-      background: rgba(255,255,255,.06);
       text-decoration:none;
+      cursor:pointer;
+      transition: transform .12s ease;
+      user-select:none;
+      font-weight:900;
     }
-
-    .faqbox{
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.05);
-      box-shadow: var(--shadow);
-      padding:14px;
+    .btn:active{transform: translateY(1px)}
+    .btn-primary{
+      background: linear-gradient(90deg, rgba(34,197,94,.98), rgba(16,185,129,.98));
+      color:#071018;
+      border-color: rgba(34,197,94,.55);
+      box-shadow: 0 14px 30px rgba(34,197,94,.18);
     }
-    .faqbox b{color:var(--text)}
-    .faqbox .a{margin-top:8px; color:var(--muted); font-size:13px; line-height:1.5}
+    .btn-secondary{background: rgba(255,255,255,.06); color:var(--text);}
 
+    /* Footer */
     .footer{padding:18px 0 34px; color:var(--muted); font-size:12px;}
     .footer .row{
       display:flex; justify-content:space-between; align-items:flex-start;
@@ -426,6 +268,7 @@
       padding-top:14px;
     }
 
+    /* Floating WhatsApp */
     .wa-float{
       position:fixed;
       right:16px;
@@ -446,12 +289,10 @@
     .wa-float:active{transform: translateY(1px)}
     .sr-only{position:absolute; left:-9999px}
 
+    /* Mobile */
     @media (max-width: 980px){
-      .hero-grid{grid-template-columns: 1fr;}
-      .hero-right{display:none;}
       .grid3{grid-template-columns: 1fr}
       h1{font-size:28px}
-
       .topbar-inner{
         flex-direction: column;
         align-items: center;
@@ -461,8 +302,7 @@
       }
       .brand .txt strong{display:none;}
       .brand{justify-content: center; width: 100%;}
-      .brand img{width: 140px; height: 140px; border-radius: 18px;}
-
+      .brand img{width: 140px; height: 140px;}
       .phone{
         width: 100%;
         max-width: 420px;
@@ -472,9 +312,8 @@
         white-space: normal;
         text-align: center;
       }
-      .phone b{font-size: 22px; line-height: 1.05; letter-spacing: .5px;}
+      .phone b{font-size: 22px; line-height: 1.05;}
       .phone small{display:none;}
-      .phone .icon{width:34px; height:34px; border-radius:12px; font-size:18px;}
     }
   </style>
 </head>
@@ -484,9 +323,10 @@
     <div class="container">
       <div class="topbar-inner">
         <div class="brand" aria-label="Cabeçalho">
-          <img src="biofundopreto.webp" alt="Inseticida biológico original com nota fiscal e envio por transportadora" />
+          <img src="biofundopreto.webp" alt="Inseticida biológico - página inicial" />
           <div class="txt">
-            <strong>www.inseticidabiologico.com.br</strong>
+            <strong>Inseticida Biológico</strong>
+            <span>Escolha o produto (clique na foto)</span>
           </div>
         </div>
 
@@ -501,309 +341,102 @@
     </div>
   </header>
 
-  <main>
-    <section class="hero" id="topo">
+  <main id="topo">
+    <section class="hero">
       <div class="container">
-        <div class="hero-grid">
-          <div class="panel hero-left">
-            <div class="kicker">
-              <span class="dot"></span>
-              <span>
-                Frete grátis Brasil • Pix, boleto ou cartão •
-                <b>BOLETO: você recebe o produto e só paga depois</b> •
-                <b>Nota fiscal</b> • <b>Transportadora</b> • <b>Rastreio em tempo real</b>
-              </span>
-            </div>
-
-            <h1>Inseticida biológico com compra simples e rápida no WhatsApp.</h1>
-
-            <p class="sub">
-              Escolha o produto abaixo e clique em <b>Comprar no WhatsApp</b>.
-              Se tiver dúvida, fale com a gente e indicamos o melhor para sua praga e cultura.
-            </p>
-
-            <div class="bullets">
-              <div class="bullet">
-                <div class="check" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-                </div>
-                <div><b>Atendimento rápido</b> para tirar dúvidas e fechar seu pedido.</div>
-              </div>
-              <div class="bullet">
-                <div class="check" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-                </div>
-                <div><b>Frete grátis</b> para todo o Brasil (prazos por região no WhatsApp).</div>
-              </div>
-              <div class="bullet">
-                <div class="check" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-                </div>
-                <div><b>Envio imediato</b> após aprovação do pedido.</div>
-              </div>
-            </div>
-
-            <div class="cta-row">
-              <a class="btn btn-primary" id="cta-whatsapp" target="_blank" rel="noopener"
-                 href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20e%20quero%20comprar%20inseticida%20biol%C3%B3gico.">
-                <span aria-hidden="true">🟢</span>
-                <span>Comprar no WhatsApp</span>
-              </a>
-
-              <a class="btn btn-secondary" href="#produtos">
-                <small>Ver produtos</small>
-              </a>
-
-              <a class="btn btn-secondary" href="#avaliacoes">
-                <small>Avaliações</small>
-              </a>
-            </div>
-
-            <div class="trust" aria-label="Destaques">
-              <span class="tag">Compra segura</span>
-              <span class="tag">Frete grátis Brasil</span>
-              <span class="tag">Envio imediato</span>
-              <span class="tag">Pix • Boleto • Cartão</span>
-              <span class="tag"><b>Boleto: receba e pague depois</b></span>
-              <span class="tag"><b>Nota fiscal em todos os pedidos</b></span>
-              <span class="tag"><b>Envio por transportadora</b></span>
-              <span class="tag"><b>Rastreio em tempo real</b></span>
-            </div>
-
-            <div class="trustbox" aria-label="Mais confiança na compra">
-              <div class="trustbox-row">
-                <div class="trustbox-ic" aria-hidden="true">✅</div>
-                <div style="min-width:0;">
-                  <div class="trustbox-title">Mais confiança na compra</div>
-                  <div class="trustbox-txt">
-                    <b style="color:var(--text);">Boleto:</b> você <b style="color:var(--text);">recebe o produto</b> e só <b style="color:var(--text);">paga depois</b>, no vencimento.
-                    <br />
-                    <b style="color:var(--text);">Nota fiscal</b> em todos os pedidos • <b style="color:var(--text);">Envio por transportadora</b> • <b style="color:var(--text);">Rastreio em tempo real</b>.
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="seo-links" aria-label="Saiba mais (SEO)">
-              <a href="/takotrop.html">Saiba mais: Takotrop</a>
-              <a href="/bioolimpo.html">Saiba mais: BioOlimpo</a>
-              <a href="/fitoneem.html">Saiba mais: Fitoneem</a>
-            </div>
-
+        <div class="panel hero-in">
+          <div class="kicker">
+            <span class="dot"></span>
+            <span>Página simples (para o povo do campo) • Clique na foto do produto</span>
           </div>
 
-          <div class="panel hero-right" aria-label="Informações rápidas">
-            <div class="bg"></div>
-            <div class="overlay"></div>
-            <div class="card">
-              <div class="hl">
-                <div style="font-size:18px;line-height:1">⚡</div>
-                <div>
-                  <b>Compra mais rápida</b>
-                  <span>Clicou no WhatsApp e fechou o pedido.</span>
-                </div>
-              </div>
-              <div class="hl">
-                <div style="font-size:18px;line-height:1">🧾</div>
-                <div>
-                  <b>Nota fiscal + rastreio</b>
-                  <span>Envio por transportadora e rastreio em tempo real.</span>
-                </div>
-              </div>
-              <div class="hl">
-                <div style="font-size:18px;line-height:1">🧪</div>
-                <div>
-                  <b>Controle biológico</b>
-                  <span>Microbiológicos + neem para o manejo.</span>
-                </div>
-              </div>
-              <div class="hl">
-                <div style="font-size:18px;line-height:1">🚚</div>
-                <div>
-                  <b>Frete grátis no Brasil</b>
-                  <span>Consulte o prazo da sua região no WhatsApp.</span>
-                </div>
-              </div>
-              <div style="height:6px"></div>
-            </div>
-          </div>
+          <h1>Escolha o produto e abra a página dele</h1>
+          <p class="sub">
+            Aqui é direto: <b>clique na foto</b> do produto para ver <b>pragas</b> e <b>culturas</b>.
+            Se quiser, chama no WhatsApp que a gente orienta.
+          </p>
 
+          <div class="big-tip">
+            ✅ <b>Dica:</b> Se você não sabe qual escolher, clique no WhatsApp e diga: <b>cultura</b> (soja, milho, café etc.) e a <b>praga</b> (mosca-branca, tripes, percevejo…).
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="produtos">
       <div class="container">
-        <h2>Escolha o produto</h2>
-        <p class="lead">Se estiver em dúvida, clique no WhatsApp e diga sua cultura e a praga. A gente orienta rápido.</p>
+        <h2>Produtos</h2>
+        <p class="lead">Clique na foto para abrir a página do produto.</p>
 
         <div class="grid3">
+          <!-- TAKOTROP -->
           <article class="product" aria-label="Takotrop">
             <div class="p-top">
               <div class="p-title">
-                <strong>Takotrop</strong>
-                <small>Inseticida microbiológico (SC) — múltiplas vias de ação</small>
+                <strong>Takotrop®</strong>
+                <small>Pseudomonas fluorescens + P. chlororaphis (SC)</small>
               </div>
-              <div class="badge" title="Mais vendido">MAIS VENDIDO</div>
+              <div class="badge">MAIS VENDIDO</div>
             </div>
+
             <div class="p-img">
-              <img src="takotrop.webp"
-                   alt="Takotrop inseticida biológico microbiológico para mosca-branca, tripes, percevejos e cigarrinhas"
-                   loading="lazy" />
+              <a href="takotrop.html" aria-label="Abrir página do Takotrop">
+                <img src="takotrop1.webp" alt="Takotrop - clique para abrir a página do produto" loading="lazy" />
+              </a>
             </div>
+
             <div class="p-body">
-              <div>
-                Indicado para manejo biológico de pragas como mosca-branca, tripes, percevejos, cigarrinhas, ácaro-rajado e bicho-mineiro (conforme posicionamento técnico e bula).
-              </div>
-
-              <div class="techbox">
-                <div class="t-title">Informações técnicas (já abertas)</div>
-                <div class="tech">
-                  <b>Composição (bula/registro MAPA 16122):</b>
-                  <ul>
-                    <li><b>Pseudomonas fluorescens</b> (CCTB03): 6 g/L</li>
-                    <li><b>Pseudomonas chlororaphis</b> (CCTB19): 12 g/L</li>
-                    <li>Formulação: <b>SC</b></li>
-                  </ul>
-                  <div class="fineprint">Use conforme rótulo/bula e recomendações técnicas.</div>
-                </div>
-              </div>
-
-              <a class="btn btn-secondary" href="/takotrop.html" style="margin-top:2px;">Ver página completa do Takotrop</a>
+              <div>Veja pragas e culturas, modo de ação e informações técnicas do Takotrop.</div>
+              <a class="btn btn-primary" href="takotrop.html">Abrir página do Takotrop</a>
             </div>
           </article>
 
+          <!-- BIOOLIMPO -->
           <article class="product" aria-label="BioOlimpo">
             <div class="p-top">
               <div class="p-title">
-                <strong>BioOlimpo</strong>
-                <small>Beauveria + Metarhizium (WP) — fungos entomopatogênicos</small>
+                <strong>BioOlimpo®</strong>
+                <small>Beauveria bassiana + Metarhizium anisopliae (WP)</small>
               </div>
             </div>
+
             <div class="p-img">
-              <img src="bioolimpo.webp"
-                   alt="BioOlimpo beauveria bassiana e metarhizium anisopliae inseticida biológico fungo entomopatogênico"
-                   loading="lazy" />
+              <a href="bioolimpo.html" aria-label="Abrir página do BioOlimpo">
+                <img src="bioolimpo1.webp" alt="BioOlimpo - clique para abrir a página do produto" loading="lazy" />
+              </a>
             </div>
+
             <div class="p-body">
-              <div>
-                Bioinseticida microbiológico com fungos entomopatogênicos para suporte ao manejo integrado, com alvos descritos em bula.
-              </div>
-
-              <div class="techbox">
-                <div class="t-title">Informações técnicas (já abertas)</div>
-                <div class="tech">
-                  <b>Composição (bula/registro MAPA 31721):</b>
-                  <ul>
-                    <li><b>Beauveria bassiana</b> (IBCB 66): 150 g/kg</li>
-                    <li><b>Metarhizium anisopliae</b> (IBCB 425): 150 g/kg</li>
-                    <li>Formulação: <b>WP</b></li>
-                  </ul>
-                  <div class="fineprint">Use conforme rótulo/bula e recomendações técnicas.</div>
-                </div>
-              </div>
-
-              <a class="btn btn-secondary" href="/bioolimpo.html" style="margin-top:2px;">Ver página completa do BioOlimpo</a>
+              <div>Veja pragas e culturas, explicação simples e informações técnicas do BioOlimpo.</div>
+              <a class="btn btn-primary" href="bioolimpo.html">Abrir página do BioOlimpo</a>
             </div>
           </article>
 
+          <!-- FITONEEM -->
           <article class="product" aria-label="Fitoneem">
             <div class="p-top">
               <div class="p-title">
-                <strong>Fitoneem</strong>
-                <small>Óleo de Neem (EC) — suporte ao manejo integrado</small>
+                <strong>Fitoneem®</strong>
+                <small>Óleo de Neem com azadiractina (MAPA 6718)</small>
               </div>
             </div>
+
             <div class="p-img">
-              <img src="fitoneem.webp"
-                   alt="Fitoneem óleo de neem azadiractina inseticida biológico para manejo integrado"
-                   loading="lazy" />
+              <a href="fitoneem.html" aria-label="Abrir página do Fitoneem">
+                <img src="fitoneem1.webp" alt="Fitoneem - clique para abrir a página do produto" loading="lazy" />
+              </a>
             </div>
+
             <div class="p-body">
-              <div>
-                Produto à base de neem para suporte ao manejo integrado, com atuação por contato/ingestão conforme bula e recomendação técnica.
-              </div>
-
-              <div class="techbox">
-                <div class="t-title">Informações técnicas (já abertas)</div>
-                <div class="tech">
-                  <b>Composição (bula/registro MAPA 6718):</b>
-                  <ul>
-                    <li><b>Óleo de Neem</b>: 850 g/L</li>
-                    <li><b>Azadiractina A</b>: 2,00 g/L • <b>Azadiractina B</b>: 1,00 g/L</li>
-                    <li>Formulação: <b>EC</b></li>
-                  </ul>
-                  <div class="fineprint">Use conforme rótulo/bula e recomendações técnicas.</div>
-                </div>
-              </div>
-
-              <a class="btn btn-secondary" href="/fitoneem.html" style="margin-top:2px;">Ver página completa do Fitoneem</a>
+              <div>Veja pragas e culturas e por que a azadiractina padronizada faz diferença no campo.</div>
+              <a class="btn btn-primary" href="fitoneem.html">Abrir página do Fitoneem</a>
             </div>
           </article>
         </div>
-      </div>
-    </section>
 
-    <!-- Avaliações (somente isso — sem depoimentos) -->
-    <section class="section" id="avaliacoes">
-      <div class="container">
-        <h2>Avaliações de clientes</h2>
-        <p class="lead">Relatos de compra e entrega (nota fiscal, transportadora e rastreio).</p>
+        <div style="height:14px"></div>
 
-        <div class="reviews-wrap" aria-label="Avaliações">
-          <div class="reviews-head">
-            <b>Compra segura</b> • <span style="color:var(--muted)">Boleto: receba o produto e pague depois • NF • Transportadora • Rastreio</span>
-          </div>
-
-          <div class="reviews-white">
-            <div class="review">
-              <div class="stars">★★★★★</div>
-              <div class="who">Carlos H. — Ribeirão Preto / SP</div>
-              <div class="meta">Entrega por transportadora • Nota fiscal ok • Rastreio em tempo real</div>
-              <div class="txt">Chegou rápido e certinho. No boleto recebi antes e paguei depois no vencimento.</div>
-            </div>
-
-            <div class="review">
-              <div class="stars">★★★★★</div>
-              <div class="who">José C. — Sorriso / MT</div>
-              <div class="meta">Compra simples pelo WhatsApp • Produto original</div>
-              <div class="txt">Atendimento direto. Produto veio com nota fiscal e rastreio funcionando.</div>
-            </div>
-
-            <div class="review">
-              <div class="stars">★★★★★</div>
-              <div class="who">Marcos A. — Rio Verde / GO</div>
-              <div class="meta">Transportadora • Entrega antes do vencimento do boleto</div>
-              <div class="txt">Compra tranquila. Recebi primeiro, depois paguei no vencimento.</div>
-            </div>
-
-            <div class="review">
-              <div class="stars">★★★★★</div>
-              <div class="who">João B. — Cascavel / PR</div>
-              <div class="meta">Nota fiscal em todos os pedidos • Rastreio ok</div>
-              <div class="txt">Tinha receio de comprar online, mas veio nota fiscal e o rastreio acompanhou certinho.</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- FAQ (aberto, sem +) -->
-    <section class="section" id="como-comprar">
-      <div class="container">
-        <h2>Como comprar</h2>
-
-        <div class="faqbox" aria-label="Como eu compro">
-          <b>Como eu compro?</b>
-          <div class="a">
-            Clique em <b>“Comprar no WhatsApp”</b>. Diga qual produto quer e sua cultura/praga. Fechamos com <b>Pix, boleto ou cartão</b>.
-            <br><br>
-            <b>Segurança no boleto:</b> você <b>recebe</b> o produto e só <b>paga depois</b> no vencimento.
-            <br>
-            <b>Todos os pedidos vão com nota fiscal</b> • <b>envio por transportadora</b> • <b>rastreio em tempo real</b>.
-          </div>
-        </div>
+        <a class="btn btn-secondary" href="#topo">↑ Voltar ao topo</a>
       </div>
     </section>
 
@@ -812,17 +445,14 @@
         <div class="row">
           <div>
             <b>InseticidaBiologico.com.br</b><br />
-            Telefone/WhatsApp: <b>(17) 99140-5464</b><br />
-            <span>Frete grátis • Pix, boleto ou cartão</span><br />
-            <span><b>Boleto:</b> receba o produto e pague depois • <b>Nota fiscal</b> • <b>Transportadora</b> • <b>Rastreio em tempo real</b></span><br />
-            <span style="display:block; margin-top:6px;"><b>Envio imediato após aprovação do pedido.</b></span>
+            WhatsApp: <b>(17) 99140-5464</b><br />
+            <span style="display:block; margin-top:6px;">
+              <b>Aviso:</b> utilize sempre conforme rótulo/bula e boas práticas agronômicas.
+            </span>
           </div>
           <div>
-            <span class="fineprint">
-              Aviso: Utilize sempre conforme rótulo/bula e boas práticas agronômicas. Em caso de dúvida, solicite orientação técnica.
-            </span>
             <div style="margin-top:10px; opacity:.9">
-              © <span id="year"></span> www.inseticidabiologico.com.br
+              © <span id="year"></span> Inseticida Biológico
             </div>
           </div>
         </div>
@@ -830,9 +460,10 @@
     </section>
   </main>
 
-  <a class="wa-float" id="wa-float" target="_blank" rel="noopener"
+  <!-- WhatsApp flutuante (direita) -->
+  <a class="wa-float" target="_blank" rel="noopener"
      aria-label="Abrir WhatsApp"
-     href="https://wa.me/5517991405464?text=Ol%C3%A1%20vim%20do%20site%20inseticidabiologico.com.br%20e%20quero%20comprar%20inseticida%20biol%C3%B3gico.">
+     href="https://wa.me/5517991405464?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20tirar%20d%C3%BAvida%20sobre%20qual%20produto%20usar%20(Takotrop%2C%20BioOlimpo%20ou%20Fitoneem).%20Minha%20cultura%20%C3%A9%3A%20_____%20e%20a%20praga%20%C3%A9%3A%20_____.">
     <span class="sr-only">WhatsApp</span>
     <svg viewBox="0 0 32 32" aria-hidden="true">
       <path d="M19.11 17.53c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47l-.52-.01c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.26 0 1.33.97 2.61 1.11 2.79.14.18 1.91 2.92 4.63 4.09.65.28 1.15.45 1.54.57.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16 3C8.83 3 3 8.7 3 15.72c0 2.47.73 4.76 1.98 6.7L3.69 29 10.6 26.8a13.2 13.2 0 0 0 5.4 1.14c7.17 0 13-5.7 13-12.72C29 8.7 23.17 3 16 3zm0 22.42c-1.79 0-3.46-.48-4.9-1.3l-.35-.2-4.1 1.3 1.34-3.93-.23-.39a10.93 10.93 0 0 1-1.66-5.78C6.1 9.2 10.64 4.78 16 4.78c5.36 0 9.9 4.42 9.9 9.94 0 5.52-4.54 9.7-9.9 9.7z"/>
