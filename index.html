@@ -11,6 +11,8 @@
   <meta name="robots" content="index,follow" />
   <meta name="googlebot" content="index,follow,max-image-preview:large" />
 
+  <link rel="canonical" href="https://www.inseticidabiologico.com.br/" />
+
   <link rel="icon" href="biofundobranco.webp" type="image/webp" />
 
   <!-- Open Graph -->
@@ -18,9 +20,16 @@
   <meta property="og:description" content="Frete grátis Brasil • Nota fiscal • Transportadora • Rastreio. No boleto: você recebe o produto e só paga depois." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
-  <meta property="og:image" content="biofundopreto.webp" />
+  <meta property="og:url" content="https://www.inseticidabiologico.com.br/" />
+  <meta property="og:image" content="https://www.inseticidabiologico.com.br/biofundopreto.webp" />
 
-  <!-- Google Ads tag (gtag.js) -->
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Inseticida Biológico — Compra rápida no WhatsApp" />
+  <meta name="twitter:description" content="Frete grátis Brasil • NF • Transportadora • Rastreio. No boleto: receba e pague depois." />
+  <meta name="twitter:image" content="https://www.inseticidabiologico.com.br/biofundopreto.webp" />
+
+  <!-- Google Ads tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17674376709"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -29,21 +38,22 @@
     gtag('config', 'AW-17674376709');
   </script>
 
-  <!-- JSON-LD (SEO): Store + Produtos (ajuda Google Imagens / Rich Results) -->
+  <!-- JSON-LD: Store -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Store",
     "name":"InseticidaBiologico.com.br",
-    "url":"https://www.inseticidabiologico.com.br",
+    "url":"https://www.inseticidabiologico.com.br/",
     "telephone":"+55-17-99140-5464",
     "areaServed":"BR",
     "currenciesAccepted":"BRL",
     "paymentAccepted":"Pix, Boleto, Cartão de crédito",
-    "description":"Venda de inseticidas biológicos com frete grátis para todo o Brasil e atendimento via WhatsApp. No boleto, o cliente recebe o produto e paga depois no vencimento. Nota fiscal em todos os pedidos. Envio por transportadora com rastreio."
+    "description":"Venda de inseticidas biológicos com frete grátis para todo o Brasil. Nota fiscal em todos os pedidos. Envio por transportadora com rastreio. No boleto, o cliente recebe o produto e só paga depois no vencimento."
   }
   </script>
 
+  <!-- JSON-LD: Produtos (ItemList) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -56,10 +66,8 @@
         "item":{
           "@type":"Product",
           "name":"Takotrop",
-          "image":[
-            "https://www.inseticidabiologico.com.br/takotrop.webp"
-          ],
-          "description":"Inseticida microbiológico (SC) com Pseudomonas fluorescens e Pseudomonas chlororaphis.",
+          "image":["https://www.inseticidabiologico.com.br/takotrop.webp"],
+          "description":"Inseticida microbiológico (SC) com Pseudomonas fluorescens e Pseudomonas chlororaphis para suporte ao manejo integrado.",
           "brand":{"@type":"Brand","name":"Takotrop"}
         }
       },
@@ -69,10 +77,8 @@
         "item":{
           "@type":"Product",
           "name":"BioOlimpo",
-          "image":[
-            "https://www.inseticidabiologico.com.br/bioolimpo.webp"
-          ],
-          "description":"Bioinseticida microbiológico (WP) com Beauveria bassiana e Metarhizium anisopliae.",
+          "image":["https://www.inseticidabiologico.com.br/bioolimpo.webp"],
+          "description":"Bioinseticida microbiológico (WP) com Beauveria bassiana e Metarhizium anisopliae para suporte ao manejo integrado.",
           "brand":{"@type":"Brand","name":"BioOlimpo"}
         }
       },
@@ -82,11 +88,80 @@
         "item":{
           "@type":"Product",
           "name":"Fitoneem",
-          "image":[
-            "https://www.inseticidabiologico.com.br/fitoneem.webp"
-          ],
+          "image":["https://www.inseticidabiologico.com.br/fitoneem.webp"],
           "description":"Óleo de Neem (EC) com azadiractinas para suporte ao manejo integrado.",
           "brand":{"@type":"Brand","name":"Fitoneem"}
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Avaliações (AggregateRating + Reviews) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Inseticida biológico (Takotrop, BioOlimpo e Fitoneem)",
+    "image":[
+      "https://www.inseticidabiologico.com.br/takotrop.webp",
+      "https://www.inseticidabiologico.com.br/bioolimpo.webp",
+      "https://www.inseticidabiologico.com.br/fitoneem.webp"
+    ],
+    "aggregateRating":{
+      "@type":"AggregateRating",
+      "ratingValue":"5.0",
+      "reviewCount":"4"
+    },
+    "review":[
+      {
+        "@type":"Review",
+        "author":{"@type":"Person","name":"Carlos H."},
+        "reviewRating":{"@type":"Rating","ratingValue":"5"},
+        "reviewBody":"Chegou tudo certo. Gostei da segurança do boleto, recebi antes e paguei depois."
+      },
+      {
+        "@type":"Review",
+        "author":{"@type":"Person","name":"José C."},
+        "reviewRating":{"@type":"Rating","ratingValue":"5"},
+        "reviewBody":"Atendimento direto e claro. Orientaram pela praga certa e enviaram com transportadora."
+      },
+      {
+        "@type":"Review",
+        "author":{"@type":"Person","name":"Marcos A."},
+        "reviewRating":{"@type":"Rating","ratingValue":"5"},
+        "reviewBody":"Compra tranquila, sem surpresa. Tudo documentado com nota fiscal."
+      },
+      {
+        "@type":"Review",
+        "author":{"@type":"Person","name":"João B."},
+        "reviewRating":{"@type":"Rating","ratingValue":"5"},
+        "reviewBody":"Produto chegou bem embalado, rastreio acompanhando certinho até a entrega."
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Como comprar inseticida biológico?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Clique em Comprar no WhatsApp. Diga qual produto quer e sua cultura/praga. Fechamos com Pix, boleto ou cartão. No boleto, você recebe o produto e só paga depois no vencimento. Todos os pedidos vão com nota fiscal, envio por transportadora e rastreio."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Como funciona o boleto?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"No boleto, você recebe o produto e só paga depois no vencimento. Enviamos com nota fiscal e rastreio por transportadora."
         }
       }
     ]
@@ -105,7 +180,6 @@
       --radius:18px;
       --yellow:#fde047;
       --white:#ffffff;
-      --black:#0b0f1a;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -113,7 +187,7 @@
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
       color:var(--text);
-      background: var(--bg); /* FUNDO ÚNICO */
+      background: var(--bg);
       line-height:1.35;
     }
     a{color:inherit}
@@ -145,7 +219,6 @@
       white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
     }
 
-    /* TELEFONE */
     .phone{
       display:flex; align-items:center; gap:12px;
       padding:10px 14px;
@@ -251,7 +324,6 @@
       background: rgba(255,255,255,.06);
     }
 
-    /* Box credibilidade */
     .trustbox{
       margin-top:12px;
       padding:12px 12px;
@@ -377,7 +449,7 @@
       margin-top:10px; padding-top:10px;
     }
 
-    /* Avaliações (fundo branco estilo "print", SEM "Google") */
+    /* Avaliações */
     .reviews-wrap{
       border:1px solid rgba(255,255,255,.12);
       border-radius:18px;
@@ -389,7 +461,6 @@
       padding:14px;
       border-bottom:1px solid rgba(255,255,255,.12);
     }
-    .reviews-head b{color:var(--text)}
     .reviews-white{
       background: var(--white);
       color: #111827;
@@ -407,20 +478,7 @@
     .review .meta{font-size:12px; color:#334155}
     .review .txt{font-size:13px; color:#111827; line-height:1.45}
 
-    /* Depoimentos (cards escuros) */
-    .grid2{display:grid; gap:14px; grid-template-columns: 1fr 1fr;}
-    .t-card{
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.05);
-      box-shadow: var(--shadow);
-      padding:14px;
-    }
-    .t-card b{display:block; margin-bottom:4px; color:var(--text)}
-    .t-card small{display:block; color:var(--muted); margin-bottom:10px}
-    .t-card p{margin:0; color:var(--muted); font-size:13px; line-height:1.5}
-
-    /* FAQ (sem abrir/fechar) */
+    /* FAQ */
     .faqbox{
       border:1px solid var(--line);
       border-radius: var(--radius);
@@ -440,7 +498,7 @@
       padding-top:14px;
     }
 
-    /* Floating WhatsApp button */
+    /* WhatsApp */
     .wa-float{
       position:fixed;
       right:16px;
@@ -461,12 +519,11 @@
     .wa-float:active{transform: translateY(1px)}
     .sr-only{position:absolute; left:-9999px}
 
-    /* ========= MOBILE AJUSTADO ========= */
+    /* Mobile */
     @media (max-width: 980px){
       .hero-grid{grid-template-columns: 1fr;}
-      .hero-right{display:none;} /* some no mobile (corrige a coluna fora de contexto) */
+      .hero-right{display:none;}
       .grid3{grid-template-columns: 1fr}
-      .grid2{grid-template-columns: 1fr}
       h1{font-size:28px}
 
       .topbar-inner{
@@ -501,7 +558,7 @@
     <div class="container">
       <div class="topbar-inner">
         <div class="brand" aria-label="Cabeçalho">
-          <img src="biofundopreto.webp" alt="Inseticida biológico original com nota fiscal e envio por transportadora" />
+          <img src="biofundopreto.webp" alt="Inseticida biológico com nota fiscal e envio por transportadora" />
           <div class="txt">
             <strong>www.inseticidabiologico.com.br</strong>
           </div>
@@ -570,6 +627,10 @@
               <a class="btn btn-secondary" href="#produtos">
                 <small>Ver produtos</small>
               </a>
+
+              <a class="btn btn-secondary" href="#avaliacoes">
+                <small>Ver avaliações</small>
+              </a>
             </div>
 
             <div class="trust" aria-label="Destaques">
@@ -587,7 +648,7 @@
               <div class="trustbox-row">
                 <div class="trustbox-ic" aria-hidden="true">✅</div>
                 <div style="min-width:0;">
-                  <div class="trustbox-title">Mais confiança na compra</div>
+                  <div class="trustbox-title">Credibilidade e segurança</div>
                   <div class="trustbox-txt">
                     <b style="color:var(--text);">Boleto:</b> você <b style="color:var(--text);">recebe o produto</b> e só <b style="color:var(--text);">paga depois</b>, no vencimento.
                     <br />
@@ -745,15 +806,14 @@
       </div>
     </section>
 
-    <!-- Avaliações (fundo branco) -->
     <section class="section" id="avaliacoes">
       <div class="container">
         <h2>Avaliações de clientes</h2>
-        <p class="lead">Abaixo, relatos de compra e entrega (nota fiscal, transportadora e rastreio).</p>
+        <p class="lead">Relatos de compra e entrega com nota fiscal, transportadora e rastreio.</p>
 
         <div class="reviews-wrap" aria-label="Avaliações">
           <div class="reviews-head">
-            <b>Compra segura</b> • <span style="color:var(--muted)">Boleto: receba o produto e pague depois • NF • Transportadora • Rastreio</span>
+            <b>Compra segura</b> • <span style="color:var(--muted)">Boleto: receba e pague depois • NF • Transportadora • Rastreio</span>
           </div>
 
           <div class="reviews-white">
@@ -786,49 +846,12 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- Depoimentos (4 cards) -->
-    <section class="section" id="depoimentos">
-      <div class="container">
-        <h2>Depoimentos de clientes</h2>
-        <p class="lead">Cidades fortes no agro (soja, milho, algodão, cana e hortifruti).</p>
-
-        <div class="grid2">
-          <div class="t-card">
-            <b>Rogério P. — Luís Eduardo Magalhães / BA</b>
-            <small>Compra no WhatsApp • Nota fiscal • Transportadora</small>
-            <p>Atendimento rápido e objetivo. O pedido chegou com nota fiscal e consegui acompanhar o rastreio do início ao fim.</p>
-          </div>
-
-          <div class="t-card">
-            <b>Fernando S. — Rondonópolis / MT</b>
-            <small>Boleto com segurança • Recebe e paga depois</small>
-            <p>Eu tinha receio, mas no boleto recebi o produto primeiro e só paguei depois no vencimento. Isso passa confiança.</p>
-          </div>
-
-          <div class="t-card">
-            <b>Paulo V. — Uberaba / MG</b>
-            <small>Produto original • Orientação por cultura e praga</small>
-            <p>Me ajudaram a escolher conforme a praga. Veio certinho, original, e com envio por transportadora.</p>
-          </div>
-
-          <div class="t-card">
-            <b>André L. — Dourados / MS</b>
-            <small>Rastreio em tempo real • Frete grátis Brasil</small>
-            <p>Gostei do rastreio e da transparência. Tudo muito claro: nota fiscal, transportadora e prazo por região.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ (sem abrir/fechar) -->
     <section class="section" id="como-comprar">
       <div class="container">
         <h2>Como comprar</h2>
-
         <div class="faqbox" aria-label="Como eu compro">
           <b>Como eu compro?</b>
           <div class="a">
