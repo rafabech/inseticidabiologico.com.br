@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0b1220" />
 
-  <title>Inseticida Biológico | Takotrop, BioOlimpo e Fitoneem — Frete Grátis Brasil</title>
+  <title>Inseticida Biológico | Takotrop e BioOlimpo — Frete Grátis Brasil</title>
   <meta name="description" content="Compre inseticida biológico com nota fiscal. Envio por transportadora com rastreio. No boleto, você recebe o produto e só paga depois no vencimento." />
-  <meta name="keywords" content="inseticida biológico, takotrop, bioolimpo, fitoneem, controle biológico, mosca-branca, percevejo, cigarrinha, beauveria, metarhizium, neem, pseudomonas" />
+  <meta name="keywords" content="inseticida biológico, takotrop, bioolimpo, controle biológico, mosca-branca, percevejo, cigarrinha, beauveria, metarhizium, pseudomonas" />
   <meta name="robots" content="index,follow" />
   <meta name="googlebot" content="index,follow,max-image-preview:large" />
 
@@ -18,7 +18,7 @@
   <meta property="og:description" content="Frete grátis Brasil • Nota fiscal • Transportadora • Rastreio. No boleto: você recebe o produto e só paga depois." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
-  <meta property="og:image" content="biofundopreto.webp" />
+  <meta property="og:image" content="plantacao.webp" />
 
   <!-- Canonical -->
   <link rel="canonical" href="https://www.inseticidabiologico.com.br/" />
@@ -32,7 +32,7 @@
     gtag('config', 'AW-17674376709');
   </script>
 
-  <!-- JSON-LD (SEO): Store + ItemList (ajuda Google Imagens) -->
+  <!-- JSON-LD (SEO): Store + ItemList -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -74,17 +74,6 @@
           "description":"Bioinseticida microbiológico (WP) com Beauveria bassiana e Metarhizium anisopliae.",
           "brand":{"@type":"Brand","name":"BioOlimpo"}
         }
-      },
-      {
-        "@type":"ListItem",
-        "position":3,
-        "item":{
-          "@type":"Product",
-          "name":"Fitoneem",
-          "image":[ "https://www.inseticidabiologico.com.br/fitoneem.webp" ],
-          "description":"Óleo de Neem (EC) com azadiractinas para suporte ao manejo integrado.",
-          "brand":{"@type":"Brand","name":"Fitoneem"}
-        }
       }
     ]
   }
@@ -123,12 +112,12 @@
     }
     .topbar-inner{
       display:flex; align-items:center; justify-content:space-between;
-      padding:12px 0;
+      padding:8px 0; /* ↓ menor no PC */
       gap:14px;
     }
     .brand{display:flex; align-items:center; gap:12px; min-width:0;}
     .brand img{
-      width:316px; height:316px;
+      width:160px; height:160px; /* ↓ menor no PC */
       border-radius:18px;
       border:1px solid rgba(255,255,255,.14);
       box-shadow: 0 12px 30px rgba(0,0,0,.22);
@@ -266,7 +255,7 @@
     .hero-right{position:relative; min-height:280px;}
     .hero-right .bg{
       position:absolute; inset:0;
-      background-image: url("biofundopreto.webp");
+      background-image: url("plantacao.webp"); /* ✅ trocado */
       background-size: cover;
       background-position: center;
       filter: saturate(1.05) contrast(1.05);
@@ -363,13 +352,11 @@
       margin-top:10px; padding-top:10px;
     }
 
-    /* clique na foto (melhora UX) */
     .p-img a{display:block; text-decoration:none;}
     .p-img a:focus{outline:2px solid rgba(34,197,94,.7); outline-offset:4px; border-radius:18px;}
     .p-img a:hover img{filter: brightness(1.03); transform: translateY(-1px);}
     .p-img img{transition: transform .12s ease, filter .12s ease;}
 
-    /* Avaliações: branco estilo print, SEM Google */
     .reviews-wrap{
       border:1px solid rgba(255,255,255,.12);
       border-radius:18px;
@@ -399,7 +386,6 @@
     .review .meta{font-size:12px; color:#334155}
     .review .txt{font-size:13px; color:#111827; line-height:1.45}
 
-    /* Links internos SEO (discretos) */
     .seo-links{
       margin-top:12px;
       display:flex; flex-wrap:wrap; gap:10px;
@@ -491,7 +477,8 @@
     <div class="container">
       <div class="topbar-inner">
         <div class="brand" aria-label="Cabeçalho">
-          <img src="biofundopreto.webp" alt="Inseticida biológico original com nota fiscal e envio por transportadora" />
+          <!-- ✅ logo grande trocada pela imagem plantacao.webp -->
+          <img src="plantacao.webp" alt="Plantação - Inseticida biológico com compra pelo WhatsApp" />
           <div class="txt">
             <strong>www.inseticidabiologico.com.br</strong>
           </div>
@@ -594,7 +581,6 @@
             <div class="seo-links" aria-label="Saiba mais (SEO)">
               <a href="/takotrop.html">Saiba mais: Takotrop</a>
               <a href="/bioolimpo.html">Saiba mais: BioOlimpo</a>
-              <a href="/fitoneem.html">Saiba mais: Fitoneem</a>
             </div>
 
           </div>
@@ -621,7 +607,7 @@
                 <div style="font-size:18px;line-height:1">🧪</div>
                 <div>
                   <b>Controle biológico</b>
-                  <span>Microbiológicos + neem para o manejo.</span>
+                  <span>Microbiológicos para o manejo.</span>
                 </div>
               </div>
               <div class="hl">
@@ -654,7 +640,6 @@
               <div class="badge" title="Mais vendido">MAIS VENDIDO</div>
             </div>
 
-            <!-- FOTO CLICÁVEL -> vai para takotrop.html -->
             <div class="p-img">
               <a href="/takotrop.html" aria-label="Abrir página do Takotrop">
                 <img src="takotrop.webp"
@@ -693,7 +678,6 @@
               </div>
             </div>
 
-            <!-- FOTO CLICÁVEL -> vai para bioolimpo.html -->
             <div class="p-img">
               <a href="/bioolimpo.html" aria-label="Abrir página do BioOlimpo">
                 <img src="bioolimpo.webp"
@@ -723,50 +707,10 @@
               <a class="btn btn-secondary" href="/bioolimpo.html" style="margin-top:2px;">Ver página completa do BioOlimpo</a>
             </div>
           </article>
-
-          <article class="product" aria-label="Fitoneem">
-            <div class="p-top">
-              <div class="p-title">
-                <strong>Fitoneem</strong>
-                <small>Óleo de Neem (EC) — suporte ao manejo integrado</small>
-              </div>
-            </div>
-
-            <!-- FOTO CLICÁVEL -> vai para fitoneem.html -->
-            <div class="p-img">
-              <a href="/fitoneem.html" aria-label="Abrir página do Fitoneem">
-                <img src="fitoneem.webp"
-                     alt="Fitoneem óleo de neem azadiractina inseticida biológico para manejo integrado"
-                     loading="lazy" />
-              </a>
-            </div>
-
-            <div class="p-body">
-              <div>
-                Produto à base de neem para suporte ao manejo integrado, com atuação por contato/ingestão conforme bula e recomendação técnica.
-              </div>
-
-              <div class="techbox">
-                <div class="t-title">Informações técnicas</div>
-                <div class="tech">
-                  <b>Composição (bula/registro MAPA 6718):</b>
-                  <ul>
-                    <li><b>Óleo de Neem</b>: 850 g/L</li>
-                    <li><b>Azadiractina A</b>: 2,00 g/L • <b>Azadiractina B</b>: 1,00 g/L</li>
-                    <li>Formulação: <b>EC</b></li>
-                  </ul>
-                  <div class="fineprint">Use conforme rótulo/bula e recomendações técnicas.</div>
-                </div>
-              </div>
-
-              <a class="btn btn-secondary" href="/fitoneem.html" style="margin-top:2px;">Ver página completa do Fitoneem</a>
-            </div>
-          </article>
         </div>
       </div>
     </section>
 
-    <!-- Avaliações (somente isso — sem depoimentos) -->
     <section class="section" id="avaliacoes">
       <div class="container">
         <h2>Avaliações de clientes</h2>
@@ -811,7 +755,6 @@
       </div>
     </section>
 
-    <!-- FAQ (aberto, sem +) -->
     <section class="section" id="como-comprar">
       <div class="container">
         <h2>Como comprar</h2>
