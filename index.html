@@ -104,54 +104,8 @@
     a{color:inherit}
     .container{max-width:1120px; margin:0 auto; padding:0 18px}
 
-    .topbar{
-      position:sticky; top:0; z-index:30;
-      backdrop-filter: blur(10px);
-      background: rgba(11,18,32,.72);
-      border-bottom:1px solid var(--line);
-    }
-    .topbar-inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:8px 0; /* ↓ menor no PC */
-      gap:14px;
-    }
-    .brand{display:flex; align-items:center; gap:12px; min-width:0;}
-    .brand img{
-      width:160px; height:160px; /* ↓ menor no PC */
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.14);
-      box-shadow: 0 12px 30px rgba(0,0,0,.22);
-      object-fit:cover;
-      flex:0 0 auto;
-    }
-    .brand .txt strong{
-      display:block; font-size:15px; letter-spacing:.2px;
-      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-    }
-
-    .phone{
-      display:flex; align-items:center; gap:12px;
-      padding:10px 14px;
-      border:1px solid rgba(34,197,94,.35);
-      border-radius:999px;
-      background: linear-gradient(180deg, rgba(34,197,94,.16), rgba(255,255,255,.04));
-      box-shadow: 0 14px 28px rgba(34,197,94,.10);
-      white-space:nowrap;
-    }
-    .phone .icon{
-      width:36px; height:36px;
-      border-radius:14px;
-      display:grid; place-items:center;
-      background: rgba(34,197,94,.18);
-      border:1px solid rgba(34,197,94,.30);
-      flex:0 0 auto;
-      font-size:18px;
-      line-height:1;
-    }
-    .phone b{font-size:18px; letter-spacing:.2px; color:var(--text);}
-    .phone small{display:block; color:var(--muted); font-size:12px; margin-top:2px;}
-
-    .hero{padding:22px 0 10px;}
+    /* HERO */
+    .hero{padding:18px 0 10px;}
     .hero-grid{
       display:grid; gap:16px;
       grid-template-columns: 1.15fr .85fr;
@@ -164,7 +118,69 @@
       box-shadow: var(--shadow);
       overflow:hidden;
     }
-    .hero-left{padding:20px}
+    .hero-left{padding:18px}
+
+    /* Header compacto DENTRO da hero (sem topo fixo) */
+    .minihead{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+      padding:10px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius: 16px;
+      background: rgba(255,255,255,.04);
+    }
+    .minihead-left{
+      display:flex; align-items:center; gap:10px; min-width:0;
+    }
+    .minihead-left img{
+      width:58px; height:58px;
+      border-radius:14px;
+      object-fit:cover;
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow: 0 10px 24px rgba(0,0,0,.22);
+      flex:0 0 auto;
+    }
+    .minihead-left .site{
+      min-width:0;
+    }
+    .minihead-left .site b{
+      display:block;
+      font-size:13px;
+      letter-spacing:.2px;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+    .minihead-left .site span{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      margin-top:2px;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+
+    .minihead-right{
+      display:flex; align-items:center; gap:10px;
+      padding:10px 12px;
+      border:1px solid rgba(34,197,94,.35);
+      border-radius:999px;
+      background: linear-gradient(180deg, rgba(34,197,94,.16), rgba(255,255,255,.04));
+      box-shadow: 0 14px 28px rgba(34,197,94,.10);
+      white-space:nowrap;
+      flex:0 0 auto;
+    }
+    .minihead-right .icon{
+      width:32px; height:32px;
+      border-radius:12px;
+      display:grid; place-items:center;
+      background: rgba(34,197,94,.18);
+      border:1px solid rgba(34,197,94,.30);
+      font-size:16px;
+      line-height:1;
+    }
+    .minihead-right b{font-size:16px; letter-spacing:.2px; color:var(--text);}
+
     .kicker{
       display:inline-flex; gap:8px; align-items:center;
       font-size:12px; color:var(--muted);
@@ -178,6 +194,7 @@
       width:8px; height:8px; border-radius:99px; background: var(--accent);
       box-shadow:0 0 0 6px rgba(34,197,94,.14);
     }
+
     h1{
       margin:14px 0 10px;
       font-size:30px;
@@ -186,6 +203,7 @@
       color:var(--text);
     }
     .sub{margin:0 0 14px; color:var(--muted); font-size:14px;}
+
     .bullets{display:grid; gap:10px; margin:14px 0 16px;}
     .bullet{display:flex; gap:10px; align-items:flex-start; color:var(--text); font-size:14px;}
     .check{
@@ -252,10 +270,25 @@
     .trustbox-title{font-weight:900; color:var(--text);}
     .trustbox-txt{margin-top:4px; color:var(--muted); font-size:12px; line-height:1.45;}
 
+    .seo-links{
+      margin-top:12px;
+      display:flex; flex-wrap:wrap; gap:10px;
+      color:var(--muted);
+      font-size:12px;
+    }
+    .seo-links a{
+      display:inline-flex;
+      padding:8px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background: rgba(255,255,255,.06);
+      text-decoration:none;
+    }
+
     .hero-right{position:relative; min-height:280px;}
     .hero-right .bg{
       position:absolute; inset:0;
-      background-image: url("plantacao.webp"); /* ✅ trocado */
+      background-image: url("plantacao.webp");
       background-size: cover;
       background-position: center;
       filter: saturate(1.05) contrast(1.05);
@@ -282,10 +315,18 @@
     .hl b{font-size:13px; color:var(--text)}
     .hl span{display:block; color:var(--muted); font-size:12px; margin-top:2px}
 
+    /* SEÇÕES */
     .section{padding:18px 0 6px;}
     .section h2{margin:0 0 10px; font-size:20px; letter-spacing:-.2px; color:var(--text);}
     .lead{color:var(--muted); font-size:13px; margin:0 0 12px;}
-    .grid3{display:grid; gap:14px; grid-template-columns: repeat(3, 1fr);}
+
+    /* ✅ Produtos com 2 cards: fica bonito no celular e no PC */
+    .grid-products{
+      display:grid;
+      gap:14px;
+      grid-template-columns: repeat(2, 1fr); /* PC: 2 colunas */
+      align-items:stretch;
+    }
 
     .product{
       border:1px solid var(--line);
@@ -357,6 +398,7 @@
     .p-img a:hover img{filter: brightness(1.03); transform: translateY(-1px);}
     .p-img img{transition: transform .12s ease, filter .12s ease;}
 
+    /* Avaliações */
     .reviews-wrap{
       border:1px solid rgba(255,255,255,.12);
       border-radius:18px;
@@ -385,21 +427,6 @@
     .review .who{font-weight:900; color:#0f172a}
     .review .meta{font-size:12px; color:#334155}
     .review .txt{font-size:13px; color:#111827; line-height:1.45}
-
-    .seo-links{
-      margin-top:12px;
-      display:flex; flex-wrap:wrap; gap:10px;
-      color:var(--muted);
-      font-size:12px;
-    }
-    .seo-links a{
-      display:inline-flex;
-      padding:8px 10px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      background: rgba(255,255,255,.06);
-      text-decoration:none;
-    }
 
     .faqbox{
       border:1px solid var(--line);
@@ -439,67 +466,61 @@
     .wa-float:active{transform: translateY(1px)}
     .sr-only{position:absolute; left:-9999px}
 
+    /* MOBILE */
     @media (max-width: 980px){
       .hero-grid{grid-template-columns: 1fr;}
       .hero-right{display:none;}
-      .grid3{grid-template-columns: 1fr}
       h1{font-size:28px}
 
-      .topbar-inner{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: 10px 0;
+      .minihead{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:10px;
       }
-      .brand .txt strong{display:none;}
-      .brand{justify-content: center; width: 100%;}
-      .brand img{width: 140px; height: 140px; border-radius: 18px;}
+      .minihead-left{
+        justify-content:center;
+      }
+      .minihead-left .site b,
+      .minihead-left .site span{
+        white-space:normal;
+      }
+      .minihead-right{
+        width:100%;
+        max-width:420px;
+        justify-content:center;
+      }
 
-      .phone{
-        width: 100%;
-        max-width: 420px;
-        justify-content: center;
-        padding: 10px 12px;
-        border-radius: 16px;
-        white-space: normal;
-        text-align: center;
-      }
-      .phone b{font-size: 22px; line-height: 1.05; letter-spacing: .5px;}
-      .phone small{display:none;}
-      .phone .icon{width:34px; height:34px; border-radius:12px; font-size:18px;}
+      /* ✅ no celular fica 1 coluna (2 produtos fica perfeito) */
+      .grid-products{grid-template-columns: 1fr;}
     }
   </style>
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="container">
-      <div class="topbar-inner">
-        <div class="brand" aria-label="Cabeçalho">
-          <!-- ✅ logo grande trocada pela imagem plantacao.webp -->
-          <img src="plantacao.webp" alt="Plantação - Inseticida biológico com compra pelo WhatsApp" />
-          <div class="txt">
-            <strong>www.inseticidabiologico.com.br</strong>
-          </div>
-        </div>
-
-        <div class="phone" aria-label="Telefone">
-          <div class="icon" aria-hidden="true">📞</div>
-          <div>
-            <b>(17) 99140-5464</b>
-            <small>WhatsApp • atendimento rápido</small>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
   <main>
+
     <section class="hero" id="topo">
       <div class="container">
         <div class="hero-grid">
+
           <div class="panel hero-left">
+
+            <!-- ✅ Sem topo fixo: cabeçalho compacto dentro da página -->
+            <div class="minihead" aria-label="Cabeçalho compacto">
+              <div class="minihead-left">
+                <img src="plantacao.webp" alt="Plantação - InseticidaBiologico.com.br" />
+                <div class="site">
+                  <b>InseticidaBiologico.com.br</b>
+                  <span>Compra pelo WhatsApp • Frete grátis Brasil</span>
+                </div>
+              </div>
+              <div class="minihead-right" aria-label="Telefone">
+                <div class="icon" aria-hidden="true">📞</div>
+                <b>(17) 99140-5464</b>
+              </div>
+            </div>
+
             <div class="kicker">
               <span class="dot"></span>
               <span>
@@ -630,7 +651,9 @@
         <h2>Escolha o produto</h2>
         <p class="lead">Se estiver em dúvida, clique no WhatsApp e diga sua cultura e a praga. A gente orienta rápido.</p>
 
-        <div class="grid3">
+        <!-- ✅ agora é grid de 2 produtos (bonito no mobile e no PC) -->
+        <div class="grid-products">
+
           <article class="product" aria-label="Takotrop">
             <div class="p-top">
               <div class="p-title">
@@ -707,6 +730,7 @@
               <a class="btn btn-secondary" href="/bioolimpo.html" style="margin-top:2px;">Ver página completa do BioOlimpo</a>
             </div>
           </article>
+
         </div>
       </div>
     </section>
@@ -793,6 +817,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <a class="wa-float" id="wa-float" target="_blank" rel="noopener"
