@@ -11,7 +11,6 @@
   <meta name="robots" content="index,follow" />
   <meta name="googlebot" content="index,follow,max-image-preview:large" />
 
-  <link rel="icon" href="biofundobranco.webp" type="image/webp" />
   <link rel="canonical" href="https://www.inseticidabiologico.com.br/bioolimpo.html" />
 
   <!-- Open Graph -->
@@ -72,33 +71,6 @@
     a{color:inherit}
     .container{max-width:980px; margin:0 auto; padding:0 18px}
 
-    /* Topbar */
-    .topbar{
-      position:sticky; top:0; z-index:30;
-      backdrop-filter: blur(10px);
-      background: rgba(11,18,32,.76);
-      border-bottom:1px solid var(--line);
-    }
-    .topbar-inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:12px 0;
-      gap:12px;
-    }
-    .brand{display:flex; align-items:center; gap:12px; min-width:0;}
-    .brand img{
-      width:66px; height:66px;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.14);
-      object-fit:cover;
-      flex:0 0 auto;
-      box-shadow: 0 12px 30px rgba(0,0,0,.22);
-    }
-    .brand .txt strong{
-      display:block; font-size:14px; letter-spacing:.2px;
-      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-    }
-    .brand .txt span{display:block; font-size:12px; color:var(--muted)}
-
     .btn{
       display:inline-flex; gap:10px; align-items:center; justify-content:center;
       border-radius:14px;
@@ -119,6 +91,9 @@
       box-shadow: 0 14px 30px rgba(34,197,94,.18);
     }
     .btn-secondary{background: rgba(255,255,255,.06); color:var(--text);}
+
+    /* Botão voltar (topo) sem header */
+    .top-actions{padding:16px 0 0;}
 
     .hero{padding:18px 0 8px;}
     .card{
@@ -223,7 +198,6 @@
 
     @media (max-width: 860px){
       .grid2{grid-template-columns: 1fr}
-      .topbar-inner{flex-direction:column; align-items:stretch}
       .btn{width:100%}
       h1{font-size:26px}
     }
@@ -231,28 +205,14 @@
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="container">
-      <div class="topbar-inner">
-        <div class="brand" aria-label="Cabeçalho">
-          <a href="index.html" style="text-decoration:none; display:flex; gap:12px; align-items:center;">
-            <img src="biofundopreto.webp" alt="inseticidabiologico.com.br" />
-            <div class="txt">
-              <strong>inseticidabiologico.com.br</strong>
-              <span>BioOlimpo® — página do produto</span>
-            </div>
-          </a>
-        </div>
-
-        <!-- BOTÃO VOLTAR (TOPO) -->
-        <a class="btn btn-secondary" href="index.html" aria-label="Voltar para a página inicial">
-          ⬅️ Voltar para a página inicial
-        </a>
-      </div>
-    </div>
-  </header>
-
   <main>
+    <!-- BOTÃO VOLTAR (TOPO) -->
+    <div class="container top-actions">
+      <a class="btn btn-secondary" href="index.html" aria-label="Voltar para a página inicial no topo">
+        ⬅️ Voltar para a página inicial
+      </a>
+    </div>
+
     <section class="hero" id="topo">
       <div class="container">
         <div class="card hero-card">
