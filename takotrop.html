@@ -16,10 +16,10 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Takotrop® — Inseticida Biológico (Pseudomonas)" />
-  <meta property="og:description" content="Inseticida microbiológico (SC) com Pseudomonas. Nota fiscal • Transportadora • Rastreio. Compre pelo WhatsApp." />
+  <meta property="og:description" content="Inseticida microbiológico (SC) com Pseudomonas. Compre pelo WhatsApp." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
-  <meta property="og:image" content="takotrop1.webp" />
+  <meta property="og:image" content="https://www.inseticidabiologico.com.br/takotrop1.webp" />
 
   <!-- Google Ads tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17674376709"></script>
@@ -59,8 +59,6 @@
       --line:rgba(255,255,255,.12);
       --shadow: 0 14px 40px rgba(0,0,0,.30);
       --radius:18px;
-      --yellow:#fde047;
-      --danger:#ef4444;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -73,35 +71,6 @@
     }
     a{color:inherit}
     .container{max-width:980px; margin:0 auto; padding:0 18px}
-
-    /* Topbar */
-    .topbar{
-      position:sticky; top:0; z-index:30;
-      backdrop-filter: blur(10px);
-      background: rgba(11,18,32,.76);
-      border-bottom:1px solid var(--line);
-    }
-    .topbar-inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:12px 0;
-      gap:12px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:12px; min-width:0;
-    }
-    .brand img{
-      width:66px; height:66px;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.14);
-      object-fit:cover;
-      flex:0 0 auto;
-      box-shadow: 0 12px 30px rgba(0,0,0,.22);
-    }
-    .brand .txt strong{
-      display:block; font-size:14px; letter-spacing:.2px;
-      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-    }
-    .brand .txt span{display:block; font-size:12px; color:var(--muted)}
 
     .btn{
       display:inline-flex; gap:10px; align-items:center; justify-content:center;
@@ -136,19 +105,6 @@
       overflow:hidden;
     }
     .hero-card{padding:16px}
-    .kicker{
-      display:inline-flex; gap:8px; align-items:center;
-      font-size:12px; color:var(--muted);
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.06);
-      padding:8px 10px;
-      border-radius:999px;
-      flex-wrap:wrap;
-    }
-    .kicker .dot{
-      width:8px; height:8px; border-radius:99px; background: var(--accent);
-      box-shadow:0 0 0 6px rgba(34,197,94,.14);
-    }
 
     h1{
       margin:12px 0 8px;
@@ -265,10 +221,14 @@
     .wa-float:active{transform: translateY(1px)}
     .sr-only{position:absolute; left:-9999px}
 
+    /* topo simples (botão voltar) */
+    .top-actions{
+      padding:16px 0 0;
+    }
+
     /* MOBILE */
     @media (max-width: 860px){
       .grid2{grid-template-columns: 1fr}
-      .topbar-inner{flex-direction:column; align-items:stretch}
       .btn{width:100%}
       h1{font-size:26px}
     }
@@ -276,36 +236,17 @@
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="container">
-      <div class="topbar-inner">
-        <div class="brand" aria-label="Cabeçalho">
-          <a href="index.html" style="text-decoration:none; display:flex; gap:12px; align-items:center;">
-            <img src="biofundopreto.webp" alt="inseticidabiologico.com.br" />
-            <div class="txt">
-              <strong>inseticidabiologico.com.br</strong>
-              <span>Takotrop® — página do produto</span>
-            </div>
-          </a>
-        </div>
-
-        <!-- BOTÃO VOLTAR (topo) -->
-        <a class="btn btn-secondary" href="index.html" aria-label="Voltar para a página inicial">
-          ⬅️ Voltar para a página inicial
-        </a>
-      </div>
-    </div>
-  </header>
-
   <main>
+    <!-- BOTÃO VOLTAR (TOPO) -->
+    <div class="container top-actions">
+      <a class="btn btn-secondary" href="index.html" aria-label="Voltar para a página inicial no topo">
+        ⬅️ Voltar para a página inicial
+      </a>
+    </div>
+
     <section class="hero" id="topo">
       <div class="container">
         <div class="card hero-card">
-          <div class="kicker">
-            <span class="dot"></span>
-            <span>Nota fiscal • Transportadora • Rastreio em tempo real • Compra pelo WhatsApp</span>
-          </div>
-
           <h1>Takotrop® — inseticida biológico microbiológico (SC)</h1>
           <p class="sub">
             Formulação líquida (SC) com <b>Pseudomonas chlororaphis</b> + <b>Pseudomonas fluorescens</b> para suporte ao manejo biológico (use sempre conforme rótulo/bula e orientação técnica).
@@ -314,8 +255,8 @@
           <div class="grid2">
             <!-- IMAGEM CLICÁVEL (abre a imagem takotrop1.webp) -->
             <div class="pimg">
-              <a href="takotrop1.webp" target="_blank" rel="noopener" aria-label="Abrir imagem do Takotrop">
-                <img src="takotrop1.webp"
+              <a href="./takotrop1.webp" target="_blank" rel="noopener" aria-label="Abrir imagem do Takotrop">
+                <img src="./takotrop1.webp"
                      alt="Takotrop inseticida biológico microbiológico (SC) com Pseudomonas"
                      loading="eager" />
               </a>
@@ -347,7 +288,7 @@
       </div>
     </section>
 
-    <!-- SOBRE O PRODUTO (mais conteúdo do produto) -->
+    <!-- SOBRE O PRODUTO -->
     <section class="section" id="sobre">
       <div class="container">
         <h2>Sobre o Takotrop®</h2>
@@ -376,7 +317,7 @@
       </div>
     </section>
 
-    <!-- PRAGAS (SEM FRASES “NADA A VER”) -->
+    <!-- PRAGAS -->
     <section class="section" id="pragas">
       <div class="container">
         <h2>Principais pragas</h2>
@@ -394,7 +335,7 @@
       </div>
     </section>
 
-    <!-- CULTURAS (SEM FRASES “NADA A VER”) -->
+    <!-- CULTURAS -->
     <section class="section" id="culturas">
       <div class="container">
         <h2>Principais culturas</h2>
@@ -414,7 +355,7 @@
       </div>
     </section>
 
-    <!-- COMPRA (POUCA COISA, só o essencial) -->
+    <!-- COMPRA -->
     <section class="section" id="comprar">
       <div class="container">
         <h2>Comprar</h2>
@@ -433,10 +374,10 @@
       </div>
     </section>
 
-    <!-- BOTÃO VOLTAR (fim) -->
+    <!-- BOTÃO VOLTAR (FIM) -->
     <section class="section" id="voltar">
       <div class="container">
-        <a class="btn btn-secondary" href="index.html" aria-label="Voltar para a página inicial no final">
+        <a class="btn btn-secondary" href="index.html" aria-label="Voltar para a página inicial no fim">
           ⬅️ Voltar para a página inicial
         </a>
       </div>
@@ -448,7 +389,6 @@
           <div>
             <b>InseticidaBiologico.com.br</b><br />
             WhatsApp: <b>(17) 99140-5464</b><br />
-            <span>Nota fiscal • Transportadora • Rastreio em tempo real</span><br />
             <span style="display:block; margin-top:6px;"><b>Envio imediato após aprovação do pedido.</b></span>
           </div>
           <div>
