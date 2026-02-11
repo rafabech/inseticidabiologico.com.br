@@ -5,16 +5,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0b1220" />
 
-  <title>BioOlimpo® — Beauveria + Metarhizium | Pragas e Culturas</title>
-  <meta name="description" content="BioOlimpo® é inseticida biológico (WP) com Beauveria bassiana + Metarhizium anisopliae. Página do produto com pragas, culturas e informações técnicas para SEO." />
-  <meta name="keywords" content="BioOlimpo, inseticida biológico, Beauveria bassiana, Metarhizium anisopliae, cigarrinha, percevejo, mosca-branca, tripes, MIP, soja, milho, algodão, cana, café, hortifruti" />
+  <title>BioOlimpo® — Inseticida Biológico (Beauveria + Metarhizium) | InseticidaBiologico.com.br</title>
+  <meta name="description" content="BioOlimpo® é um bioinseticida microbiológico (WP) com Beauveria bassiana + Metarhizium anisopliae. Manejo biológico com orientação no WhatsApp. Nota fiscal, transportadora e rastreio." />
+  <meta name="keywords" content="BioOlimpo, inseticida biológico, Beauveria bassiana, Metarhizium anisopliae, fungos entomopatogênicos, controle biológico, mosca-branca, tripes, percevejos, cigarrinhas, pulgões, cochonilhas" />
   <meta name="robots" content="index,follow" />
   <meta name="googlebot" content="index,follow,max-image-preview:large" />
 
   <link rel="icon" href="biofundobranco.webp" type="image/webp" />
+  <link rel="canonical" href="https://www.inseticidabiologico.com.br/bioolimpo.html" />
 
-  <meta property="og:title" content="BioOlimpo® — Inseticida Biológico" />
-  <meta property="og:description" content="Página do produto: pragas, culturas e informações técnicas. Atendimento no WhatsApp." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="BioOlimpo® — Inseticida Biológico (Beauveria + Metarhizium)" />
+  <meta property="og:description" content="Bioinseticida microbiológico (WP) com fungos entomopatogênicos. Nota fiscal • Transportadora • Rastreio. Compre pelo WhatsApp." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:image" content="bioolimpo1.webp" />
@@ -28,6 +30,7 @@
     gtag('config', 'AW-17674376709');
   </script>
 
+  <!-- JSON-LD (SEO) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -36,7 +39,7 @@
     "image":[
       "https://www.inseticidabiologico.com.br/bioolimpo1.webp"
     ],
-    "description":"Inseticida biológico (WP) com Beauveria bassiana e Metarhizium anisopliae para manejo integrado de pragas.",
+    "description":"Bioinseticida microbiológico (WP) com Beauveria bassiana e Metarhizium anisopliae para manejo biológico.",
     "brand":{"@type":"Brand","name":"BioOlimpo"},
     "offers":{
       "@type":"Offer",
@@ -49,66 +52,192 @@
 
   <style>
     :root{
-      --bg:#0b1220; --muted:#c8d3ea; --text:#f7faff; --accent:#22c55e;
-      --line:rgba(255,255,255,.12); --shadow: 0 14px 40px rgba(0,0,0,.30);
+      --bg:#0b1220;
+      --muted:#c8d3ea;
+      --text:#f7faff;
+      --accent:#22c55e;
+      --line:rgba(255,255,255,.12);
+      --shadow: 0 14px 40px rgba(0,0,0,.30);
       --radius:18px;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,"Helvetica Neue",sans-serif; color:var(--text); background:var(--bg); line-height:1.35;}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
+      color:var(--text);
+      background: var(--bg);
+      line-height:1.35;
+    }
     a{color:inherit}
-    .container{max-width:1120px; margin:0 auto; padding:0 18px}
+    .container{max-width:980px; margin:0 auto; padding:0 18px}
 
-    .topbar{position:sticky; top:0; z-index:30; backdrop-filter: blur(10px); background: rgba(11,18,32,.72); border-bottom:1px solid var(--line);}
-    .topbar-inner{display:flex; align-items:center; justify-content:space-between; padding:12px 0; gap:14px;}
+    /* Topbar */
+    .topbar{
+      position:sticky; top:0; z-index:30;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.76);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0;
+      gap:12px;
+    }
     .brand{display:flex; align-items:center; gap:12px; min-width:0;}
-    .brand img{width:120px; height:120px; border-radius:18px; border:1px solid rgba(255,255,255,.14); box-shadow: 0 12px 30px rgba(0,0,0,.22); object-fit:cover; flex:0 0 auto;}
-    .brand .txt strong{display:block; font-size:15px; letter-spacing:.2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+    .brand img{
+      width:66px; height:66px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.14);
+      object-fit:cover;
+      flex:0 0 auto;
+      box-shadow: 0 12px 30px rgba(0,0,0,.22);
+    }
+    .brand .txt strong{
+      display:block; font-size:14px; letter-spacing:.2px;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
     .brand .txt span{display:block; font-size:12px; color:var(--muted)}
-    .phone{display:flex; align-items:center; gap:12px; padding:10px 14px; border:1px solid rgba(34,197,94,.35); border-radius:999px; background: linear-gradient(180deg, rgba(34,197,94,.16), rgba(255,255,255,.04)); box-shadow: 0 14px 28px rgba(34,197,94,.10); white-space:nowrap;}
-    .phone .icon{width:36px; height:36px; border-radius:14px; display:grid; place-items:center; background: rgba(34,197,94,.18); border:1px solid rgba(34,197,94,.30); flex:0 0 auto; font-size:18px; line-height:1;}
-    .phone b{font-size:18px; letter-spacing:.2px; color:var(--text);}
-    .phone small{display:block; color:var(--muted); font-size:12px; margin-top:2px;}
 
-    .section{padding:18px 0 6px;}
-    .panel{border:1px solid var(--line); border-radius: var(--radius); background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03)); box-shadow: var(--shadow); overflow:hidden;}
-    .hero{padding:18px 0 8px;}
-    .hero-in{padding:18px}
-    h1{margin:0 0 10px; font-size:30px; letter-spacing:-.3px; line-height:1.12;}
-    .sub{margin:0; color:var(--muted); font-size:14px;}
-    .kicker{display:inline-flex; gap:8px; align-items:center; flex-wrap:wrap; font-size:12px; color:var(--muted); border:1px solid var(--line); background: rgba(255,255,255,.06); padding:8px 10px; border-radius:999px; margin-bottom:12px;}
-    .kicker .dot{width:8px; height:8px; border-radius:99px; background: var(--accent); box-shadow:0 0 0 6px rgba(34,197,94,.14);}
-    .grid2{display:grid; gap:14px; grid-template-columns: 1.1fr .9fr;}
-    .box{border:1px solid var(--line); border-radius: var(--radius); background: rgba(255,255,255,.05); box-shadow: var(--shadow); padding:14px;}
-    .h2{margin:0 0 10px; font-size:20px; letter-spacing:-.2px;}
-    .lead{color:var(--muted); font-size:13px; margin:0 0 12px;}
-    .list{margin:0; padding-left:18px; color:var(--muted); font-size:13px; line-height:1.55;}
-    .list li{margin:6px 0}
-    .imgbox img{width:100%; height:auto; border-radius:16px; border:1px solid rgba(255,255,255,.10); background: rgba(0,0,0,.15);}
-
-    .cta-row{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px;}
-    .btn{display:inline-flex; gap:10px; align-items:center; justify-content:center; border-radius:14px; padding:12px 14px; border:1px solid var(--line); text-decoration:none; cursor:pointer; transition: transform .12s ease; user-select:none;}
+    .btn{
+      display:inline-flex; gap:10px; align-items:center; justify-content:center;
+      border-radius:14px;
+      padding:12px 14px;
+      border:1px solid var(--line);
+      text-decoration:none;
+      cursor:pointer;
+      user-select:none;
+      transition: transform .12s ease, filter .12s ease, background .12s ease;
+      white-space:nowrap;
+    }
     .btn:active{transform: translateY(1px)}
-    .btn-primary{background: linear-gradient(90deg, rgba(34,197,94,.98), rgba(16,185,129,.98)); color:#071018; border-color: rgba(34,197,94,.55); font-weight:900; box-shadow: 0 14px 30px rgba(34,197,94,.18);}
+    .btn-primary{
+      background: linear-gradient(90deg, rgba(34,197,94,.98), rgba(16,185,129,.98));
+      color:#071018;
+      border-color: rgba(34,197,94,.55);
+      font-weight:900;
+      box-shadow: 0 14px 30px rgba(34,197,94,.18);
+    }
     .btn-secondary{background: rgba(255,255,255,.06); color:var(--text);}
 
-    .footer{padding:18px 0 34px; color:var(--muted); font-size:12px;}
-    .footer .row{display:flex; justify-content:space-between; align-items:flex-start; gap:12px; flex-wrap:wrap; border-top:1px solid var(--line); padding-top:14px;}
+    .hero{padding:18px 0 8px;}
+    .card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero-card{padding:16px}
+    .kicker{
+      display:inline-flex; gap:8px; align-items:center;
+      font-size:12px; color:var(--muted);
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      padding:8px 10px;
+      border-radius:999px;
+      flex-wrap:wrap;
+    }
+    .kicker .dot{
+      width:8px; height:8px; border-radius:99px; background: var(--accent);
+      box-shadow:0 0 0 6px rgba(34,197,94,.14);
+    }
+    h1{margin:12px 0 8px; font-size:28px; letter-spacing:-.3px; line-height:1.12;}
+    .sub{margin:0 0 12px; color:var(--muted); font-size:14px;}
 
-    .wa-float{position:fixed; right:16px; bottom:16px; z-index:50; width:58px; height:58px; border-radius:999px; display:grid; place-items:center; background: linear-gradient(180deg, #22c55e, #16a34a); box-shadow: 0 18px 35px rgba(34,197,94,.28); border:1px solid rgba(255,255,255,.18); text-decoration:none; transform: translateZ(0);}
+    .grid2{display:grid; gap:14px; grid-template-columns: 1fr 1fr; align-items:stretch;}
+    .pimg{padding:14px; display:flex; align-items:center; justify-content:center;}
+    .pimg a{display:block; width:100%;}
+    .pimg img{
+      width:100%;
+      height:auto;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.15);
+    }
+    .box{padding:14px; display:grid; gap:10px;}
+
+    .chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:6px}
+    .chip{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background: rgba(255,255,255,.06);
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .section{padding:14px 0 0;}
+    .section h2{margin:0 0 10px; font-size:20px; letter-spacing:-.2px;}
+
+    .info{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: var(--shadow);
+      padding:14px;
+    }
+    .info b{color:var(--text)}
+    .info p{margin:8px 0 0; color:var(--muted); font-size:13px; line-height:1.55}
+
+    .list{
+      margin:10px 0 0 18px;
+      padding:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.65;
+    }
+
+    .tech{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: var(--shadow);
+      padding:14px;
+    }
+    .tech .t-title{font-weight:900; color:var(--text); margin-bottom:8px;}
+    .fineprint{
+      color:var(--muted);
+      font-size:12px;
+      border-top:1px solid var(--line);
+      margin-top:10px; padding-top:10px;
+    }
+
+    .footer{padding:18px 0 34px; color:var(--muted); font-size:12px;}
+    .footer .row{
+      display:flex; justify-content:space-between; align-items:flex-start;
+      gap:12px; flex-wrap:wrap;
+      border-top:1px solid var(--line);
+      padding-top:14px;
+    }
+
+    /* Floating WhatsApp */
+    .wa-float{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:50;
+      width:58px;
+      height:58px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background: linear-gradient(180deg, #22c55e, #16a34a);
+      box-shadow: 0 18px 35px rgba(34,197,94,.28);
+      border:1px solid rgba(255,255,255,.18);
+      text-decoration:none;
+      transform: translateZ(0);
+    }
     .wa-float svg{width:28px; height:28px; fill:#071018}
     .wa-float:active{transform: translateY(1px)}
     .sr-only{position:absolute; left:-9999px}
 
-    @media (max-width: 980px){
-      .grid2{grid-template-columns:1fr}
-      h1{font-size:28px}
-      .topbar-inner{flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 10px 0;}
-      .brand .txt strong{display:none;}
-      .brand{justify-content:center; width:100%;}
-      .phone{width:100%; max-width:420px; justify-content:center; white-space:normal; text-align:center;}
-      .phone small{display:none;}
-      .phone b{font-size:22px;}
+    @media (max-width: 860px){
+      .grid2{grid-template-columns: 1fr}
+      .topbar-inner{flex-direction:column; align-items:stretch}
+      .btn{width:100%}
+      h1{font-size:26px}
     }
   </style>
 </head>
@@ -118,117 +247,157 @@
     <div class="container">
       <div class="topbar-inner">
         <div class="brand" aria-label="Cabeçalho">
-          <img src="bioolimpo1.webp" alt="BioOlimpo inseticida biológico Beauveria e Metarhizium" />
-          <div class="txt">
-            <strong>BioOlimpo®</strong>
-            <span>Beauveria + Metarhizium (WP)</span>
-          </div>
+          <a href="index.html" style="text-decoration:none; display:flex; gap:12px; align-items:center;">
+            <img src="biofundopreto.webp" alt="InseticidaBiologico.com.br" />
+            <div class="txt">
+              <strong>InseticidaBiologico.com.br</strong>
+              <span>BioOlimpo® — página do produto</span>
+            </div>
+          </a>
         </div>
 
-        <div class="phone" aria-label="Telefone">
-          <div class="icon" aria-hidden="true">📞</div>
-          <div>
-            <b>(17) 99140-5464</b>
-            <small>WhatsApp • atendimento rápido</small>
-          </div>
-        </div>
+        <a class="btn btn-secondary" href="index.html" aria-label="Voltar para a página inicial">
+          ⬅️ Voltar para a página inicial
+        </a>
       </div>
     </div>
   </header>
 
-  <main id="topo">
-    <section class="hero">
+  <main>
+    <section class="hero" id="topo">
       <div class="container">
-        <div class="panel hero-in">
+        <div class="card hero-card">
           <div class="kicker">
             <span class="dot"></span>
-            <span>Página do produto • Pragas + Culturas • Informações técnicas</span>
+            <span>Nota fiscal • Transportadora • Rastreio em tempo real • Compra pelo WhatsApp</span>
           </div>
-          <h1>BioOlimpo® — fungos entomopatogênicos</h1>
+
+          <h1>BioOlimpo® — bioinseticida microbiológico (WP)</h1>
           <p class="sub">
-            Bioinseticida microbiológico (WP) com <b>Beauveria bassiana</b> + <b>Metarhizium anisopliae</b>, voltado ao manejo integrado.
+            Formulação pó molhável (WP) com <b>Beauveria bassiana</b> + <b>Metarhizium anisopliae</b>, muito usada em programas de manejo biológico (sempre conforme rótulo/bula e orientação técnica).
           </p>
 
-          <div class="cta-row">
-            <a class="btn btn-primary" target="_blank" rel="noopener"
-               href="https://wa.me/5517991405464?text=Ol%C3%A1%2C%20quero%20comprar%20BIOOLIMPO%20e%20tirar%20d%C3%BAvidas%20sobre%20praga%20e%20cultura.">
-              <span aria-hidden="true">🟢</span>
-              <span>Falar no WhatsApp</span>
-            </a>
-            <a class="btn btn-secondary" href="index.html">← Voltar para os produtos</a>
+          <div class="grid2">
+            <div class="pimg">
+              <a href="bioolimpo1.webp" target="_blank" rel="noopener" aria-label="Abrir imagem do BioOlimpo">
+                <img src="bioolimpo1.webp"
+                     alt="BioOlimpo inseticida biológico Beauveria bassiana e Metarhizium anisopliae (WP)"
+                     loading="eager" />
+              </a>
+            </div>
+
+            <div class="box">
+              <a class="btn btn-primary" target="_blank" rel="noopener"
+                 href="https://wa.me/5517991405464?text=Ol%C3%A1%2C%20vim%20do%20site%20InseticidaBiologico.com.br%20e%20quero%20comprar%20BIOOLIMPO.%20Minha%20cultura%20%C3%A9%20____%20e%20a%20praga%20%C3%A9%20____.">
+                🟢 Comprar BioOlimpo no WhatsApp
+              </a>
+
+              <div class="chips" aria-label="Destaques do produto">
+                <span class="chip">Bioinseticida microbiológico (WP)</span>
+                <span class="chip">Beauveria + Metarhizium</span>
+                <span class="chip">Manejo biológico</span>
+              </div>
+
+              <div class="info" aria-label="Resumo">
+                <b>Resumo rápido</b>
+                <p>
+                  BioOlimpo® é um microbiológico à base de fungos entomopatogênicos. No WhatsApp, você informa <b>cultura</b> e <b>praga</b> e a gente orienta o melhor caminho de uso dentro do manejo.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container">
+        <h2>Sobre o BioOlimpo®</h2>
+        <div class="info">
+          <b>O que é</b>
+          <p>
+            Bioinseticida microbiológico com fungos entomopatogênicos, utilizado em programas de MIP (manejo integrado de pragas).
+            A eficiência depende de posicionamento, clima, tecnologia de aplicação e boas práticas de campo.
+          </p>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="tech" aria-label="Informações técnicas">
+          <div class="t-title">Informações técnicas</div>
+          <div style="color:var(--muted); font-size:13px; line-height:1.6;">
+            <b style="color:var(--text);">Composição (bula/registro MAPA 31721):</b>
+            <ul class="list">
+              <li><b style="color:var(--text);">Beauveria bassiana</b> (IBCB 66): 150 g/kg</li>
+              <li><b style="color:var(--text);">Metarhizium anisopliae</b> (IBCB 425): 150 g/kg</li>
+              <li>Formulação: <b style="color:var(--text);">WP</b></li>
+            </ul>
+            <div class="fineprint">Use conforme rótulo/bula e recomendações técnicas.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="pragas">
       <div class="container">
-        <div class="grid2">
-          <div class="box">
-            <div class="h2">Principais pragas (SEO)</div>
-            <p class="lead">Exemplos de alvos citados no conteúdo técnico/comercial do produto.</p>
-            <ul class="list">
-              <li>Cigarrinhas</li>
-              <li>Percevejos</li>
-              <li>Mosca-branca</li>
-              <li>Tripes</li>
-              <li>Bicho-mineiro</li>
-              <li>Outras pragas-alvo conforme posicionamento técnico</li>
-            </ul>
-          </div>
-
-          <div class="box">
-            <div class="h2">Principais culturas (SEO)</div>
-            <p class="lead">Culturas típicas do MIP onde o produtor busca por “praga + controle biológico”.</p>
-            <ul class="list">
-              <li>Soja</li>
-              <li>Milho</li>
-              <li>Algodão</li>
-              <li>Cana-de-açúcar</li>
-              <li>Café</li>
-              <li>Hortifruti (varia por alvo e recomendação)</li>
-            </ul>
-          </div>
+        <h2>Principais pragas</h2>
+        <div class="info">
+          <b>Pragas comuns em busca e manejo</b>
+          <ul class="list">
+            <li>Mosca-branca</li>
+            <li>Tripes</li>
+            <li>Pulgões</li>
+            <li>Cochonilhas</li>
+            <li>Percevejos</li>
+            <li>Cigarrinhas</li>
+          </ul>
         </div>
+      </div>
+    </section>
 
-        <div style="height:14px"></div>
-
-        <div class="grid2">
-          <div class="panel box">
-            <div class="h2">Como funciona (explicado simples)</div>
-            <div class="lead">
-              Beauveria e Metarhizium são fungos que atuam no controle biológico de pragas-alvo, dentro de programas de manejo integrado.
-            </div>
-            <div style="color:var(--muted); font-size:13px; line-height:1.55;">
-              • Ideal para compor protocolos com monitoramento e boas práticas.<br>
-              • Ajuda em estratégias de rotação/alternância de tecnologias.<br>
-              <div style="margin-top:10px; font-size:12px;">
-                <b>Importante:</b> utilize sempre conforme rótulo/bula e orientação agronômica.
-              </div>
-            </div>
-          </div>
-
-          <div class="panel box imgbox">
-            <div class="h2">Imagem do produto</div>
-            <img src="bioolimpo1.webp" alt="BioOlimpo (imagem 1) — Beauveria + Metarhizium" loading="lazy">
-          </div>
+    <section class="section" id="culturas">
+      <div class="container">
+        <h2>Principais culturas</h2>
+        <div class="info">
+          <b>Culturas mais frequentes em busca e uso no campo</b>
+          <ul class="list">
+            <li>Soja</li>
+            <li>Milho</li>
+            <li>Algodão</li>
+            <li>Cana-de-açúcar</li>
+            <li>Café</li>
+            <li>Feijão</li>
+            <li>Hortaliças</li>
+            <li>Frutíferas</li>
+          </ul>
         </div>
+      </div>
+    </section>
 
-        <div style="height:14px"></div>
-
-        <div class="box">
-          <div class="h2">Informações técnicas</div>
-          <div style="color:var(--muted); font-size:13px; line-height:1.55;">
-            <b>Composição (conforme descrito):</b><br>
-            • <b>Beauveria bassiana</b> (IBCB 66): 150 g/kg<br>
-            • <b>Metarhizium anisopliae</b> (IBCB 425): 150 g/kg<br>
-            • Formulação: <b>WP</b>
-          </div>
+    <section class="section" id="comprar">
+      <div class="container">
+        <h2>Comprar</h2>
+        <div class="info">
+          <b>Bem simples</b>
+          <p>
+            Clique no WhatsApp e escreva: <b>cultura</b> + <b>praga</b>.
+            Pedido com <b>nota fiscal</b>, envio por <b>transportadora</b> e <b>rastreio</b>.
+          </p>
+          <div style="height:10px"></div>
+          <a class="btn btn-primary" target="_blank" rel="noopener"
+             href="https://wa.me/5517991405464?text=Ol%C3%A1%2C%20quero%20comprar%20BIOOLIMPO.%20Minha%20cultura%20%C3%A9%20____%20e%20a%20praga%20%C3%A9%20____.">
+            🟢 Comprar BioOlimpo no WhatsApp
+          </a>
         </div>
+      </div>
+    </section>
 
-        <div class="cta-row" style="margin-top:14px;">
-          <a class="btn btn-secondary" href="#topo">↑ Voltar ao topo</a>
-        </div>
+    <section class="section" id="voltar">
+      <div class="container">
+        <a class="btn btn-secondary" href="index.html" aria-label="Voltar para a página inicial no final">
+          ⬅️ Voltar para a página inicial
+        </a>
       </div>
     </section>
 
@@ -238,13 +407,15 @@
           <div>
             <b>InseticidaBiologico.com.br</b><br />
             WhatsApp: <b>(17) 99140-5464</b><br />
-            <span style="display:block; margin-top:6px;">
-              <b>Aviso:</b> utilize sempre conforme rótulo/bula e boas práticas agronômicas.
-            </span>
+            <span>Nota fiscal • Transportadora • Rastreio em tempo real</span><br />
+            <span style="display:block; margin-top:6px;"><b>Envio imediato após aprovação do pedido.</b></span>
           </div>
           <div>
+            <span style="color:var(--muted); font-size:12px;">
+              Aviso: Utilize sempre conforme rótulo/bula e boas práticas agronômicas. Em caso de dúvida, solicite orientação técnica.
+            </span>
             <div style="margin-top:10px; opacity:.9">
-              © <span id="year"></span> BioOlimpo® — Página do produto
+              © <span id="year"></span> inseticidabiologico.com.br
             </div>
           </div>
         </div>
@@ -252,9 +423,9 @@
     </section>
   </main>
 
-  <a class="wa-float" target="_blank" rel="noopener"
+  <a class="wa-float" id="wa-float" target="_blank" rel="noopener"
      aria-label="Abrir WhatsApp"
-     href="https://wa.me/5517991405464?text=Ol%C3%A1%2C%20quero%20comprar%20BIOOLIMPO%20e%20tirar%20d%C3%BAvidas%20sobre%20praga%20e%20cultura.">
+     href="https://wa.me/5517991405464?text=Ol%C3%A1%2C%20vim%20do%20site%20InseticidaBiologico.com.br%20e%20quero%20comprar%20BIOOLIMPO.%20Minha%20cultura%20%C3%A9%20____%20e%20a%20praga%20%C3%A9%20____.">
     <span class="sr-only">WhatsApp</span>
     <svg viewBox="0 0 32 32" aria-hidden="true">
       <path d="M19.11 17.53c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47l-.52-.01c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.26 0 1.33.97 2.61 1.11 2.79.14.18 1.91 2.92 4.63 4.09.65.28 1.15.45 1.54.57.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16 3C8.83 3 3 8.7 3 15.72c0 2.47.73 4.76 1.98 6.7L3.69 29 10.6 26.8a13.2 13.2 0 0 0 5.4 1.14c7.17 0 13-5.7 13-12.72C29 8.7 23.17 3 16 3zm0 22.42c-1.79 0-3.46-.48-4.9-1.3l-.35-.2-4.1 1.3 1.34-3.93-.23-.39a10.93 10.93 0 0 1-1.66-5.78C6.1 9.2 10.64 4.78 16 4.78c5.36 0 9.9 4.42 9.9 9.94 0 5.52-4.54 9.7-9.9 9.7z"/>
