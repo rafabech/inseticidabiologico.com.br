@@ -333,6 +333,7 @@
       border-radius:16px;
       border:1px solid rgba(255,255,255,.10);
       background: rgba(0,0,0,.15);
+      display:block;
     }
     .p-body{
       padding:0 14px 14px;
@@ -361,6 +362,12 @@
       border-top:1px solid var(--line);
       margin-top:10px; padding-top:10px;
     }
+
+    /* clique na foto (melhora UX) */
+    .p-img a{display:block; text-decoration:none;}
+    .p-img a:focus{outline:2px solid rgba(34,197,94,.7); outline-offset:4px; border-radius:18px;}
+    .p-img a:hover img{filter: brightness(1.03); transform: translateY(-1px);}
+    .p-img img{transition: transform .12s ease, filter .12s ease;}
 
     /* Avaliações: branco estilo print, SEM Google */
     .reviews-wrap{
@@ -646,11 +653,16 @@
               </div>
               <div class="badge" title="Mais vendido">MAIS VENDIDO</div>
             </div>
+
+            <!-- FOTO CLICÁVEL -> vai para takotrop.html -->
             <div class="p-img">
-              <img src="takotrop.webp"
-                   alt="Takotrop inseticida biológico microbiológico para mosca-branca, tripes, percevejos e cigarrinhas"
-                   loading="lazy" />
+              <a href="/takotrop.html" aria-label="Abrir página do Takotrop">
+                <img src="takotrop.webp"
+                     alt="Takotrop inseticida biológico microbiológico para mosca-branca, tripes, percevejos e cigarrinhas"
+                     loading="lazy" />
+              </a>
             </div>
+
             <div class="p-body">
               <div>
                 Indicado para manejo biológico de pragas como mosca-branca, tripes, percevejos, cigarrinhas, ácaro-rajado e bicho-mineiro (conforme posicionamento técnico e bula).
@@ -680,11 +692,16 @@
                 <small>Beauveria + Metarhizium (WP) — fungos entomopatogênicos</small>
               </div>
             </div>
+
+            <!-- FOTO CLICÁVEL -> vai para bioolimpo.html -->
             <div class="p-img">
-              <img src="bioolimpo.webp"
-                   alt="BioOlimpo beauveria bassiana e metarhizium anisopliae inseticida biológico fungo entomopatogênico"
-                   loading="lazy" />
+              <a href="/bioolimpo.html" aria-label="Abrir página do BioOlimpo">
+                <img src="bioolimpo.webp"
+                     alt="BioOlimpo beauveria bassiana e metarhizium anisopliae inseticida biológico fungo entomopatogênico"
+                     loading="lazy" />
+              </a>
             </div>
+
             <div class="p-body">
               <div>
                 Bioinseticida microbiológico com fungos entomopatogênicos para suporte ao manejo integrado, com alvos descritos em bula.
@@ -714,11 +731,16 @@
                 <small>Óleo de Neem (EC) — suporte ao manejo integrado</small>
               </div>
             </div>
+
+            <!-- FOTO CLICÁVEL -> vai para fitoneem.html -->
             <div class="p-img">
-              <img src="fitoneem.webp"
-                   alt="Fitoneem óleo de neem azadiractina inseticida biológico para manejo integrado"
-                   loading="lazy" />
+              <a href="/fitoneem.html" aria-label="Abrir página do Fitoneem">
+                <img src="fitoneem.webp"
+                     alt="Fitoneem óleo de neem azadiractina inseticida biológico para manejo integrado"
+                     loading="lazy" />
+              </a>
             </div>
+
             <div class="p-body">
               <div>
                 Produto à base de neem para suporte ao manejo integrado, com atuação por contato/ingestão conforme bula e recomendação técnica.
