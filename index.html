@@ -111,14 +111,14 @@
       width:100%;
       margin:0;
       border-bottom:1px solid var(--line);
-      background: rgba(255,255,255,.03);
+      background: rgba(0,0,0,.35); /* (alteração) */
     }
     .top-cover img{
       width:100%;
-      height:auto;
+      height:320px;          /* (alteração) deixa a capa menor */
       display:block;
-     max-height: none;
-     object-fit: contain;
+      object-fit: contain;   /* (alteração) não corta a imagem */
+      background: rgba(0,0,0,.35); /* (alteração) caso sobre espaço */
     }
 
     /* HERO (agora fora do “quadrado”, centralizado e focado em conversão) */
@@ -387,7 +387,7 @@
     @media (max-width: 980px){
       .grid3{grid-template-columns: 1fr}
       h1{font-size:28px}
-      .top-cover img{max-height: 320px;}
+      .top-cover img{height:220px;} /* (alteração) capa menor no celular */
       .btn-primary{min-width: 100%;}
       .bullets{max-width: 100%;}
       .hero-content{text-align:left;}
