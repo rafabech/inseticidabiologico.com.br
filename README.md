@@ -1,1 +1,0 @@
-# inseticidabiologico.com.br
